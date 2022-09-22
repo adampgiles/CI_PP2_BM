@@ -40,6 +40,7 @@ inputTempoRefresh.addEventListener("click", function(){
 // Kit variables
 let kitSelect = document.getElementById("kits");
 let currentKit = kitSelect.value;
+let currentSounds = ["sound1.wav", "sound2.wav", "sound3.wav", "sound4.wav", "sound5.wav", "sound6.wav"]; // CODE TO ADD - "sound filenames"
 
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', function(){  
@@ -94,6 +95,16 @@ window.addEventListener('DOMContentLoaded', function(){
   infoWindow.style.display = "none";
 });
 
+// Track Icon Elements
+let iconsTrack = document.getElementsByClassName("track-icon");
+// Add click event listener to trigger sound
+for(i = 0; i < iconsTrack.length; i++){
+  let number = i;
+  iconsTrack[number].addEventListener("click", function(){
+    // CODE TO ADD - "Play Sound"
+    console.log("Playing: " + currentSounds[number]); // check if correct sound attached to each track icon
+  });
+}
 
 
 
