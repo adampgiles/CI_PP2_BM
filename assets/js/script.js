@@ -1,3 +1,7 @@
+// Web Audio Api variables
+const audioContext = new AudioContext();
+let bufferTracks = [null, null, null, null, null, null];
+
 // Playback variables
 const inputPlayback = document.getElementById("input-playback");
 let iconPlay = document.getElementById("icon-play");
@@ -40,7 +44,7 @@ inputTempoRefresh.addEventListener("click", function(){
 // Kit variables
 let kitSelect = document.getElementById("kits");
 let currentKit = kitSelect.value;
-let currentSounds = ["sound1.wav", "sound2.wav", "sound3.wav", "sound4.wav", "sound5.wav", "sound6.wav"]; // CODE TO ADD - "sound filenames"
+let currentSounds = ["assets/audio/kick.wav", "assets/audio/snare.wav", "assets/audio/clap.wav", "assets/audio/hihat.wav", "assets/audio/shaker.wav", "assets/audio/snare.wav"]; // CODE TO ADD - "sound filenames"
 
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', function(){  
@@ -82,6 +86,31 @@ inputInfo.addEventListener("click", function(){
   console.log("Info Window Open: " + isInfoWindowOpen); // Test if info window changed
 });
 
+// Track Icon Elements
+let iconsTrack = document.getElementsByClassName("track-icon");
+// Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
+for(i = 0; i < iconsTrack.length; i++){
+  let number = i;
+  const request = new XMLHttpRequest();
+  request.open("GET", currentSounds[number]);
+  request.responseType = "arraybuffer";
+  request.onload = function() {
+    let undecodedAudio = request.response;
+    audioContext.decodeAudioData(undecodedAudio, (data) => bufferTracks[number] = data);
+  };
+  request.send();
+}
+
+for(i = 0; i < iconsTrack.length; i++){
+  let number = i;
+  iconsTrack[number].addEventListener("click", function(){
+    const source = audioContext.createBufferSource();
+    source.buffer = bufferTracks[number];
+    source.connect(audioContext.destination);
+    source.start();
+  });
+}
+
 // Execute when DOM is loaded
 window.addEventListener('DOMContentLoaded', function(){
   // Toggle Playback icon visibility
@@ -95,16 +124,7 @@ window.addEventListener('DOMContentLoaded', function(){
   infoWindow.style.display = "none";
 });
 
-// Track Icon Elements
-let iconsTrack = document.getElementsByClassName("track-icon");
-// Add click event listener to trigger sound
-for(i = 0; i < iconsTrack.length; i++){
-  let number = i;
-  iconsTrack[number].addEventListener("click", function(){
-    // CODE TO ADD - "Play Sound"
-    console.log("Playing: " + currentSounds[number]); // check if correct sound attached to each track icon
-  });
-}
+
 
 
 
