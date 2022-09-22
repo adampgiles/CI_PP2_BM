@@ -142,12 +142,24 @@ body{
 }
 
 .track{
-  height: 40px;
-  padding: 5px;
+  height: 45px;
+  padding: 2.5px;
   background-color: rgb(245, 245, 245);
   border: 2px solid rgb(40, 40, 40);
   border-radius: 5px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+}
+.track-icon{
+  height: 35px;
+  width: 35px;
+  padding: 2.5px;
+  background-color: white;
+  border: 2px solid rgb(40, 40, 40);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.track-icon svg{
+  width: 100%;
+  height: 100%;
 }
