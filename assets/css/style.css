@@ -28,15 +28,20 @@ body{
   border-radius: 5px;
 }
 
-.input-play{
+.input-playback{
   width: 30px;
 }
-.play{  
+.input-playback div{
+  width: 100%;
+  height: 100%;
+  background-color: "";
+  border: none;
+}
+.play svg{  
   width: 100%;
   height: 100%;
 }
-.stop{
-  display:none;
+.stop svg{
   width: 100%;
   height: 100%;
 }
@@ -82,6 +87,7 @@ body{
 }
 
 .input-info svg{
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
 }
