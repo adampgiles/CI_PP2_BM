@@ -2,6 +2,8 @@
 
 **Developer: Adam Giles**
 
+[Live website](https://adampgiles.github.io/CI_PP2_BM/)
+
 ## Table of Content
 
 - [Project Goals](#project-goals)
