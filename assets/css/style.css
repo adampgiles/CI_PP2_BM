@@ -66,12 +66,14 @@ body{
   margin: 2.5px;
   text-align: center;
 }
-.tempo-block div{
+.tempo-refresh{
   width: 40px;
   padding: 1px;
   background-color: white;
   border: 2px solid rgb(40, 40, 40);;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Kit Block */
