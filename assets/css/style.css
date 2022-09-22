@@ -191,10 +191,13 @@ body{
 .step{
   height: 30px;
   width: 12.5px;
-  background-color: white;
+  background-color: rgb(200, 200, 200);
   border: 3px solid rgb(75, 75, 75);
   border-radius: 10px;
 }
 .step-0, .step-4, .step-8, .step-12{
   border: 3px solid rgb(0, 0, 0);
 } 
+.step:hover{
+  background-color: white !important;
+}

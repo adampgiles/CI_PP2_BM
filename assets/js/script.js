@@ -136,7 +136,7 @@ for(i = 0; i < steps.length; i++){
     steps[num][number].addEventListener("click", function(){
       if(trackStepValues[num][number] === 0){
         trackStepValues[num][number] = 1;
-        steps[num][number].style.backgroundColor = "rgb(84, 131, 207)";
+        steps[num][number].style.backgroundColor = "rgba(0, 0, 0, 0.40)";
         console.log("step value: " + trackStepValues[num][number]);
       }
       else{
