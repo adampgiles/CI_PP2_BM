@@ -83,7 +83,7 @@ body{
 
 /* Kit Block */
 .kit-block{
-  width: 125px;
+  width: 115px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +140,6 @@ body{
   flex-direction: column;
   justify-content: space-around;
 }
-
 .track{
   height: 45px;
   padding: 2.5px;  
