@@ -10,14 +10,16 @@ body{
 }
 
 .control-interface{
-  margin-top: 5px;
+  position: relative;
+  margin-top: 10px;
   width: 300px;
   height: 40px;
+  padding: 2.5px;
   background-color: rgb(130, 130, 130);
   border: 2px solid rgb(40, 40, 40);
   border-radius: 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
 }
 .control-interface div{
@@ -28,7 +30,6 @@ body{
 
 .input-play{
   width: 30px;
-  margin: 2.5px;
 }
 .play{  
   width: 100%;
@@ -42,7 +43,6 @@ body{
 
 .tempo-block{
   width: 110px;
-  margin: 2.5px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -59,8 +59,7 @@ body{
 }
 
 .kit-block{
-  width: 130px;
-  margin: 2.5px;
+  width: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +69,19 @@ body{
   margin: 2.5px;
 }
 .kit-block select{
-  width: 80px;
+  width: 75px;
   margin: 2.5px;
+}
+
+.input-info{
+  position: absolute;
+  width: 20px;
+  height: 20px; 
+  top: -11px;
+  right: -11px;
+}
+
+.input-info svg{
+  width: 100%;
+  height: 100%;
 }
