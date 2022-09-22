@@ -10,6 +10,11 @@ body{
  justify-content: center;
 }
 
+.page-container{
+  display: flex;
+  flex-direction: column;
+}
+
 /* Control Interface Section */
 .control-interface{
   position: relative;
@@ -120,4 +125,29 @@ body{
   width: 300px;
   height: 545px;
   top: -2px;
+}
+
+/* Track Interface Section */
+.track-interface{
+  margin-top: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 2.5px;
+  background-color: rgb(130, 130, 130);
+  border: 2px solid rgb(40, 40, 40);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.track{
+  height: 40px;
+  padding: 5px;
+  background-color: rgb(245, 245, 245);
+  border: 2px solid rgb(40, 40, 40);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
