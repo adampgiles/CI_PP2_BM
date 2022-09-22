@@ -47,7 +47,7 @@ body{
 }
 
 .tempo-block{
-  width: 110px;
+  width: 120px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -58,9 +58,16 @@ body{
   margin: 2.5px;
 }
 .tempo-block input{
-  width: 55px;
+  width: 45px;
   margin: 2.5px;
   text-align: center;
+}
+.tempo-block div{
+  width: 40px;
+  padding: 1px;
+  background-color: white;
+  border: 2px solid rgb(40, 40, 40);;
+  border-radius: 5px;
 }
 
 .kit-block{
