@@ -100,7 +100,7 @@ for(i = 0; i < iconsTrack.length; i++){
   };
   request.send();
 }
-
+// Play the sounds using Web Audio Api
 for(i = 0; i < iconsTrack.length; i++){
   let number = i;
   iconsTrack[number].addEventListener("click", function(){
@@ -109,6 +109,43 @@ for(i = 0; i < iconsTrack.length; i++){
     source.connect(audioContext.destination);
     source.start();
   });
+}
+
+// Step variables
+let trackStepValues = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
+const steps = [
+  document.getElementById("step-container-one").children, 
+  document.getElementById("step-container-two").children,
+  document.getElementById("step-container-three").children,
+  document.getElementById("step-container-four").children,
+  document.getElementById("step-container-five").children,
+  document.getElementById("step-container-six").children
+];
+
+for(i = 0; i < steps.length; i++){
+  let num = i;    
+  for(j = 0; j < steps[num].length; j++){
+    let number = j;      
+    steps[num][number].addEventListener("click", function(){
+      if(trackStepValues[num][number] === 0){
+        trackStepValues[num][number] = 1;
+        steps[num][number].style.backgroundColor = "rgb(84, 131, 207)";
+        console.log("step value: " + trackStepValues[num][number]);
+      }
+      else{
+        trackStepValues[num][number] = 0;
+        steps[num][number].style.backgroundColor = "rgb(222, 222, 222)";
+        console.log("step value: " + trackStepValues[num][number]);
+      }
+    });  
+  }
 }
 
 // Execute when DOM is loaded
@@ -123,10 +160,3 @@ window.addEventListener('DOMContentLoaded', function(){
   // Toggle Info Window visibility
   infoWindow.style.display = "none";
 });
-
-
-
-
-
-
-
