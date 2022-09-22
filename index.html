@@ -10,11 +10,27 @@
 </head>
 <body>  
   <div class="control-interface">
-    <div class="input-play"></div>
-    <div class="tempo-block"></div>
-    <div class="kit-block"></div>
+    <div class="input-play">
+      <i class="fa-solid fa-play play"></i>
+      <i class="fa-solid fa-stop stop"></i>
+    </div>
+    <div class="tempo-block">
+      <label for="tempo">BPM:</label>
+      <input type="number" name="tempo" id="input-tempo" min="60" max="200" value="120">
+    </div>
+    <div class="kit-block">
+      <label for="kits">BPM:</label>
+      <select name="kits" id="kits">
+        <option value="rock">Rock</option>
+        <option value="house">House</option>
+        <option value="jazz">Jazz</option>
+        <option value="dubstep">Dubstep</option>
+      </select>
+    </div>
   </div>
 
+  <!-- Font Awesome Link --> 
+  <script src="https://kit.fontawesome.com/d642f04513.js" crossorigin="anonymous"></script>
   <!-- Custom Script Link -->
   <script src="assets/js/script.js" defer></script>  
 </body>
