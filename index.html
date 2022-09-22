@@ -9,7 +9,9 @@
     <title>Beat Maker - Drum Sequencer</title>
 </head>
 <body>  
+  <!-- Control Interface Section -->
   <div class="control-interface">
+    <!-- Playback block -->
     <div id="input-playback" class="input-playback">
       <div id="icon-play" class="play">
         <i class="fa-solid fa-play"></i>
@@ -18,14 +20,15 @@
         <i class="fa-solid fa-stop"></i>
       </div>
     </div>
+    <!-- Tempo block -->
     <div class="tempo-block">
       <label for="tempo">BPM:</label>
       <input type="number" name="tempo" id="input-tempo" min="60" max="200" value="120">
       <div id="input-tempo-refresh">
         <i class="fa-solid fa-arrows-rotate"></i>
-      </div>
-      
+      </div>      
     </div>
+    <!-- Kit block -->
     <div class="kit-block">
       <label for="kits">Kits:</label>
       <select name="kits" id="kits">
@@ -35,7 +38,16 @@
         <option value="dubstep">Dubstep</option>
       </select>
     </div>
-    <div id="input-info" class="input-info"><i class="fa-solid fa-question info"></i></div>
+    <!-- Information block -->
+    <div id="input-info" class="input-info">
+      <div id ="icon-info" class="info">
+        <i class="fa-solid fa-question"></i>
+      </div>
+      <div id ="icon-close" class="close">
+        <i class="fa-solid fa-x"></i>
+      </div>
+    </div>
+    <div id="info-window" class="info-window"></div>
   </div>
 
   <!-- Font Awesome Link --> 

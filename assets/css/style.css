@@ -1,3 +1,4 @@
+/* Default values */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +10,7 @@ body{
  justify-content: center;
 }
 
+/* Control Interface Section */
 .control-interface{
   position: relative;
   margin-top: 10px;
@@ -28,6 +30,7 @@ body{
   border-radius: 5px;
 }
 
+/* Playback Block */
 .input-playback{
   width: 30px;
 }
@@ -46,6 +49,7 @@ body{
   height: 100%;
 }
 
+/* Tempo Block */
 .tempo-block{
   width: 120px;
   padding: 5px;
@@ -70,6 +74,7 @@ body{
   border-radius: 5px;
 }
 
+/* Kit Block */
 .kit-block{
   width: 125px;
   display: flex;
@@ -85,16 +90,32 @@ body{
   margin: 2.5px;
 }
 
+/* Info Block */
 .input-info{
   position: absolute;
   width: 20px;
   height: 20px; 
   top: -11px;
   right: -11px;
+  z-index: 1;
 }
-
-.input-info svg{
-  width: 80%;
-  height: 80%;
-  margin: 10%;
+.input-info div{
+  width: 100%;
+  height: 100%;
+  background-color: "";
+  border: none;
+}
+.info svg{
+  width: 100%;
+  height: 100%;
+}
+.close svg{
+  width: 100%;
+  height: 100%;
+}
+.info-window{
+  position: absolute;
+  width: 300px;
+  height: 545px;
+  top: -2px;
 }

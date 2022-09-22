@@ -4,6 +4,21 @@ let iconPlay = document.getElementById("icon-play");
 let iconStop = document.getElementById("icon-stop");
 let isPlaying = false;
 
+inputPlayback.addEventListener("click", TogglePlayback);
+function TogglePlayback(){
+  if(isPlaying){  
+    iconPlay.style.display = "block";
+    iconStop.style.display = "none";
+    isPlaying = false;
+  }
+  else{
+    iconPlay.style.display = "none";
+    iconStop.style.display = "block";
+    isPlaying = true;
+  }
+  console.log("Playing: " + isPlaying); // Test if playback changed
+}
+
 // Tempo variable
 let tempoInput = document.getElementById("input-tempo");
 let beatsPerMinute = (60 / tempoInput.value) * 1000; // Converts tempo to milliseconds
@@ -22,31 +37,9 @@ inputTempoRefresh.addEventListener("click", function(){
   console.log("Current Tempo: " + tempoInput.value); // Test if new value updated
 });
 
-
 // Kit variables
 let kitSelect = document.getElementById("kits");
 let currentKit = kitSelect.value;
-
-window.addEventListener('DOMContentLoaded', function(){
-  // Toggle Playback icon visibility
-  iconPlay.style.display = "block";
-  iconStop.style.display = "none";
-});
-
-inputPlayback.addEventListener("click", TogglePlayback);
-function TogglePlayback(){
-  if(isPlaying){  
-    iconPlay.style.display = "block";
-    iconStop.style.display = "none";
-    isPlaying = false;
-  }
-  else{
-    iconPlay.style.display = "none";
-    iconStop.style.display = "block";
-    isPlaying = true;
-  }
-  console.log("Playing: " + isPlaying); // Test if playback changed
-}
 
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', function(){  
@@ -64,5 +57,45 @@ kitSelect.addEventListener('input', function(){
   }   
   console.log("Current Kit: " + kitSelect.value); // Test if kit updated
 });
+
+// Info variables
+let inputInfo = document.getElementById("input-info");
+let iconInfo = document.getElementById("icon-info");
+let iconClose = document.getElementById("icon-close");
+let infoWindow = document.getElementById("info-window");
+let isInfoWindowOpen = false;
+
+inputInfo.addEventListener("click", function(){
+  if(isInfoWindowOpen){  
+    iconInfo.style.display = "block";
+    iconClose.style.display = "none";
+    isInfoWindowOpen = false;
+    infoWindow.style.display = "none";
+  }
+  else{
+    iconInfo.style.display = "none";
+    iconClose.style.display = "block";
+    isInfoWindowOpen = true;
+    infoWindow.style.display = "block";
+  }
+  console.log("Info Window Open: " + isInfoWindowOpen); // Test if info window changed
+});
+
+// Execute when DOM is loaded
+window.addEventListener('DOMContentLoaded', function(){
+  // Toggle Playback icon visibility
+  iconPlay.style.display = "block";
+  iconStop.style.display = "none";
+
+  // Toggle Info/Close Icon visibility
+  iconInfo.style.display = "block";
+  iconClose.style.display = "none";
+  // Toggle Info Window visibility
+  infoWindow.style.display = "none";
+});
+
+
+
+
 
 
