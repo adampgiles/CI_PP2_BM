@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 body{
  background-color: rgb(104, 125, 158);
@@ -50,10 +49,13 @@ body{
   align-items: center;
 }
 .tempo-block label{
+  width: 35px;
   margin: 2.5px;
 }
 .tempo-block input{
+  width: 55px;
   margin: 2.5px;
+  text-align: center;
 }
 
 .kit-block{
@@ -64,8 +66,10 @@ body{
   align-items: center;
 }
 .kit-block label{
+  width: 30px;
   margin: 2.5px;
 }
 .kit-block select{
+  width: 80px;
   margin: 2.5px;
 }
