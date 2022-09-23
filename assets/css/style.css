@@ -198,6 +198,9 @@ body{
 .step-0, .step-4, .step-8, .step-12{
   border: 3px solid rgb(0, 0, 0);
 } 
-.step:hover{
-  background-color: white !important;
+/* Only apply hover style to devices with hover capabilities */
+@media (hover: hover){ 
+  .step:hover{ 
+    background-color: white !important;
+  }
 }
