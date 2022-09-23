@@ -57,10 +57,10 @@ inputTempoRefresh.addEventListener("click", function(){
 
 // Kit variables
 let kitSelect = document.getElementById("kits");
-let kitOne = ["assets/audio/kitOne/kick.wav", "assets/audio/kitOne/snare.wav", "assets/audio/kitOne/clap.wav", "assets/audio/kitOne/hihat.wav", "assets/audio/kitOne/shaker.wav", "assets/audio/kitOne/cowbell.wav"];
-let kitTwo = ["assets/audio/kitTwo/kick.wav", "assets/audio/kitTwo/snare.wav", "assets/audio/kitTwo/clap.wav", "assets/audio/kitTwo/hihat.wav", "assets/audio/kitTwo/shaker.wav", "assets/audio/kitTwo/cowbell.wav"];
-let kitThree = ["assets/audio/kitThree/kick.wav", "assets/audio/kitThree/snare.wav", "assets/audio/kitThree/clap.wav", "assets/audio/kitThree/hihat.wav", "assets/audio/kitThree/shaker.wav", "assets/audio/kitThree/cowbell.wav"];
-let kitFour = ["assets/audio/kitFour/kick.wav", "assets/audio/kitFour/snare.wav", "assets/audio/kitFour/clap.wav", "assets/audio/kitFour/hihat.wav", "assets/audio/kitFour/shaker.wav", "assets/audio/kitFour/cowbell.wav"];
+let kitOne = ["assets/audio/kit1/kick.wav", "assets/audio/kit1/snare.wav", "assets/audio/kit1/clap.wav", "assets/audio/kit1/hihat.wav", "assets/audio/kit1/shaker.wav", "assets/audio/kit1/cowbell.wav"];
+let kitTwo = ["assets/audio/kit2/kick.wav", "assets/audio/kit2/snare.wav", "assets/audio/kit2/clap.wav", "assets/audio/kit2/hihat.wav", "assets/audio/kit2/shaker.wav", "assets/audio/kit2/cowbell.wav"];
+let kitThree = ["assets/audio/kit3/kick.wav", "assets/audio/kit3/snare.wav", "assets/audio/kit3/clap.wav", "assets/audio/kit3/hihat.wav", "assets/audio/kit3/shaker.wav", "assets/audio/kit3/cowbell.wav"];
+let kitFour = ["assets/audio/kit4/kick.wav", "assets/audio/kit4/snare.wav", "assets/audio/kit4/clap.wav", "assets/audio/kit4/hihat.wav", "assets/audio/kit4/shaker.wav", "assets/audio/kit4/cowbell.wav"];
 let currentKit = kitOne; // Defaulted to KitOne
 
 
@@ -79,6 +79,7 @@ kitSelect.addEventListener('input', function(){
   if(kitSelect.value == "kitFour"){
     currentKit = kitFour;
   }   
+
   for(i = 0; i < currentKit.length; i++){
     LoadSounds(i);
   }
