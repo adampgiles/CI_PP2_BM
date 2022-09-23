@@ -32,6 +32,7 @@ let tempoInput = document.getElementById("input-tempo");
 let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to milliseconds
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
+// Update Tempo on refresh input click
 inputTempoRefresh.addEventListener("click", function(){
   // Lock tempo to min and max values
   if(tempoInput.value < tempoMinMax.min){
@@ -39,8 +40,17 @@ inputTempoRefresh.addEventListener("click", function(){
   }
   else if(tempoInput.value > tempoMinMax.max){
     tempoInput.value = tempoMinMax.max;
-  } 
-  beatsPerMinute = (60 / tempoInput.value) * 250;
+  }  
+
+  // Update Tempo - (Process: Stop loop, update beatsPerMinute, resume loop)
+  if(isPlaying){
+    clearInterval(stepInterval);
+    beatsPerMinute = (60 / tempoInput.value) * 250;
+    PlayLoop()    
+  }
+  else{
+    beatsPerMinute = (60 / tempoInput.value) * 250;
+  }
 
   console.log("Current Tempo: " + tempoInput.value); // Test if new value updated
 });
@@ -165,15 +175,12 @@ window.addEventListener('DOMContentLoaded', function(){
 // Play Loop
 function PlayLoop(){
   stepInterval = setInterval(function(){
-    if(isPlaying == true){ 
-      console.log("Step Position: " + stepPosition);
-      
+    if(isPlaying == true){          
       // Check if Step is enable for each track, trigger sound if enabled
       for(i = 0; i < trackStepValues.length; i++){
         if(trackStepValues[i][stepPosition] == 1){
           PlayStep(i);
         }
-        console.log(i);
         ToggleStepBorder(i);
       }    
 
@@ -199,7 +206,6 @@ function StopLoop(){
 
 // Change step border colours to visually indicate the tempo and that the loop is playing
 function ToggleStepBorder(trackNumber){
-  console.log(steps[trackNumber][stepPosition]);
   steps[trackNumber][stepPosition].style.borderColor = "rgb(225, 225, 225)";
 
   let currentStep = stepPosition;
