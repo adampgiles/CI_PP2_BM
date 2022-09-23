@@ -7,6 +7,8 @@ const inputPlayback = document.getElementById("input-playback");
 let iconPlay = document.getElementById("icon-play");
 let iconStop = document.getElementById("icon-stop");
 let isPlaying = false;
+let stepPosition = 0;
+let fullBarCount = 16;
 
 inputPlayback.addEventListener("click", TogglePlayback);
 function TogglePlayback(){
@@ -14,18 +16,20 @@ function TogglePlayback(){
     iconPlay.style.display = "block";
     iconStop.style.display = "none";
     isPlaying = false;
+    StopLoop();
   }
   else{
     iconPlay.style.display = "none";
     iconStop.style.display = "block";
     isPlaying = true;
+    PlayLoop();
   }
   console.log("Playing: " + isPlaying); // Test if playback changed
 }
 
 // Tempo variable
 let tempoInput = document.getElementById("input-tempo");
-let beatsPerMinute = (60 / tempoInput.value) * 1000; // Converts tempo to milliseconds
+let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to milliseconds
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
 inputTempoRefresh.addEventListener("click", function(){
@@ -36,7 +40,7 @@ inputTempoRefresh.addEventListener("click", function(){
   else if(tempoInput.value > tempoMinMax.max){
     tempoInput.value = tempoMinMax.max;
   } 
-  beatsPerMinute = (60 / tempoInput.value) * 1000;
+  beatsPerMinute = (60 / tempoInput.value) * 250;
 
   console.log("Current Tempo: " + tempoInput.value); // Test if new value updated
 });
@@ -44,7 +48,7 @@ inputTempoRefresh.addEventListener("click", function(){
 // Kit variables
 let kitSelect = document.getElementById("kits");
 let currentKit = kitSelect.value;
-let currentSounds = ["assets/audio/kick.wav", "assets/audio/snare.wav", "assets/audio/clap.wav", "assets/audio/hihat.wav", "assets/audio/shaker.wav", "assets/audio/snare.wav"]; // CODE TO ADD - "sound filenames"
+let currentSounds = ["assets/audio/kick.wav", "assets/audio/snare.wav", "assets/audio/clap.wav", "assets/audio/hihat.wav", "assets/audio/shaker.wav", "assets/audio/cowbell.wav"]; // CODE TO ADD - "sound filenames"
 
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', function(){  
@@ -104,10 +108,7 @@ for(i = 0; i < iconsTrack.length; i++){
 for(i = 0; i < iconsTrack.length; i++){
   let number = i;
   iconsTrack[number].addEventListener("click", function(){
-    const source = audioContext.createBufferSource();
-    source.buffer = bufferTracks[number];
-    source.connect(audioContext.destination);
-    source.start();
+    PlayStep(number);
   });
 }
 
@@ -160,3 +161,36 @@ window.addEventListener('DOMContentLoaded', function(){
   // Toggle Info Window visibility
   infoWindow.style.display = "none";
 });
+
+// Play Loop
+function PlayLoop(){
+  stepInterval = setInterval(function(){
+    if(isPlaying == true){ 
+      console.log("Step Position: " + stepPosition);
+      
+      // Check if Step is enable for each track, trigger sound if enabled
+      for(i = 0; i < trackStepValues.length; i++){
+        if(trackStepValues[i][stepPosition] == 1){
+          PlayStep(i);
+        }
+      }    
+
+      // Increment stepPosition and reset if reaches 16
+      stepPosition++;
+      if(stepPosition > 15){
+        stepPosition = 0;
+      }            
+    }
+  }, beatsPerMinute);
+}
+function PlayStep(number){
+  const source = audioContext.createBufferSource();
+  source.buffer = bufferTracks[number];
+  source.connect(audioContext.destination);
+  source.start();
+  console.log("Sound: " + currentSounds[number]);
+}
+function StopLoop(){
+  clearInterval(stepInterval);
+  stepPosition = 0;
+}
