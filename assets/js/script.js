@@ -57,23 +57,32 @@ inputTempoRefresh.addEventListener("click", function(){
 
 // Kit variables
 let kitSelect = document.getElementById("kits");
-let currentKit = kitSelect.value;
-let currentSounds = ["assets/audio/kick.wav", "assets/audio/snare.wav", "assets/audio/clap.wav", "assets/audio/hihat.wav", "assets/audio/shaker.wav", "assets/audio/cowbell.wav"]; // CODE TO ADD - "sound filenames"
+let kitOne = ["assets/audio/kitOne/kick.wav", "assets/audio/kitOne/snare.wav", "assets/audio/kitOne/clap.wav", "assets/audio/kitOne/hihat.wav", "assets/audio/kitOne/shaker.wav", "assets/audio/kitOne/cowbell.wav"];
+let kitTwo = ["assets/audio/kitTwo/kick.wav", "assets/audio/kitTwo/snare.wav", "assets/audio/kitTwo/clap.wav", "assets/audio/kitTwo/hihat.wav", "assets/audio/kitTwo/shaker.wav", "assets/audio/kitTwo/cowbell.wav"];
+let kitThree = ["assets/audio/kitThree/kick.wav", "assets/audio/kitThree/snare.wav", "assets/audio/kitThree/clap.wav", "assets/audio/kitThree/hihat.wav", "assets/audio/kitThree/shaker.wav", "assets/audio/kitThree/cowbell.wav"];
+let kitFour = ["assets/audio/kitFour/kick.wav", "assets/audio/kitFour/snare.wav", "assets/audio/kitFour/clap.wav", "assets/audio/kitFour/hihat.wav", "assets/audio/kitFour/shaker.wav", "assets/audio/kitFour/cowbell.wav"];
+let currentKit = kitOne; // Defaulted to KitOne
+
+
 
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', function(){  
-  if(kitSelect.value == "rock"){
-    // Set Kit to ROCK
+  if(kitSelect.value == "kitOne"){
+    currentKit = kitOne;
   }
-  if(kitSelect.value == "house"){
-    // Set Kit to HOUSE
+  if(kitSelect.value == "kitTwo"){
+    currentKit = kitTwo;
   }
-  if(kitSelect.value == "jazz"){
-    // Set Kit to JAZZ
+  if(kitSelect.value == "kitThree"){
+    currentKit = kitThree;
   }
-  if(kitSelect.value == "dubstep"){
-    // Set Kit to DUBSTEP
+  if(kitSelect.value == "kitFour"){
+    currentKit = kitFour;
   }   
+  for(i = 0; i < currentKit.length; i++){
+    LoadSounds(i);
+  }
+
   console.log("Current Kit: " + kitSelect.value); // Test if kit updated
 });
 
@@ -104,15 +113,8 @@ inputInfo.addEventListener("click", function(){
 let iconsTrack = document.getElementsByClassName("track-icon");
 // Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
 for(i = 0; i < iconsTrack.length; i++){
-  let number = i;
-  const request = new XMLHttpRequest();
-  request.open("GET", currentSounds[number]);
-  request.responseType = "arraybuffer";
-  request.onload = function() {
-    let undecodedAudio = request.response;
-    audioContext.decodeAudioData(undecodedAudio, (data) => bufferTracks[number] = data);
-  };
-  request.send();
+  let soundNumber = i;  
+  LoadSounds(soundNumber);
 }
 // Play the sounds using Web Audio Api
 for(i = 0; i < iconsTrack.length; i++){
@@ -172,6 +174,18 @@ window.addEventListener('DOMContentLoaded', function(){
   infoWindow.style.display = "none";
 });
 
+// Load sounds to buffers
+function LoadSounds(soundNumber){
+  const request = new XMLHttpRequest();
+  request.open("GET", currentKit[soundNumber]);
+  request.responseType = "arraybuffer";
+  request.onload = function() {
+    let undecodedAudio = request.response;
+    audioContext.decodeAudioData(undecodedAudio, (data) => bufferTracks[soundNumber] = data);
+  };
+  request.send();
+}
+
 // Play Loop
 function PlayLoop(){
   stepInterval = setInterval(function(){
@@ -197,7 +211,7 @@ function PlayStep(number){
   source.buffer = bufferTracks[number];
   source.connect(audioContext.destination);
   source.start();
-  console.log("Sound: " + currentSounds[number]);
+  console.log("Sound: " + currentKit[number]);
 }
 function StopLoop(){
   clearInterval(stepInterval);
