@@ -173,6 +173,8 @@ function PlayLoop(){
         if(trackStepValues[i][stepPosition] == 1){
           PlayStep(i);
         }
+        console.log(i);
+        ToggleStepBorder(i);
       }    
 
       // Increment stepPosition and reset if reaches 16
@@ -193,4 +195,21 @@ function PlayStep(number){
 function StopLoop(){
   clearInterval(stepInterval);
   stepPosition = 0;
+}
+
+// Change step border colours to visually indicate the tempo and that the loop is playing
+function ToggleStepBorder(trackNumber){
+  console.log(steps[trackNumber][stepPosition]);
+  steps[trackNumber][stepPosition].style.borderColor = "rgb(225, 225, 225)";
+
+  let currentStep = stepPosition;
+  setTimeout(function(){
+    if(currentStep == 0 || currentStep == 4 || currentStep == 8 || currentStep == 12){
+      steps[trackNumber][currentStep].style.borderColor = "rgb(0, 0, 0)";
+    }
+    else{
+      steps[trackNumber][currentStep].style.borderColor = "rgb(75, 75, 75)";
+    }
+  }, beatsPerMinute)  
+   
 }
