@@ -33,7 +33,15 @@ let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to millise
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
 // Update Tempo on refresh input click
-inputTempoRefresh.addEventListener("click", function(){
+inputTempoRefresh.addEventListener("click", UpdateTempo);
+// Update Tempo on "enter" key press if editing tempo value
+tempoInput.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    UpdateTempo();
+  }
+});
+
+function UpdateTempo(){
   // Lock tempo to min and max values
   if(tempoInput.value < tempoMinMax.min){
     tempoInput.value = tempoMinMax.min;
@@ -41,7 +49,7 @@ inputTempoRefresh.addEventListener("click", function(){
   else if(tempoInput.value > tempoMinMax.max){
     tempoInput.value = tempoMinMax.max;
   }  
-
+  
   // Update Tempo - (Process: Stop loop, update beatsPerMinute, resume loop)
   if(isPlaying){
     clearInterval(stepInterval);
@@ -51,9 +59,10 @@ inputTempoRefresh.addEventListener("click", function(){
   else{
     beatsPerMinute = (60 / tempoInput.value) * 250;
   }
-
-  console.log("Current Tempo: " + tempoInput.value); // Test if new value updated
-});
+  
+  console.log("Current Tempo: " + tempoInput.value); // Test if new value updated  
+}
+  
 
 // Kit variables
 let kitSelect = document.getElementById("kits");
