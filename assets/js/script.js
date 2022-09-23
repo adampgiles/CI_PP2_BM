@@ -63,8 +63,6 @@ let kitThree = ["assets/audio/kit3/kick.wav", "assets/audio/kit3/snare.wav", "as
 let kitFour = ["assets/audio/kit4/kick.wav", "assets/audio/kit4/snare.wav", "assets/audio/kit4/clap.wav", "assets/audio/kit4/hihat.wav", "assets/audio/kit4/shaker.wav", "assets/audio/kit4/cowbell.wav"];
 let currentKit = kitOne; // Defaulted to KitOne
 
-
-
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', function(){  
   if(kitSelect.value == "kitOne"){
@@ -151,12 +149,10 @@ for(i = 0; i < steps.length; i++){
       if(trackStepValues[num][number] === 0){
         trackStepValues[num][number] = 1;
         steps[num][number].style.backgroundColor = "rgba(0, 0, 0, 0.40)";
-        console.log("step value: " + trackStepValues[num][number]);
       }
       else{
         trackStepValues[num][number] = 0;
         steps[num][number].style.backgroundColor = "rgb(222, 222, 222)";
-        console.log("step value: " + trackStepValues[num][number]);
       }
     });  
   }
@@ -212,7 +208,6 @@ function PlayStep(number){
   source.buffer = bufferTracks[number];
   source.connect(audioContext.destination);
   source.start();
-  console.log("Sound: " + currentKit[number]);
 }
 function StopLoop(){
   clearInterval(stepInterval);
