@@ -192,7 +192,31 @@
     </div>
 
     <!-- Share Section -->
-    <div class="share-interface">      
+    <div class="share-interface"> 
+      <div class="preset-block">
+        <label for="presets">Preset:</label>
+        <select name="presets" id="presets">
+          <option value="presetOne">Preset-1</option>
+          <option value="presetTwo">Preset-2</option>
+          <option value="presetThree">Preset-3</option>
+          <option value="presetFour">Preset-4</option>
+          <option value="presetFoive">Preset-5</option>
+          <option value="presetSix">Preset-6</option>
+          <option value="presetSeven">Preset-7</option>
+          <option value="presetEight">Preset-8</option>
+          <option value="presetNine">Preset-9</option>
+          <option value="presetTen">Preset-10</option>
+        </select>
+        <div id="input-preset-refresh" class="preset-refresh">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>   
+      </div>    
+        <p> - Create a loop and click Export to generate share-data in the text-box below.<br>- Paste share-data into the text-box below and click Import to load the loop to the sequencer</p>
+        <textarea id="input-share-data"  class="input-share-data" name="loop-data" id="loop-data" cols="30" rows="10"></textarea> 
+      <div class="share-input-block">
+        <div id="input-export" class="input-export">Export Loop</div>
+        <div id="input-import" class="input-import">Import Loop</div>
+      </div>   
     </div>
   
     <!-- Font Awesome Link --> 

@@ -178,7 +178,7 @@ body{
 
 /* Track Interface Section */
 .track-interface{
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   z-index: 1;
@@ -257,8 +257,8 @@ body{
   }
 }
 
-/* Synth Interface Section */
-.synth-interface{
+/* Share Interface Section */
+.share-interface{
   margin: 0px 5px 10px 5px;
   max-width: 400px;
   height: 350px;
@@ -268,6 +268,68 @@ body{
   border-radius: 0px 0px 5px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
+}
+/* Kit Block */
+.preset-block{
+  width: 60%;
+  aspect-ratio: 10 / 1;
+  margin: 5px;
+  padding: 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  border: 2px solid rgb(40, 40, 40);
+  border-radius: 5px;
+}
+.preset-block label{
+  width: 20%;
+  margin: 2.5px;
+  text-align: right;
+}
+.preset-block select{
+  width: 60%;
+  margin: 2.5px;
+}
+.preset-refresh{
+  max-width: 24px;
+  aspect-ratio: 1 / 1;
+  margin: 2.5px;
+  background-color: white;
+  border: 2px solid rgb(40, 40, 40);;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.preset-refresh svg{
+  width: 80%;
+  height: 80%;
+  padding: 10%;
+}
+.share-interface p{
+  padding: 5px;
+  font-size: 90%;
+}
+.input-share-data{
+  width: 80%;
+  margin: 5px;
+  background-color: white;
+  border: 2px solid rgb(40, 40, 40);;
+  border-radius: 5px;
+}
+.share-input-block{
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+.share-input-block div{
+  margin: 0px 15px 0px 15px;
+  padding: 5px;
+  background-color: white;
+  border: 2px solid rgb(40, 40, 40);;
+  border-radius: 5px;
 }
