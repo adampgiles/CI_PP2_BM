@@ -5,25 +5,55 @@ let bufferTracks = [null, null, null, null, null, null];
 // Tab variables
 drumWindow = document.getElementById("drum-window");
 shareWindow = document.getElementById("share-window");
+infoWindow = document.getElementById("info-window");
+
 inputDrumTab = document.getElementById("drum-tab");
-inputDrumTab.addEventListener("click", ShowDrumWindow);
 inputShareTab = document.getElementById("share-tab");
+inputInfoTab = document.getElementById("info-tab");
+
+inputDrumTab.addEventListener("click", ShowDrumWindow);
 function ShowDrumWindow(){
   drumWindow.style.display = "flex";
   shareWindow.style.display = "none";
+  infoWindow.style.display = "none";
+
   inputDrumTab.style.zIndex = "2";
   inputShareTab.style.zIndex = "0";
+  inputInfoTab.style.zIndex = "0";
+
   inputDrumTab.style.backgroundColor = "rgb(130, 130, 130)";
   inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
+  inputInfoTab.style.backgroundColor = "rgb(110, 110, 110)";
 }
+
 inputShareTab.addEventListener("click", ShowShareWindow);
 function ShowShareWindow(){
   drumWindow.style.display = "none";
   shareWindow.style.display = "flex";
+  infoWindow.style.display = "none";
+
   inputDrumTab.style.zIndex = "0";
   inputShareTab.style.zIndex = "2";
+  inputInfoTab.style.zIndex = "0";
+
   inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
   inputShareTab.style.backgroundColor = "rgb(130, 130, 130)";
+  inputInfoTab.style.backgroundColor = "rgb(110, 110, 110)";
+}
+
+inputInfoTab.addEventListener("click", ShowInfoWindow);
+function ShowInfoWindow(){
+  drumWindow.style.display = "none";
+  shareWindow.style.display = "none";
+  infoWindow.style.display = "flex";
+  
+  inputDrumTab.style.zIndex = "0";
+  inputShareTab.style.zIndex = "0";
+  inputInfoTab.style.zIndex = "2";
+
+  inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
+  inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
+  inputInfoTab.style.backgroundColor = "rgb(130, 130, 130)";
 }
 
 // Playback variables
@@ -118,29 +148,6 @@ kitSelect.addEventListener('input', function(){
   console.log("Current Kit: " + kitSelect.value); // Test if kit updated
 });
 
-// Info variables
-let inputInfo = document.getElementById("input-info");
-let iconInfo = document.getElementById("icon-info");
-let iconClose = document.getElementById("icon-close");
-let infoWindow = document.getElementById("info-window");
-let isInfoWindowOpen = false;
-
-inputInfo.addEventListener("click", function(){
-  if(isInfoWindowOpen){  
-    iconInfo.style.display = "block";
-    iconClose.style.display = "none";
-    isInfoWindowOpen = false;
-    infoWindow.style.display = "none";
-  }
-  else{
-    iconInfo.style.display = "none";
-    iconClose.style.display = "block";
-    isInfoWindowOpen = true;
-    infoWindow.style.display = "block";
-  }
-  console.log("Info Window Open: " + isInfoWindowOpen); // Test if info window changed
-});
-
 // Track Icon Elements
 let iconsTrack = document.getElementsByClassName("track-icon");
 // Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
@@ -196,12 +203,6 @@ window.addEventListener('DOMContentLoaded', function(){
   // Toggle Playback icon visibility
   iconPlay.style.display = "block";
   iconStop.style.display = "none";
-
-  // Toggle Info/Close Icon visibility
-  iconInfo.style.display = "block";
-  iconClose.style.display = "none";
-  // Toggle Info Window visibility
-  infoWindow.style.display = "none";
 });
 
 // Load sounds to buffers

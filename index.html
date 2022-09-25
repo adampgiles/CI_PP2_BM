@@ -9,15 +9,7 @@
     <title>Beat Maker - Drum Sequencer</title>
 </head>
 <body>  
-  <div class="page-container">
-    <!-- Information block -->
-    <div id="input-info" class="input-info">
-        <i id="icon-info" class="fa-solid fa-question info"></i>
-        <i id="icon-close" class="fa-solid fa-x close"></i>
-    </div>      
-    <!-- Information Window -->
-    <!-- TO BE POPULATED --> <div id="info-window" class="info-window"></div> 
-    
+  <div class="page-container">    
     <!-- Control Interface Section -->
     <div class="control-interface">
       <!-- Playback block -->
@@ -51,12 +43,13 @@
 
     <!-- Tab Section -->
     <div class="tab-section">
-      <div id="drum-tab" class="drum-tab">Drum Sequencer</div>
-      <div id="share-tab" class="share-tab">Export/Import</div>
+      <div id="drum-tab" class="drum-tab">Sequencer</div>
+      <div id="share-tab" class="share-tab">Presets/Share</div>
+      <div id="info-tab" class="info-tab">Information</div>
     </div>
   
     <!-- Track Interface Section -->
-    <div id="drum-window" class="track-interface">
+    <div id="drum-window" class="track-window">
       <!-- Track 1 Block -->
       <div id="track-one" class="track track-one">
         <div id="icon-track-one" class="track-icon"><i class="fa-solid fa-music"></i></div>
@@ -192,7 +185,7 @@
     </div>
 
     <!-- Share Section -->
-    <div id="share-window" class="share-interface"> 
+    <div id="share-window" class="share-window"> 
       <div class="preset-block">
         <label for="presets">Preset:</label>
         <select name="presets" id="presets">
@@ -217,6 +210,11 @@
         <div id="input-export" class="input-export">Export Loop</div>
         <div id="input-import" class="input-import">Import Loop</div>
       </div>   
+    </div>
+
+     <!-- Information Section -->
+     <div id="info-window" class="info-window"> 
+      TO BE POPULATED<br>This window will contain;<br>A tutorial, credits and a disclaimer.
     </div>
   
     <!-- Font Awesome Link --> 
