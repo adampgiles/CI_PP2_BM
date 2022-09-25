@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 100%;
 }
 body{
  background-color: rgb(104, 125, 158);
@@ -19,9 +20,9 @@ body{
 /* Control Interface Section */
 .control-interface{
   position: relative;
-  margin-top: 10px;
-  width: 300px;
-  height: 40px;
+  margin: 5px;
+  max-width: 400px;
+  aspect-ratio: 8 / 1;
   padding: 2.5px;
   background-color: rgb(130, 130, 130);
   border: 2px solid rgb(40, 40, 40);
@@ -38,7 +39,8 @@ body{
 
 /* Playback Block */
 .input-playback{
-  width: 30px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
 }
 .input-playback div{
   width: 100%;
@@ -59,7 +61,7 @@ body{
 
 /* Tempo Block */
 .tempo-block{
-  width: 120px;
+  width: 45%;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -75,18 +77,24 @@ body{
   text-align: center;
 }
 .tempo-refresh{
-  width: 40px;
-  padding: 1px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 2.5px;
   background-color: white;
   border: 2px solid rgb(40, 40, 40);;
   border-radius: 5px;
   display: flex;
   justify-content: center;
 }
+.tempo-refresh svg{
+  width: 80%;
+  height: 80%;
+  padding: 10%;
+}
 
 /* Kit Block */
 .kit-block{
-  width: 115px;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,9 +146,9 @@ body{
 
 /* Track Interface Section */
 .track-interface{
-  margin-top: 10px;
-  width: 300px;
-  height: 300px;
+  margin: 10px 5px 10px 5px;
+  max-width: 400px;
+  height: 350px;
   padding: 2.5px;
   background-color: rgb(130, 130, 130);
   border: 2px solid rgb(40, 40, 40);
@@ -150,7 +158,7 @@ body{
   justify-content: space-around;
 }
 .track{
-  height: 45px;
+  height: 15%;
   padding: 2.5px;  
   border: 2px solid rgb(40, 40, 40);
   border-radius: 5px;
@@ -175,14 +183,14 @@ body{
   background-color: rgb(219, 216, 176);
 }
 .track-icon{
-  height: 35px;
-  width: 35px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
   padding: 2.5px;
   background-color: white;
   border: 2px solid rgb(40, 40, 40);
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  justify-content: center;  
 }
 .track-icon svg{
   width: 90%;
@@ -191,19 +199,20 @@ body{
 }
 
 .step-container{
-  height: 35px;
-  width: 240px;
+  height: 100%;
+  width: 100%;
   margin-left: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .step{
-  height: 30px;
-  width: 12.5px;
+  height: 75%;
+  width: 10%;
+  margin: 1px;
   background-color: rgb(200, 200, 200);
   border: 3px solid rgb(75, 75, 75);
-  border-radius: 10px;
+  border-radius: 50px;
 }
 .step-0, .step-4, .step-8, .step-12{
   border: 3px solid rgb(0, 0, 0);
