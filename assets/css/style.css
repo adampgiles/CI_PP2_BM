@@ -20,7 +20,7 @@ body{
 /* Control Interface Section */
 .control-interface{
   position: relative;
-  margin: 5px;
+  margin: 5px 5px 0px 5px;
   max-width: 400px;
   aspect-ratio: 8 / 1;
   padding: 2.5px;
@@ -144,18 +144,54 @@ body{
   z-index: 1;
 }
 
+.tab-section{
+  position: relative;
+  margin: 0px 5px 0px 5px;
+  max-width: 400px;
+  aspect-ratio: 10 / 1;
+  display: flex;
+  justify-content: space-around;
+}
+.tab-section div{
+  position: absolute;
+  height: 100%;
+  width: 33%;
+  background-color: rgb(130, 130, 130);
+  border: 2px solid rgb(40, 40, 40);
+  border-bottom: none;
+  border-radius: 5px 5px 0px 0px;  
+  text-align: center;
+  padding: 2.5px;
+}
+.drum-tab{
+  left: 0%;
+  top: 6px;  
+  z-index: 2;
+}
+.synth-tab{
+  left: 33.5%;
+  top: 6px;
+  z-index: 0;
+}
+.share-tab{
+  right: 0%;
+  top: 6px;
+  z-index: 0;
+}
+
 /* Track Interface Section */
 .track-interface{
-  margin: 10px 5px 10px 5px;
+  margin: 0px 5px 10px 5px;
   max-width: 400px;
   height: 350px;
   padding: 2.5px;
   background-color: rgb(130, 130, 130);
   border: 2px solid rgb(40, 40, 40);
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 1;
 }
 .track{
   height: 15%;
