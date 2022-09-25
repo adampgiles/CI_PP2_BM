@@ -2,6 +2,30 @@
 const audioContext = new AudioContext();
 let bufferTracks = [null, null, null, null, null, null];
 
+// Tab variables
+drumWindow = document.getElementById("drum-window");
+shareWindow = document.getElementById("share-window");
+inputDrumTab = document.getElementById("drum-tab");
+inputDrumTab.addEventListener("click", ShowDrumWindow);
+inputShareTab = document.getElementById("share-tab");
+function ShowDrumWindow(){
+  drumWindow.style.display = "flex";
+  shareWindow.style.display = "none";
+  inputDrumTab.style.zIndex = "2";
+  inputShareTab.style.zIndex = "0";
+  inputDrumTab.style.backgroundColor = "rgb(130, 130, 130)";
+  inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
+}
+inputShareTab.addEventListener("click", ShowShareWindow);
+function ShowShareWindow(){
+  drumWindow.style.display = "none";
+  shareWindow.style.display = "flex";
+  inputDrumTab.style.zIndex = "0";
+  inputShareTab.style.zIndex = "2";
+  inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
+  inputShareTab.style.backgroundColor = "rgb(130, 130, 130)";
+}
+
 // Playback variables
 const inputPlayback = document.getElementById("input-playback");
 let iconPlay = document.getElementById("icon-play");
