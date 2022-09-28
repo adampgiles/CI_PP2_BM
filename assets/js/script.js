@@ -187,7 +187,7 @@ for(i = 0; i < steps.length; i++){
   for(j = 0; j < steps[num].length; j++){
     let number = j;      
     steps[num][number].addEventListener("click", function(){
-      if(trackStepValues[num][number] === 0){
+      if(trackStepValues[num][number] == 0){
         trackStepValues[num][number] = 1;
         steps[num][number].style.backgroundColor = "rgba(0, 0, 0, 0.40)";
       }
@@ -364,6 +364,72 @@ function ImportLoop(){
   //Set Track Six Step Values
   for(i = 0; i < 16; i++){
     trackStepValues[5][i] = track6String.charAt(i);
+  }
+
+  UpdateStepDisplay();
+}
+
+function UpdateStepDisplay(){
+
+  //Update Track One
+  for(i = 0; i < 16; i++){
+    let num = i;
+    if(trackStepValues[0][num] == 1){
+      steps[0][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+    }
+    else{
+      steps[0][num].style.backgroundColor = "rgb(222, 222, 222)";
+    }
+  }
+  //Update Track Two
+  for(i = 0; i < 16; i++){
+    let num = i;
+    if(trackStepValues[1][num] == 1){
+      steps[1][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+    }
+    else{
+      steps[1][num].style.backgroundColor = "rgb(222, 222, 222)";
+    }
+  }
+  //Update Track Three
+  for(i = 0; i < 16; i++){
+    let num = i;
+    if(trackStepValues[2][num] == 1){
+      steps[2][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+    }
+    else{
+      steps[2][num].style.backgroundColor = "rgb(222, 222, 222)";
+    }
+  }
+  //Update Track Four
+  for(i = 0; i < 16; i++){
+    let num = i;
+    if(trackStepValues[3][num] == 1){
+      steps[3][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+    }
+    else{
+      steps[3][num].style.backgroundColor = "rgb(222, 222, 222)";
+    }
+  }
+  //Update Track Five
+  for(i = 0; i < 16; i++){
+    let num = i;
+    if(trackStepValues[4][num] == 1){
+      steps[4][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+    }
+    else{
+      steps[4][num].style.backgroundColor = "rgb(222, 222, 222)";
+    }
+  }
+  //Update Track Six
+  for(i = 0; i < 16; i++){
+    let num = i;
+    if(trackStepValues[5][num] == 1){
+      steps[5][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+    }
+    else{
+      steps[5][num].style.backgroundColor = "rgb(222, 222, 222)";
+    }
   }
 }
 
