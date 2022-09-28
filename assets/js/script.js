@@ -332,5 +332,7 @@ function ImportLoop(){
   let track6String = loopString.substring(track6StartPoint, stringEndPoint);
 
   console.log(tempoString, kitString, track1String, track2String, track3String, track4String, track5String, track6String);
+
+  UpdateTempo(tempoString);
 }
 
