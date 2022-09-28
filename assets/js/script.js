@@ -263,9 +263,13 @@ function ToggleStepBorder(trackNumber){
   }, beatsPerMinute)     
 }
 
-const inputExport = document.getElementById("input-export");
+let shareTextbox = document.getElementById("input-share-data");
 
+const inputExport = document.getElementById("input-export");
 inputExport.addEventListener('click', ExportLoop);
+
+const inputImport = document.getElementById("input-import");
+inputImport.addEventListener('click', ImportLoop);
 
 // Loop Export
 function ExportLoop(){
@@ -299,5 +303,33 @@ function ExportLoop(){
   let exportString = "<t>" + tempoInput.value + "<k>" + kitSelect.value + "<a>" + track1Steps + "<b>" + track2Steps + "<c>" + track3Steps + "<d>" + track4Steps + "<e>"  + track5Steps + "<f>"  + track6Steps + "<g>";
   // Test if string is produced
   console.log(exportString);
+
+  shareTextbox.value = exportString;
+}
+
+// Loop Import
+function ImportLoop(){
+  let loopString = shareTextbox.value;
+
+  let tempoStartPoint = loopString.indexOf("<t>") +3;
+  let kitStartPoint = loopString.indexOf("<k>") +3;
+  let track1StartPoint = loopString.indexOf("<a>") +3;
+  let track2StartPoint = loopString.indexOf("<b>") +3;
+  let track3StartPoint = loopString.indexOf("<c>") +3;
+  let track4StartPoint = loopString.indexOf("<d>") +3;
+  let track5StartPoint = loopString.indexOf("<e>") +3;
+  let track6StartPoint = loopString.indexOf("<f>") +3;
+  let stringEndPoint = loopString.indexOf("<g>");
+  
+  let tempoString = loopString.substring(tempoStartPoint, kitStartPoint -3);
+  let kitString = loopString.substring(kitStartPoint, track1StartPoint -3);
+  let track1String = loopString.substring(track1StartPoint, track2StartPoint -3);
+  let track2String = loopString.substring(track2StartPoint, track3StartPoint -3);
+  let track3String = loopString.substring(track3StartPoint, track4StartPoint -3);
+  let track4String = loopString.substring(track4StartPoint, track5StartPoint -3);
+  let track5String = loopString.substring(track5StartPoint, track6StartPoint -3);
+  let track6String = loopString.substring(track6StartPoint, stringEndPoint);
+
+  console.log(tempoString, kitString, track1String, track2String, track3String, track4String, track5String, track6String);
 }
 
