@@ -91,30 +91,31 @@ inputTempoRefresh.addEventListener("click", UpdateTempo);
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
-    UpdateTempo();
+    UpdateTempo(tempoInput.value);
   }
 });
 
-function UpdateTempo(){
+function UpdateTempo(newTempo){
   // Lock tempo to min and max values
-  if(tempoInput.value < tempoMinMax.min){
-    tempoInput.value = tempoMinMax.min;
+  if(newTempo < tempoMinMax.min){
+    newTempo = tempoMinMax.min;
   }
-  else if(tempoInput.value > tempoMinMax.max){
-    tempoInput.value = tempoMinMax.max;
+  else if(newTempo > tempoMinMax.max){
+    newTempo = tempoMinMax.max;
   }  
   
   // Update Tempo - (Process: Stop loop, update beatsPerMinute, resume loop)
   if(isPlaying){
     clearInterval(stepInterval);
-    beatsPerMinute = (60 / tempoInput.value) * 250;
+    beatsPerMinute = (60 / newTempo) * 250;
     PlayLoop()    
   }
   else{
-    beatsPerMinute = (60 / tempoInput.value) * 250;
+    beatsPerMinute = (60 / newTempo) * 250;
   }
   
-  console.log("Current Tempo: " + tempoInput.value); // Test if new value updated  
+  tempoInput.value = newTempo;
+  console.log("Current Tempo: " + newTempo); // Test if new value updated  
 }
   
 
