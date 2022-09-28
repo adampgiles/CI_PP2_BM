@@ -87,7 +87,7 @@ let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to millise
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
 // Update Tempo on refresh input click
-inputTempoRefresh.addEventListener("click", UpdateTempo(tempoInput.value));
+inputTempoRefresh.addEventListener("click", UpdateTempo);
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
@@ -95,27 +95,26 @@ tempoInput.addEventListener("keyup", (event) => {
   }
 });
 
-function UpdateTempo(newTempo){
+function UpdateTempo(){
   // Lock tempo to min and max values
-  if(newTempo < tempoMinMax.min){
-    newTempo = tempoMinMax.min;
+  if(tempoInput.value < tempoMinMax.min){
+    tempoInput.value = tempoMinMax.min;
   }
-  else if(newTempo > tempoMinMax.max){
-    newTempo = tempoMinMax.max;
+  else if(tempoInput.value > tempoMinMax.max){
+    tempoInput.value = tempoMinMax.max;
   }  
   
   // Update Tempo - (Process: Stop loop, update beatsPerMinute, resume loop)
   if(isPlaying){
     clearInterval(stepInterval);
-    beatsPerMinute = (60 / newTempo) * 250;
+    beatsPerMinute = (60 / tempoInput.value) * 250;
     PlayLoop()    
   }
   else{
-    beatsPerMinute = (60 / newTempo) * 250;
+    beatsPerMinute = (60 / tempoInput.value) * 250;
   }
-  
-  tempoInput.value = newTempo;
-  console.log("Current Tempo: " + newTempo); // Test if new value updated  
+
+  console.log("Current Tempo: " + tempoInput.value); // Test if new value updated  
 }
   
 
@@ -128,18 +127,18 @@ let kitFour = ["assets/audio/kit4/kick.wav", "assets/audio/kit4/snare.wav", "ass
 let currentKit = kitOne; // Defaulted to KitOne
 
 // Updates currentKit when new option selected on combobox
-kitSelect.addEventListener('input', UpdateKit(kitSelect.value));
-function UpdateKit(newKit){
-  if(newKit == "kitOne"){
+kitSelect.addEventListener('input', UpdateKit);
+function UpdateKit(){
+  if(kitSelect.value == "kitOne"){
     currentKit = kitOne;
   }
-  if(newKit == "kitTwo"){
+  if(kitSelect.value == "kitTwo"){
     currentKit = kitTwo;
   }
-  if(newKit == "kitThree"){
+  if(kitSelect.value == "kitThree"){
     currentKit = kitThree;
   }
-  if(newKit == "kitFour"){
+  if(kitSelect.value == "kitFour"){
     currentKit = kitFour;
   }   
 
@@ -147,7 +146,6 @@ function UpdateKit(newKit){
     LoadSounds(i);
   }
 
-  kitSelect.value = newKit;
   console.log("Current Kit: " + kitSelect.value); // Test if kit updated
 }
 
@@ -336,8 +334,36 @@ function ImportLoop(){
   console.log(tempoString, kitString, track1String, track2String, track3String, track4String, track5String, track6String);
 
   // Import Tempo
-  UpdateTempo(tempoString);
+  tempoInput.value = tempoString;
+  UpdateTempo();
+
   // Import Kit
-  UpdateKit(kitString);
+  kitSelect.value = kitString;
+  UpdateKit();
+
+  //Set Track One Step Values
+  for(i = 0; i < 16; i++){
+    trackStepValues[0][i] = track1String.charAt(i);
+  }
+  //Set Track Two Step Values
+  for(i = 0; i < 16; i++){
+    trackStepValues[1][i] = track2String.charAt(i);
+  }
+  //Set Track Three Step Values
+  for(i = 0; i < 16; i++){
+    trackStepValues[2][i] = track3String.charAt(i);
+  }
+  //Set Track Four Step Values
+  for(i = 0; i < 16; i++){
+    trackStepValues[3][i] = track4String.charAt(i);
+  }
+  //Set Track Five Step Values
+  for(i = 0; i < 16; i++){
+    trackStepValues[4][i] = track5String.charAt(i);
+  }
+  //Set Track Six Step Values
+  for(i = 0; i < 16; i++){
+    trackStepValues[5][i] = track6String.charAt(i);
+  }
 }
 
