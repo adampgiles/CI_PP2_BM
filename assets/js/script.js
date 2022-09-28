@@ -87,7 +87,7 @@ let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to millise
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
 // Update Tempo on refresh input click
-inputTempoRefresh.addEventListener("click", UpdateTempo);
+inputTempoRefresh.addEventListener("click", UpdateTempo(tempoInput.value));
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
@@ -128,17 +128,18 @@ let kitFour = ["assets/audio/kit4/kick.wav", "assets/audio/kit4/snare.wav", "ass
 let currentKit = kitOne; // Defaulted to KitOne
 
 // Updates currentKit when new option selected on combobox
-kitSelect.addEventListener('input', function(){  
-  if(kitSelect.value == "kitOne"){
+kitSelect.addEventListener('input', UpdateKit(kitSelect.value));
+function UpdateKit(newKit){
+  if(newKit == "kitOne"){
     currentKit = kitOne;
   }
-  if(kitSelect.value == "kitTwo"){
+  if(newKit == "kitTwo"){
     currentKit = kitTwo;
   }
-  if(kitSelect.value == "kitThree"){
+  if(newKit == "kitThree"){
     currentKit = kitThree;
   }
-  if(kitSelect.value == "kitFour"){
+  if(newKit == "kitFour"){
     currentKit = kitFour;
   }   
 
@@ -146,8 +147,9 @@ kitSelect.addEventListener('input', function(){
     LoadSounds(i);
   }
 
+  kitSelect.value = newKit;
   console.log("Current Kit: " + kitSelect.value); // Test if kit updated
-});
+}
 
 // Track Icon Elements
 let iconsTrack = document.getElementsByClassName("track-icon");
@@ -333,6 +335,9 @@ function ImportLoop(){
 
   console.log(tempoString, kitString, track1String, track2String, track3String, track4String, track5String, track6String);
 
+  // Import Tempo
   UpdateTempo(tempoString);
+  // Import Kit
+  UpdateKit(kitString);
 }
 
