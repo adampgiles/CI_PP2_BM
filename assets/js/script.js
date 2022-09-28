@@ -260,6 +260,42 @@ function ToggleStepBorder(trackNumber){
     else{
       steps[trackNumber][currentStep].style.borderColor = "rgb(75, 75, 75)";
     }
-  }, beatsPerMinute)  
-   
+  }, beatsPerMinute)     
 }
+
+const inputExport = document.getElementById("input-export");
+
+inputExport.addEventListener('click', ExportLoop);
+
+// Loop Export
+function ExportLoop(){
+  //Convert each track's step values to a 16 digit string
+  let track1steps = "";
+  for(i = 0; i < 16; i++){
+    track1steps += trackStepValues[0][i];
+  }
+  let track2steps = "";
+  for(i = 0; i < 16; i++){
+    track2steps += trackStepValues[1][i];
+  }
+  let track3steps = "";
+  for(i = 0; i < 16; i++){
+    track3steps += trackStepValues[2][i];
+  }
+  let track4steps = "";
+  for(i = 0; i < 16; i++){
+    track4steps += trackStepValues[3][i];
+  }
+  let track5steps = "";
+  for(i = 0; i < 16; i++){
+    track5steps += trackStepValues[4][i];
+  }
+  let track6steps = "";
+  for(i = 0; i < 16; i++){
+    track6steps += trackStepValues[5][i];
+  }
+
+  // Test if string is produced
+  console.log(track1steps, track2steps, track3steps, track4steps, track5steps, track6steps);
+}
+
