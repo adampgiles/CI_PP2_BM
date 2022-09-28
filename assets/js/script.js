@@ -265,10 +265,10 @@ function ToggleStepBorder(trackNumber){
 }
 
 //Preset Loops
-const presetOne = "1";
-const presetTwo = "2";
-const presetThree = "3";
-const presetFour = "4";
+const presetOne = "<t>128<k>kitOne<a>1000100010001000<b>0000100000001000<c>0000000000000000<d>1010101010101010<e>0000000000000000<f>0000000000000000<g>";
+const presetTwo = "<t>110<k>kitTwo<a>1000001000100100<b>0000100000001001<c>0000000000000000<d>1011101010110111<e>0000000000000000<f>0000000000000000<g>";
+const presetThree = "<t>120<k>kitFour<a>1001001000100100<b>0000100000001000<c>0000100000001000<d>1010010101100011<e>0000000000000000<f>0010000000100101<g>";
+const presetFour = "<t>160<k>kitFour<a>1000000000000000<b>0000000010000010<c>0000100000001010<d>1011101010111010<e>1000000000001010<f>0000000000000000<g>";
 const presetFive = "5";
 const presetSix = "6";
 const presetSeven = "7";
@@ -312,7 +312,7 @@ function LoadPreset(){
     shareTextbox.value = presetTen;
   }
 
-  ImportLoop();
+  ImportLoop();  
 }
 
 // Export & Import variables
@@ -482,5 +482,8 @@ function UpdateStepDisplay(){
       steps[5][num].style.backgroundColor = "rgb(222, 222, 222)";
     }
   }
+
+  ShowDrumWindow();
+  
 }
 
