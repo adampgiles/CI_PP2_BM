@@ -264,6 +264,58 @@ function ToggleStepBorder(trackNumber){
   }, beatsPerMinute)     
 }
 
+//Preset Loops
+const presetOne = "1";
+const presetTwo = "2";
+const presetThree = "3";
+const presetFour = "4";
+const presetFive = "5";
+const presetSix = "6";
+const presetSeven = "7";
+const presetEight = "8";
+const presetNine = "9";
+const presetTen = "10";
+
+let presetSelect = document.getElementById("presets");
+const inputPresetRefresh = document.getElementById("input-preset-refresh");
+inputPresetRefresh.addEventListener('click', LoadPreset);
+
+function LoadPreset(){
+  if(presetSelect.value == "presetOne"){
+    shareTextbox.value = presetOne;
+  }
+  else if(presetSelect.value == "presetTwo"){
+    shareTextbox.value = presetTwo;
+  }
+  else if(presetSelect.value == "presetThree"){
+    shareTextbox.value = presetThree;
+  }
+  else if(presetSelect.value == "presetFour"){
+    shareTextbox.value = presetFour;
+  }
+  else if(presetSelect.value == "presetFive"){
+    shareTextbox.value = presetFive;
+  }
+  else if(presetSelect.value == "presetSix"){
+    shareTextbox.value = presetSix;
+  }
+  else if(presetSelect.value == "presetSeven"){
+    shareTextbox.value = presetSeven;
+  }
+  else if(presetSelect.value == "presetEight"){
+    shareTextbox.value = presetEight;
+  }
+  else if(presetSelect.value == "presetNine"){
+    shareTextbox.value = presetNine;
+  }
+  else if(presetSelect.value == "presetTen"){
+    shareTextbox.value = presetTen;
+  }
+
+  ImportLoop();
+}
+
+// Export & Import variables
 let shareTextbox = document.getElementById("input-share-data");
 
 const inputExport = document.getElementById("input-export");
@@ -370,7 +422,6 @@ function ImportLoop(){
 }
 
 function UpdateStepDisplay(){
-
   //Update Track One
   for(i = 0; i < 16; i++){
     let num = i;
