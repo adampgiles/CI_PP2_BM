@@ -76,11 +76,11 @@ body{
   align-items: center;
 }
 .tempo-block label{
-  width: width: clamp(30px, 35%, 50px);;
+  width: clamp(35px, 30%, 40px);;
   margin: 2.5px;
 }
 .tempo-block input{
-  width: clamp(50px, 50%, 75px);
+  width: clamp(45px, 40%, 50px);
   margin: 2.5px;
   text-align: center;
 }
@@ -110,9 +110,10 @@ body{
 .kit-block label{
   width: 30%;
   margin: 2.5px;
+  text-align: center;
 }
 .kit-block select{
-  width: 70%;
+  width: 60%;
   margin: 2.5px;
 }
 
