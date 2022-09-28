@@ -46,7 +46,7 @@ body{
 
 /* Playback Block */
 .input-playback{
-  max-width: 40px;
+  width: 40px;
   aspect-ratio: 1 / 1;
 }
 .input-playback div{
@@ -287,7 +287,7 @@ body{
   padding: 10%;
 }
 .share-window p{
-  padding: 5px;
+  padding: 5px 25px 5px 25px;
   font-size: 90%;
 }
 .input-share-data{
@@ -296,6 +296,7 @@ body{
   background-color: white;
   border: 2px solid rgb(40, 40, 40);;
   border-radius: 5px;
+  padding: 2.5px;
 }
 .share-input-block{
   width: 100%;
