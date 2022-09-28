@@ -270,32 +270,34 @@ inputExport.addEventListener('click', ExportLoop);
 // Loop Export
 function ExportLoop(){
   //Convert each track's step values to a 16 digit string
-  let track1steps = "";
+  let track1Steps = "";
   for(i = 0; i < 16; i++){
-    track1steps += trackStepValues[0][i];
+    track1Steps += trackStepValues[0][i];
   }
-  let track2steps = "";
+  let track2Steps = "";
   for(i = 0; i < 16; i++){
-    track2steps += trackStepValues[1][i];
+    track2Steps += trackStepValues[1][i];
   }
-  let track3steps = "";
+  let track3Steps = "";
   for(i = 0; i < 16; i++){
-    track3steps += trackStepValues[2][i];
+    track3Steps += trackStepValues[2][i];
   }
-  let track4steps = "";
+  let track4Steps = "";
   for(i = 0; i < 16; i++){
-    track4steps += trackStepValues[3][i];
+    track4Steps += trackStepValues[3][i];
   }
-  let track5steps = "";
+  let track5Steps = "";
   for(i = 0; i < 16; i++){
-    track5steps += trackStepValues[4][i];
+    track5Steps += trackStepValues[4][i];
   }
-  let track6steps = "";
+  let track6Steps = "";
   for(i = 0; i < 16; i++){
-    track6steps += trackStepValues[5][i];
+    track6Steps += trackStepValues[5][i];
   }
 
+  // Create full export string, combining tempo, kit and track step values, with tags between to target when importing
+  let exportString = "<t>" + tempoInput.value + "<k>" + kitSelect.value + "<a>" + track1Steps + "<b>" + track2Steps + "<c>" + track3Steps + "<d>" + track4Steps + "<e>"  + track5Steps + "<f>"  + track6Steps + "<g>";
   // Test if string is produced
-  console.log(track1steps, track2steps, track3steps, track4steps, track5steps, track6steps);
+  console.log(exportString);
 }
 
