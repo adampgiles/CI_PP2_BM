@@ -64,6 +64,12 @@ let isPlaying = false;
 let stepPosition = 0;
 let fullBarCount = 16;
 
+window.addEventListener("keyup", function(event){
+  if(event.code = "Space"){
+    TogglePlayback();
+  }    
+});
+
 inputPlayback.addEventListener("click", TogglePlayback);
 function TogglePlayback(){
   if(isPlaying){  
