@@ -64,8 +64,8 @@ let isPlaying = false;
 let stepPosition = 0;
 let fullBarCount = 16;
 
-window.addEventListener("keyup", function(event){
-  if(event.code == "Space"){
+document.addEventListener("keyup", function(event){
+  if(event.code === "Space"){
     TogglePlayback();
   }    
 });
@@ -99,7 +99,7 @@ inputTempoRefresh.addEventListener("click", function(){
 });
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
-  if (event.code == "Enter") {
+  if (event.code === "Enter") {
     UpdateTempo(tempoInput.value);
   }
 });
