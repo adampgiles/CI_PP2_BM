@@ -87,7 +87,10 @@ let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to millise
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
 // Update Tempo on refresh input click
-inputTempoRefresh.addEventListener("click", UpdateTempo);
+inputTempoRefresh.addEventListener("click", function(){
+  UpdateTempo();
+  ClickColourToggle(this.style);
+});
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
@@ -115,8 +118,7 @@ function UpdateTempo(){
   }
 
   console.log("Current Tempo: " + tempoInput.value); // Test if new value updated  
-}
-  
+}  
 
 // Kit variables
 let kitSelect = document.getElementById("kits");
@@ -161,6 +163,7 @@ for(i = 0; i < iconsTrack.length; i++){
   let number = i;
   iconsTrack[number].addEventListener("click", function(){
     PlayStep(number);
+    ClickColourToggle(this.style);
   });
 }
 
@@ -319,13 +322,18 @@ function LoadPreset(){
 let shareTextbox = document.getElementById("input-share-data");
 
 const inputExport = document.getElementById("input-export");
-inputExport.addEventListener('click', ExportLoop);
+inputExport.addEventListener('click', function(){
+  ExportLoop();
+  ClickColourToggle(this.style);
+});
 
 const inputImport = document.getElementById("input-import");
-inputImport.addEventListener('click', ImportLoop);
+inputImport.addEventListener('click',function(){
+  ImportLoop();
+});
 
 // Loop Export
-function ExportLoop(){
+function ExportLoop(){  
   //Convert each track's step values to a 16 digit string
   let track1Steps = "";
   for(i = 0; i < 16; i++){
@@ -483,7 +491,16 @@ function UpdateStepDisplay(){
     }
   }
 
-  ShowDrumWindow();
-  
+  ShowDrumWindow();  
+}
+
+// Change background-colour temporarily
+function ClickColourToggle(element){
+  element.backgroundColor = "rgb(130, 130, 130)"; 
+
+  setTimeout(ResetColour, 100);
+  function ResetColour(){
+    element.backgroundColor = "rgb(255, 255, 255)";
+  }  
 }
 
