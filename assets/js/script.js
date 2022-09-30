@@ -158,6 +158,7 @@ function UpdateKit(){
 }
 
 // Track Icon Elements
+// Drum Pads
 let drumPad = document.getElementsByClassName("drum-pad");
 // Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
 for(i = 0; i < drumPad.length; i++){
@@ -171,6 +172,22 @@ for(i = 0; i < drumPad.length; i++){
     PlayStep(number);
     ClickColourToggle(this.style);
   });
+}
+// Clear Icons
+let iconClear = document.getElementsByClassName("clear");
+for(i = 0; i < iconClear.length; i++){
+  let number = i;
+  iconClear[number].addEventListener("click", function(){
+    ClearTrackSteps(number);
+    ClickColourToggle(this.style);
+  });
+}
+
+function ClearTrackSteps(trackNumber){
+  for(i = 0; i < 16; i++){
+    trackStepValues[trackNumber][i] = 0;
+  }
+  UpdateStepDisplay();
 }
 
 // Step variables
