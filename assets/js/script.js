@@ -158,16 +158,16 @@ function UpdateKit(){
 }
 
 // Track Icon Elements
-let iconsTrack = document.getElementsByClassName("track-icon");
+let drumPad = document.getElementsByClassName("drum-pad");
 // Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
-for(i = 0; i < iconsTrack.length; i++){
+for(i = 0; i < drumPad.length; i++){
   let soundNumber = i;  
   LoadSounds(soundNumber);
 }
 // Play the sounds using Web Audio Api
-for(i = 0; i < iconsTrack.length; i++){
+for(i = 0; i < drumPad.length; i++){
   let number = i;
-  iconsTrack[number].addEventListener("click", function(){
+  drumPad[number].addEventListener("click", function(){
     PlayStep(number);
     ClickColourToggle(this.style);
   });
