@@ -138,19 +138,19 @@ body{
 }
 .drum-tab{
   left: 0%;
-  top: 2px;  
+  top: 2.5px;  
   z-index: 2;
   background-color: rgb(130, 130, 130);
 }
 .share-tab{
   left: 33.75%;
-  top: 2px;
+  top: 2.5px;
   z-index: 0;
   background-color: rgb(110, 110, 110);
 }
 .info-tab{
   right: 0%;
-  top: 2px;
+  top: 2.5px;
   z-index: 0;
   background-color: rgb(110, 110, 110);
 }
