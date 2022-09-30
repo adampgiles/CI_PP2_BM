@@ -169,7 +169,7 @@ for(i = 0; i < drumPad.length; i++){
 for(i = 0; i < drumPad.length; i++){
   let number = i;
   drumPad[number].addEventListener("click", function(){
-    PlayStep(number);
+    PlayOneShot(number);
     ClickColourToggle(this.style);
   });
 }
@@ -181,6 +181,26 @@ for(i = 0; i < iconClear.length; i++){
     ClearTrackSteps(number);
     ClickColourToggle(this.style);
   });
+}
+// Mute Icons
+let iconMute = document.getElementsByClassName("mute");
+let mutedTracks = [0, 0, 0, 0, 0, 0];
+for(i = 0; i < iconMute.length; i++){
+  let number = i;
+  iconMute[number].addEventListener("click", function(){
+    ToggleTrackMute(number, this.style);
+  });
+}
+
+function ToggleTrackMute(trackNumber, element){
+  if(mutedTracks[trackNumber] == 0){
+    mutedTracks[trackNumber] = 1;
+    element.backgroundColor = "rgb(130, 130, 130)"; 
+  }
+  else{
+    mutedTracks[trackNumber] = 0;
+    element.backgroundColor = "rgb(255, 255, 255)";
+  }
 }
 
 function ClearTrackSteps(trackNumber){
@@ -264,11 +284,20 @@ function PlayLoop(){
     }
   }, beatsPerMinute);
 }
-function PlayStep(number){
+function PlayOneShot(number){
   const source = audioContext.createBufferSource();
   source.buffer = bufferTracks[number];
   source.connect(audioContext.destination);
   source.start();
+}
+
+function PlayStep(number){
+  if(mutedTracks[number] == 0){
+    const source = audioContext.createBufferSource();
+    source.buffer = bufferTracks[number];
+    source.connect(audioContext.destination);
+    source.start();
+  }
 }
 function StopLoop(){
   clearInterval(stepInterval);
