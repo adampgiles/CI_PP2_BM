@@ -15,7 +15,7 @@ body{
   margin: auto;
   width: clamp(320px, 100vw, 400px);
   height: 100vh;
-  padding: 5px;
+  padding: 2.5px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -26,95 +26,96 @@ body{
 /* Control Interface Section */
 .control-interface{
   position: relative;
-  margin: 5px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   width: 100%;
-  height: 50px;
-  padding: 2.5px;
+  height: 40px;
   background-color: rgb(130, 130, 130);
   border: 2px solid rgb(40, 40, 40);
-  border-radius: 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
-
-}
-.control-interface div{
-  background-color: rgb(245, 245, 245);
-  border: 2px solid rgb(40, 40, 40);
-  border-radius: 5px;
 }
 
 /* Playback Block */
 .input-playback{
-  width: 40px;
-  aspect-ratio: 1 / 1;
-}
-.input-playback div{
-  width: 100%;
   height: 100%;
-  background-color: "";
-  border: none;
+  width: 12%;
+  background-color: white;
+  border-right: 2px solid rgb(40, 40, 40); 
+  display: flex; 
+}
+.play{
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  display: flex; 
 }
 .play svg{  
-  width: 80%;
-  height: 80%;
-  padding: 10%;
+  width: 100%;
+  height: 100%;
+}
+.stop{
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  display: flex; 
 }
 .stop svg{
-  width: 80%;
-  height: 80%;
-  padding: 10%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Tempo Block */
 .tempo-block{
-  width: 42.5%;
-  height: 40px;
-  padding: 5px;
+  width: 44%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+  background-color: white;
+  border-right: 2px solid black;
 }
 .tempo-block label{
-  width: clamp(35px, 30%, 40px);;
-  margin: 2.5px;
+  width: 25%;
+  margin: 0 10px 0 5px;
+  text-align: center;
 }
 .tempo-block input{
-  width: clamp(45px, 40%, 50px);
-  margin: 2.5px;
+  width: 50%;
   text-align: center;
 }
 .tempo-refresh{
-  width: 25px;
-  height: 25px;
+  width: 25%;
+  height: 75%;
+  margin: 0 5px 0 5px;
+  padding: 5px;
   background-color: white;
-  border: 2px solid rgb(40, 40, 40);;
-  border-radius: 5px;
+  border: 1.5px solid rgb(40, 40, 40);
   display: flex;
   justify-content: center;
 }
 .tempo-refresh svg{
-  width: 80%;
-  height: 80%;
-  padding: 10%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Kit Block */
 .kit-block{
-  width: 40%;
-  height: 40px;
+  width: 44%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  background-color: white;
 }
 .kit-block label{
   width: 30%;
-  margin: 2.5px;
+  margin: 0 2.5px 0 5px;
   text-align: center;
 }
 .kit-block select{
-  width: 60%;
-  margin: 2.5px;
+  width: 70%;
+  margin: 0 5px 0 2.5px;
 }
 
 /* Tab Navigation Section */
