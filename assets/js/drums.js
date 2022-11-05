@@ -2,60 +2,6 @@
 const audioContext = new AudioContext();
 let bufferTracks = [null, null, null, null, null, null];
 
-// Tab variables
-drumWindow = document.getElementById("drum-window");
-shareWindow = document.getElementById("share-window");
-infoWindow = document.getElementById("info-window");
-
-inputDrumTab = document.getElementById("drum-tab");
-inputShareTab = document.getElementById("share-tab");
-inputInfoTab = document.getElementById("info-tab");
-
-inputDrumTab.addEventListener("click", ShowDrumWindow);
-function ShowDrumWindow(){
-  drumWindow.style.display = "flex";
-  shareWindow.style.display = "none";
-  infoWindow.style.display = "none";
-
-  inputDrumTab.style.zIndex = "2";
-  inputShareTab.style.zIndex = "0";
-  inputInfoTab.style.zIndex = "0";
-
-  inputDrumTab.style.backgroundColor = "rgb(130, 130, 130)";
-  inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputInfoTab.style.backgroundColor = "rgb(110, 110, 110)";
-}
-
-inputShareTab.addEventListener("click", ShowShareWindow);
-function ShowShareWindow(){
-  drumWindow.style.display = "none";
-  shareWindow.style.display = "flex";
-  infoWindow.style.display = "none";
-
-  inputDrumTab.style.zIndex = "0";
-  inputShareTab.style.zIndex = "2";
-  inputInfoTab.style.zIndex = "0";
-
-  inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputShareTab.style.backgroundColor = "rgb(130, 130, 130)";
-  inputInfoTab.style.backgroundColor = "rgb(110, 110, 110)";
-}
-
-inputInfoTab.addEventListener("click", ShowInfoWindow);
-function ShowInfoWindow(){
-  drumWindow.style.display = "none";
-  shareWindow.style.display = "none";
-  infoWindow.style.display = "flex";
-  
-  inputDrumTab.style.zIndex = "0";
-  inputShareTab.style.zIndex = "0";
-  inputInfoTab.style.zIndex = "2";
-
-  inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputInfoTab.style.backgroundColor = "rgb(130, 130, 130)";
-}
-
 // Playback variables
 const inputPlayback = document.getElementById("input-playback");
 let iconPlay = document.getElementById("icon-play");
@@ -132,7 +78,7 @@ let kitOne = ["assets/audio/kit1/kick.wav", "assets/audio/kit1/snare.wav", "asse
 let kitTwo = ["assets/audio/kit2/kick.wav", "assets/audio/kit2/snare.wav", "assets/audio/kit2/clap.wav", "assets/audio/kit2/hihat.wav", "assets/audio/kit2/shaker.wav", "assets/audio/kit2/cowbell.wav"];
 let kitThree = ["assets/audio/kit3/kick.wav", "assets/audio/kit3/snare.wav", "assets/audio/kit3/clap.wav", "assets/audio/kit3/hihat.wav", "assets/audio/kit3/shaker.wav", "assets/audio/kit3/cowbell.wav"];
 let kitFour = ["assets/audio/kit4/kick.wav", "assets/audio/kit4/snare.wav", "assets/audio/kit4/clap.wav", "assets/audio/kit4/hihat.wav", "assets/audio/kit4/shaker.wav", "assets/audio/kit4/cowbell.wav"];
-let currentKit = kitOne; // Defaulted to KitOne
+let currentKit = kitOne; // Defaults to KitOne
 
 // Updates currentKit when new option selected on combobox
 kitSelect.addEventListener('input', UpdateKit);
