@@ -311,6 +311,7 @@ body{
 }
 .input-share-data{
   width: 85%;
+  height: 25%;
   margin: 5px;
   background-color: white;
   border: 2px solid rgb(40, 40, 40);;
@@ -344,4 +345,29 @@ body{
   border: 2px solid rgb(40, 40, 40);
   border-radius: 0px 0px 5px 5px;
   text-align: center;
+}
+
+/* Submission Section */
+.submission-input-block{
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(130, 130, 130);
+  border: 2px solid rgb(40, 40, 40);
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+  padding: 2.5px;
+}
+.submission-input-block p{
+  padding: 2.5px;
+}
+.submission-input-block div{
+  margin: auto;
+  width: 75%;
+  padding: 5px;
+  background-color: white;
+  border: 2px solid rgb(40, 40, 40);;
+  border-radius: 5px;
 }
