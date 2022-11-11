@@ -378,7 +378,7 @@ body{
   height: 200px;
   z-index: 2;
   margin: 354px 10px 50px 10px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: start;
   align-items: flex-end;
