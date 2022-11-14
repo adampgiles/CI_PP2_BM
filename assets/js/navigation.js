@@ -22,9 +22,9 @@ function ShowDrumWindow(){
   inputShareTab.style.zIndex = "0";
   inputInfoTab.style.zIndex = "0";
 
-  inputDrumTab.style.backgroundColor = "rgb(130, 130, 130)";
-  inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputInfoTab.style.backgroundColor = "rgb(110, 110, 110)";
+  inputDrumTab.style.backgroundColor = "var(--tabActive)";
+  inputShareTab.style.backgroundColor = "var(--tabInactive)";
+  inputInfoTab.style.backgroundColor = "var(--tabInactive)";
 }
 
 inputShareTab.addEventListener("click", ShowShareWindow);
@@ -38,9 +38,9 @@ function ShowShareWindow(){
   inputShareTab.style.zIndex = "2";
   inputInfoTab.style.zIndex = "0";
 
-  inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputShareTab.style.backgroundColor = "rgb(130, 130, 130)";
-  inputInfoTab.style.backgroundColor = "rgb(110, 110, 110)";
+  inputDrumTab.style.backgroundColor = "var(--tabInactive)";
+  inputShareTab.style.backgroundColor = "var(--tabActive)";
+  inputInfoTab.style.backgroundColor = "var(--tabInactive)";
 }
 
 inputInfoTab.addEventListener("click", ShowInfoWindow);
@@ -54,9 +54,9 @@ function ShowInfoWindow(){
   inputShareTab.style.zIndex = "0";
   inputInfoTab.style.zIndex = "2";
 
-  inputDrumTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputShareTab.style.backgroundColor = "rgb(110, 110, 110)";
-  inputInfoTab.style.backgroundColor = "rgb(130, 130, 130)";
+  inputDrumTab.style.backgroundColor = "var(--tabInactive)";
+  inputShareTab.style.backgroundColor = "var(--tabInactive)";
+  inputInfoTab.style.backgroundColor = "var(--tabActive)";
 }
 
 inputSubmissionOpen.addEventListener("click", ShowSubmissionWindow);
