@@ -375,7 +375,7 @@ body{
 .submission-window{
   position: absolute;
   width: 98.5%;
-  height: 502px;
+  height: 433px;
   z-index: 2;
   margin: 52px 10px 50px 10px;
   display: none;

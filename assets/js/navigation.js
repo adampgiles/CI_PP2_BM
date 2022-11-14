@@ -63,7 +63,9 @@ inputSubmissionOpen.addEventListener("click", ShowSubmissionWindow);
 inputSubmissionClose.addEventListener("click", HideSubmissionWindow);
 function ShowSubmissionWindow(){
   submissionWindow.style.display = "flex";
+  submissionInputBlock.style.display = "none"
 }
 function HideSubmissionWindow(){
   submissionWindow.style.display = "none";
+  submissionInputBlock.style.display = "flex"
 }
