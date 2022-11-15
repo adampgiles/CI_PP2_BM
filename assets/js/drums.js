@@ -36,6 +36,7 @@ function TogglePlayback(){
 // Tempo variable
 let tempoInput = document.getElementById("input-tempo");
 let tempoTooltip = document.getElementById("tempo-tooltip");
+let tempoUpdated = document.getElementById("tempo-updated");
 let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to milliseconds
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
@@ -44,7 +45,7 @@ tempoInput.addEventListener("click", function(){
   tempoTooltip.style.display = "block";  
 });
 // Hide Tooltip
-tempoInput.addEventListener("change", function(){
+tempoInput.addEventListener("blur", function(){
   tempoTooltip.style.display = "none";  
 });
 // Update Tempo on refresh input click
@@ -52,11 +53,20 @@ inputTempoRefresh.addEventListener("click", function(){
   UpdateTempo();
   ClickColourToggle(this.style);
   tempoTooltip.style.display = "none";
+  tempoUpdated.style.display = "block";
+  setTimeout(function () {
+    tempoUpdated.style.display = "none";
+  }, 500)
 });
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
   if (event.code === "Enter") {
     UpdateTempo(tempoInput.value);
+    tempoTooltip.style.display = "none";
+  tempoUpdated.style.display = "block";
+  setTimeout(function () {
+    tempoUpdated.style.display = "none";
+  }, 500)
   }
 });
 

@@ -130,6 +130,18 @@ body{
   font-weight: bold;
   font-size: 80%;
 }
+.tempo-updated{
+  display: none;
+  position: fixed;
+  z-index: 5;
+  margin: 80px 0px 25px 20px;
+  padding: 2.5px;
+  background-color: var(--backgroundPage);
+  border: 2px solid var(--borders);
+  border-radius: 2.5px;
+  font-weight: bold;
+  font-size: 80%;
+}
 
 /* Kit Block */
 .kit-block{
