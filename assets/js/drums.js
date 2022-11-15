@@ -164,11 +164,11 @@ for(i = 0; i < iconMute.length; i++){
 function ToggleTrackMute(trackNumber, element){
   if(mutedTracks[trackNumber] == 0){
     mutedTracks[trackNumber] = 1;
-    element.backgroundColor = "rgb(130, 130, 130)"; 
+    element.backgroundColor = "var(--buttonsClicked)"; 
   }
   else{
     mutedTracks[trackNumber] = 0;
-    element.backgroundColor = "rgb(255, 255, 255)";
+    element.backgroundColor = "var(--buttons)";
   }
 }
 
@@ -208,7 +208,7 @@ for(i = 0; i < steps.length; i++){
       }
       else{
         trackStepValues[num][number] = 0;
-        steps[num][number].style.backgroundColor = "rgb(222, 222, 222)";
+        steps[num][number].style.backgroundColor = "var(--stepBackground)";
       }
     });  
   }
@@ -450,60 +450,60 @@ function UpdateStepDisplay(){
   for(i = 0; i < 16; i++){
     let num = i;
     if(trackStepValues[0][num] == 1){
-      steps[0][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+      steps[0][num].style.backgroundColor = "var(--clear)";
     }
     else{
-      steps[0][num].style.backgroundColor = "rgb(222, 222, 222)";
+      steps[0][num].style.backgroundColor = "var(--stepBackground)";
     }
   }
   //Update Track Two
   for(i = 0; i < 16; i++){
     let num = i;
     if(trackStepValues[1][num] == 1){
-      steps[1][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+      steps[1][num].style.backgroundColor = "var(--clear)";
     }
     else{
-      steps[1][num].style.backgroundColor = "rgb(222, 222, 222)";
+      steps[1][num].style.backgroundColor = "var(--stepBackground)";
     }
   }
   //Update Track Three
   for(i = 0; i < 16; i++){
     let num = i;
     if(trackStepValues[2][num] == 1){
-      steps[2][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+      steps[2][num].style.backgroundColor = "var(--clear)";
     }
     else{
-      steps[2][num].style.backgroundColor = "rgb(222, 222, 222)";
+      steps[2][num].style.backgroundColor = "var(--stepBackground)";
     }
   }
   //Update Track Four
   for(i = 0; i < 16; i++){
     let num = i;
     if(trackStepValues[3][num] == 1){
-      steps[3][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+      steps[3][num].style.backgroundColor = "var(--clear)";
     }
     else{
-      steps[3][num].style.backgroundColor = "rgb(222, 222, 222)";
+      steps[3][num].style.backgroundColor = "var(--stepBackground)";
     }
   }
   //Update Track Five
   for(i = 0; i < 16; i++){
     let num = i;
     if(trackStepValues[4][num] == 1){
-      steps[4][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+      steps[4][num].style.backgroundColor = "var(--clear)";
     }
     else{
-      steps[4][num].style.backgroundColor = "rgb(222, 222, 222)";
+      steps[4][num].style.backgroundColor = "var(--stepBackground)";
     }
   }
   //Update Track Six
   for(i = 0; i < 16; i++){
     let num = i;
     if(trackStepValues[5][num] == 1){
-      steps[5][num].style.backgroundColor = "rgb(0, 0, 0, 0.40)";
+      steps[5][num].style.backgroundColor = "var(--clear)";
     }
     else{
-      steps[5][num].style.backgroundColor = "rgb(222, 222, 222)";
+      steps[5][num].style.backgroundColor = "var(--stepBackground)";
     }
   }
 
@@ -512,11 +512,11 @@ function UpdateStepDisplay(){
 
 // Change background-colour temporarily
 function ClickColourToggle(element){
-  element.backgroundColor = "rgb(130, 130, 130)"; 
+  element.backgroundColor = "var(--buttonsClicked)"; 
 
   setTimeout(ResetColour, 100);
   function ResetColour(){
-    element.backgroundColor = "rgb(255, 255, 255)";
+    element.backgroundColor = "var(--buttons)";
   }  
 }
 
