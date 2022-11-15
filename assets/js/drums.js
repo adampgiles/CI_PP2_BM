@@ -51,6 +51,8 @@ tempoInput.addEventListener("keyup", (event) => {
 });
 
 function UpdateTempo(){
+  tempoInput.value = Math.round(tempoInput.value);
+
   // Lock tempo to min and max values
   if(tempoInput.value < tempoMinMax.min){
     tempoInput.value = tempoMinMax.min;
