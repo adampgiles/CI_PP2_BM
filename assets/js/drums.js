@@ -194,7 +194,7 @@ for(i = 0; i < steps.length; i++){
     steps[num][number].addEventListener("click", function(){
       if(trackStepValues[num][number] == 0){
         trackStepValues[num][number] = 1;
-        steps[num][number].style.backgroundColor = "rgba(0, 0, 0, 0.40)";
+        steps[num][number].style.backgroundColor = "var(--clear)";
       }
       else{
         trackStepValues[num][number] = 0;
@@ -265,16 +265,11 @@ function StopLoop(){
 
 // Change step border colours to visually indicate the tempo and that the loop is playing
 function ToggleStepBorder(trackNumber){
-  steps[trackNumber][stepPosition].style.borderColor = "rgb(225, 225, 225)";
+  steps[trackNumber][stepPosition].style.borderColor = "var(--stepPlaybackBorder)";
 
   let currentStep = stepPosition;
   setTimeout(function(){
-    if(currentStep == 0 || currentStep == 4 || currentStep == 8 || currentStep == 12){
-      steps[trackNumber][currentStep].style.borderColor = "rgb(0, 0, 0)";
-    }
-    else{
-      steps[trackNumber][currentStep].style.borderColor = "rgb(75, 75, 75)";
-    }
+      steps[trackNumber][currentStep].style.borderColor = "var(--stepDefaultBorder)";
   }, beatsPerMinute)     
 }
 

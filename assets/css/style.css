@@ -7,6 +7,17 @@
   --tabInactive: #5779a5;
   --borders: #2b2b2b;
   --buttons: #f8f8f8;
+
+  --trackOne: #ffaa83;
+  --trackTwo: #fdff83;
+  --trackThree: #83ff9a;
+  --trackFour: #83e6ff;
+  --trackFive: #a083ff;
+  --trackSix: #ff83cb;
+
+  --clear: #00000040;
+  --stepPlaybackBorder: #ffffff;
+  --stepDefaultBorder: #393939;
 }
 
 *{
@@ -98,6 +109,7 @@ body{
   padding: 5px;
   background-color: var(--childBlocks);
   border: 1.5px solid var(--borders);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
 }
@@ -195,22 +207,22 @@ body{
   display: flex;
 }
 .track-one{
-  background-color: rgb(255, 255, 255);
+  background-color: var(--trackOne);
 }
 .track-two{
-  background-color: rgb(219, 176, 215);
+  background-color: var(--trackTwo);
 }
 .track-three{
-  background-color: rgb(177, 176, 219);
+  background-color: var(--trackThree);
 }
 .track-four{
-  background-color: rgb(176, 211, 219);
+  background-color: var(--trackFour);
 }
 .track-five{
-  background-color: rgb(176, 219, 180);
+  background-color: var(--trackFive);
 }
 .track-six{
-  background-color: rgb(219, 216, 176);
+  background-color: var(--trackSix);
 }
 .track-icon{
   height: 100%;
@@ -261,7 +273,10 @@ body{
   height: 100%;
   width: 6.25%;
   background-color: rgb(200, 200, 200);
-  border: 1px solid black;
+  border: 1px solid var(--stepDefaultBorder);
+}
+.step-0, .step-4, .step-8, .step-12{
+  border-left: 1.75px solid var(--stepDefaultBorder);
 }
 /* Only apply hover style to devices with hover capabilities */
 @media (hover: hover){ 
