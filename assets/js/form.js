@@ -15,10 +15,10 @@ function SendLoop(){
 
     ExportLoop();
     var parameters = {
-      name: inputname.value,
-      emailAddress: inputEmailAddress.value,
-      loopTitle: inputLoopTitle.value,
-      loopData: inputLoopData.value
+      name: inputname,
+      emailAddress: inputEmailAddress,
+      loopTitle: inputLoopTitle,
+      loopData: inputLoopData
     };
   
     serviceID = "service_n6ymtsk";
@@ -27,9 +27,9 @@ function SendLoop(){
     emailjs.send(serviceID, templateID, parameters)
     .then(
       res =>{
-        document.getElementById("name").value = "";
-        document.getElementById("email-address").value = "";
-        document.getElementById("loop-title").value = "";
+        inputname = "";
+        inputEmailAddress = "";
+        inputLoopTitle = "";
         console.log(res);
     
         formAlert.textContent = "Loop Data successfully sent for review! Thank you!";
