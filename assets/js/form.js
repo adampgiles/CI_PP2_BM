@@ -1,3 +1,4 @@
+// Code used and modified from YouTube tutorial (https://www.youtube.com/watch?v=dgcYOm8n8ME)
 function SendLoop(){
   inputname = document.getElementById("name").value,
   inputEmailAddress = document.getElementById("email-address").value,
@@ -9,7 +10,7 @@ function SendLoop(){
     formAlert.textContent = "Please enter details in all three text boxes";
     return;
   }
-  else{
+  else{ 
     formAlert.textContent = "Please wait, sending details...";
 
     ExportLoop();
