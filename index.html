@@ -281,24 +281,23 @@
       <div id="input-submission-close" class="input-submission-close">
         <i class="fa-regular fa-circle-xmark"></i>
       </div>
-      <div class="submission-form">
-        <form>
-          <div>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-          </div>
-          <div>
-            <label for="emailAddress">Email Address:</label><br>
-            <input type="email" id="emailAddress" name="emailAddress"><br>
-          </div>
-          <div>
-            <label for="loop-title">Your Loop Title:</label><br>
-            <input type="text" id="loop-title" name="loop-title"><br>
-          </div>
-          <div>
-            <input class="input-loop-submit" type="submit" value="Send Loop"/>
-          </div>
-        </form> 
+      <div class="submission-form">        
+        <div>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
+        </div>
+        <div>
+          <label for="email-address">Email Address:</label><br>
+          <input type="email" id="email-address" name="email-address" required><br>
+        </div>
+        <div>
+          <label for="loop-title">Your Loop Title:</label><br>
+          <input type="text" id="loop-title" name="loop-title" required><br>
+        </div>
+        <div id="form-alert" class="form-alert"></div>
+        <div>
+          <button class="input-loop-submit" onclick="SendLoop()">Send Loop</button>
+        </div>        
       </div>
     </div> 
   
@@ -308,6 +307,15 @@
     <script src="assets/js/drums.js" defer></script>    
     <!-- Tab Navigation Script Link -->
     <script src="assets/js/navigation.js" defer></script> 
+    <!-- EmailJS Script Link --> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init("QE8Dp1wYPRMCL2P0G");
+      })();
+    </script>
+    <!-- Form Script Link -->
+    <script src="assets/js/form.js" defer></script> 
   </div>
 </body>
 </html>
