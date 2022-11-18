@@ -286,7 +286,7 @@ body{
 }
 .step{
   height: 100%;
-  width: 6.25%;
+  width: 100%;
   background-color: var(--stepBackground);
   border: 1px solid var(--stepDefaultBorder);
 }
