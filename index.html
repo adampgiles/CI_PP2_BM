@@ -281,23 +281,27 @@
       <div id="input-submission-close" class="input-submission-close">
         <i class="fa-regular fa-circle-xmark"></i>
       </div>
-      <div class="submission-form">        
+      <div class="submission-form">      
+        <div class="submission-info">
+          <h2>Want your Loop added to the Presets?<br>Fill out the form below...</h2>
+          <p>If we like what we hear...<br> Your Loop will be added to the Presets!</p>
+        </div>  
         <div>
-          <label for="name">Name:</label><br>
+          <label for="name">Name</label><br>
           <input type="text" id="name" name="name" required><br>
         </div>
         <div>
-          <label for="email-address">Email Address:</label><br>
+          <label for="email-address">Email Address</label><br>
           <input type="email" id="email-address" name="email-address" required><br>
         </div>
         <div>
-          <label for="loop-title">Your Loop Title:</label><br>
+          <label for="loop-title">Your Loop Title</label><br>
           <input type="text" id="loop-title" name="loop-title" required><br>
         </div>
-        <div id="form-alert" class="form-alert"></div>
         <div>
-          <button class="input-loop-submit" onclick="SendLoop()">Send Loop</button>
+          <button class="input-submit" onclick="SendLoop()">Send Loop</button>
         </div>        
+        <div id="form-alert" class="form-alert"></div>
       </div>
     </div> 
   

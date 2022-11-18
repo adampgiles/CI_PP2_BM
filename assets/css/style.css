@@ -380,6 +380,14 @@ body{
   border: 2px solid var(--borders);
   border-radius: 5px;
 }
+.input-submission-open{
+  padding: 5px;
+  margin: 2.5px;
+  background-color: var(--buttons);
+  border: 2px solid var(--borders);
+  border-radius: 10px;
+  font-weight: bold;
+}
 
 /* Information Section */
 .info-window{
@@ -443,15 +451,51 @@ body{
   height: 20px;
   background-color: var(--buttons);
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 .input-submission-close svg{
   width: 100%;
   height: 100%;  
 }
+.submission-info{
+  margin: 0px;
+  padding: 25px;
+  background-color: var(--childBlocks);
+  border: 2px solid var(--borders);
+  border-radius: 5px;
+}
+.submission-info h2{
+  font-weight: bold;
+  padding: 5px;
+}
+.submission-info p{
+  font-weight: 500;
+  padding: 5px;
+}
+.submission-form div{
+  padding: 2.5px;
+  margin-top: 5px;
+  font-weight: bold; 
+}
+.submission-form input{
+  padding: 5px;
+  background-color: var(--buttons);
+  border: 2px solid var(--borders);
+  border-radius: 5px;
+  font-weight: bold;
+}
+.input-submit{
+  padding: 5px;
+  margin: 2.5px;
+  background-color: var(--buttons);
+  border: 2px solid var(--borders);
+  border-radius: 10px;
+  font-weight: bold;
+}
 .form-alert{
   display: none;
-  margin: 10px;
-  padding: 2.5px;
+  margin: 5px;
+  padding: 5px;
   background-color: var(--childBlocks);
   border: 2px solid var(--borders);
   border-radius: 5px;
