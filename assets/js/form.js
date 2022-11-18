@@ -7,10 +7,12 @@ function SendLoop(){
   formAlert = document.getElementById("form-alert");
 
   if(inputname == "" || inputEmailAddress == "" || inputLoopTitle == ""){
+    formAlert.style.display = "block";
     formAlert.textContent = "Please enter details in all three text boxes";
     return;
   }
   else{ 
+    formAlert.style.display = "block";
     formAlert.textContent = "Please wait, sending details...";
 
     ExportLoop();
@@ -32,7 +34,10 @@ function SendLoop(){
         inputLoopTitle = "";
         console.log(res);
     
-        formAlert.textContent = "Loop Data successfully sent for review! Thank you!";
+        formAlert.textContent = "Loop Data successfully sent for review!";
+        setTimeout(function () {
+          formAlert.style.display = "none";
+        }, 2000)
       }
     )
     .catch((err) => console.log(err));
