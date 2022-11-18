@@ -38,7 +38,7 @@ function SendLoop(){
         formAlert.textContent = "Loop Data successfully sent for review!";
         setTimeout(function () {
           formAlert.style.display = "none";
-        }, 2000)
+        }, 4000)
       }
     )
     .catch((err) => console.log(err));
