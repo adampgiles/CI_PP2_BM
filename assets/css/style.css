@@ -446,6 +446,9 @@ body{
   text-align: center;
   padding: 2.5px;
 }
+.submission-form{
+  width: 100%;
+}
 .input-submission-close{
   align-self: flex-end;
   width: 20px;
@@ -459,8 +462,6 @@ body{
   height: 100%;  
 }
 .submission-info{
-  margin: 0px;
-  padding: 25px;
   background-color: var(--childBlocks);
   border: 2px solid var(--borders);
   border-radius: 5px;
@@ -474,6 +475,7 @@ body{
   padding: 5px;
 }
 .submission-form div{
+  width: 100%;
   padding: 2.5px;
   margin-top: 5px;
   font-weight: bold; 
