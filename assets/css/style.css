@@ -497,7 +497,6 @@ body{
 }
 .form-alert{
   display: none;
-  margin: 5px;
   padding: 5px;
   background-color: var(--childBlocks);
   border: 2px solid var(--borders);
