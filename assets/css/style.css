@@ -404,6 +404,81 @@ body{
   border-radius: 0px 0px 5px 5px;
   text-align: center;
 }
+.tutorial-block{
+  display: flex;
+  flex-direction: column;  
+  height: 300px;
+  background-color: var(--childBlocks);
+  border: 2px solid var(--borders);
+  border-radius: 5px;
+}
+.tutorial-block img{  
+  width: 95%;
+  margin: auto;
+}
+.tutorial-media{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 75%;
+  flex: 1;
+}
+.tutorial-media p{
+  padding: 2.5px;
+  border: 1.5px solid var(--borders);
+  border-radius: 2.5px;
+}
+.media-left{
+  width: 30%;
+  padding: 5px;
+}
+.media-left svg{
+  margin-top: 2.5px;
+  margin-right: 50%;
+}
+.media-middle{
+  width: 35%;
+  padding: 5px;
+}
+.media-middle svg{
+  margin-top: 2.5px;
+  margin-right: 50%;
+}
+.media-right{
+  width: 35%;
+  padding: 5px;
+}
+.media-right svg{
+  margin-top: 2.5px;
+}
+
+.tutorial-track{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 75%;
+  flex: 1;
+}
+.tutorial-track p{
+  padding: 2.5px;
+  border: 1.5px solid var(--borders);
+  border-radius: 2.5px;
+}
+.track-left{
+  width: 65%;
+  padding: 5px;
+}
+.track-left svg{
+  margin-top: 2.5px;
+  margin-right: 50%;
+}
+.track-right{
+  width: 35%;
+  padding: 5px;
+}
+.track-right svg{
+  margin-top: 2.5px;
+}
 
 /* Submission Section */
 .submission-input-block{
