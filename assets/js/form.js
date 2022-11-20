@@ -2,13 +2,13 @@
 function SendLoop(){
   ExportLoop();
 
-  inputname = document.getElementById("name").value,
-  inputEmailAddress = document.getElementById("email-address").value,
-  inputLoopTitle = document.getElementById("loop-title").value,
-  inputLoopData = document.getElementById("input-share-data").value
+  inputname = document.getElementById("name"),
+  inputEmailAddress = document.getElementById("email-address"),
+  inputLoopTitle = document.getElementById("loop-title"),
+  inputLoopData = document.getElementById("input-share-data")
   formAlert = document.getElementById("form-alert");
 
-  if(inputname == "" || inputEmailAddress == "" || inputLoopTitle == ""){
+  if(inputname.value == "" || inputEmailAddress.value == "" || inputLoopTitle.value == ""){
     formAlert.style.display = "block";
     formAlert.textContent = "Please enter details in all three text boxes";
     return;
@@ -18,10 +18,10 @@ function SendLoop(){
     formAlert.textContent = "Please wait, sending details...";
       
     var parameters = {
-      name: inputname,
-      emailAddress: inputEmailAddress,
-      loopTitle: inputLoopTitle,
-      loopData: inputLoopData
+      name: inputname.value,
+      emailAddress: inputEmailAddress.value,
+      loopTitle: inputLoopTitle.value,
+      loopData: inputLoopData.value
     };
   
     serviceID = "service_n6ymtsk";
@@ -30,9 +30,9 @@ function SendLoop(){
     emailjs.send(serviceID, templateID, parameters)
     .then(
       res =>{
-        inputname = "";
-        inputEmailAddress = "";
-        inputLoopTitle = "";
+        inputname.value = "";
+        inputEmailAddress.value = "";
+        inputLoopTitle.value = "";
         console.log(res);
     
         formAlert.textContent = "Loop Data successfully sent for review!";
