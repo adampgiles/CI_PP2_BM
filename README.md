@@ -50,5 +50,8 @@ User stories have been seperated into two groups; Site Users and Site Owner.
 ## Design
 
 ### Colour
-The site's colour scheme consists of five key colours; White, black, yellow, teal and light-blue. White is used for buttons and input fields. Black is used for text and icons. Yellow is used for the background and the Quick Guide text-boxes. Light-blue is used Off-white and off-black where used for clicked buttons.
-![Alt text](/docs/features/colour_scheme.png "Colour Scheme")
+The site's colour scheme consists of five key colours; White, black, yellow, teal and light-blue. White is used for buttons and input fields. Black is used for text and icons. Yellow is used for the background and the Quick Guide text-boxes. Light-blue is used for clicked buttons.
+
+### Font
+
+One font was used on the site; Signika Negative, which is a clear and legible font.
