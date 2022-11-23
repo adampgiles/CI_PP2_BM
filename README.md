@@ -55,3 +55,27 @@ The site's colour scheme consists of five key colours; White, black, yellow, tea
 ### Font
 
 One font was used on the site; Signika Negative, which is a clear and legible font.
+
+### Structure
+
+The website structure consists of a main page and 404 page. The main page has a persistent media control section at the top of the page and a section below consisting of three windows. Only one window is visable at a time and can be changed using tabs at the top of this section. 
+
+The sections and windows are detailed below;
+
+- The Media Control contains a "Play/Stop" button, Tempo number input and Kit Selection dropdown.
+(Media Control screenshot here)
+
+- The first window contains the Track section. This section contains six tracks. Each track consists of a Drum Pad, mute button, clear button and a 16 step drum sequencer.
+(Track Section screenshot to be added here)
+
+- The second window contains the Presets and Share section. This section contains Preset selection instructions and a dropdown, Export and Import instruction, text input box and Export and Import buttons. When viewing this window a section shows below. This section contains text and a button inviting the user to submit thier loop to be added to the presets. Clicking the button opens the Submission Window.
+(Preset/Share Section screenshot to be added here)
+
+- The Submission Window contains a form with instructions. The form has text inputs for "Name", "Email Address" and "Loop Title", and a button to submit the form. There is also a text alert box below the button, which displays a message after clicking the button. This message changes based on the validity of the input and the current stage during loop submission. The form uses EmailJS, which is detailed further in a section below.
+(Submission Window screenshot to be added here)
+
+- The third window contains the Information section. This section contains a Quick Guide, Credits and a copyright notice. The Quick Guide gives the user an overview of the drum sequencer features.
+(Information Section screenshot to be added here)
+
+A 404 page was created to ensure that a user can easily navigate back to the Beat Maker site if they encounter a page which does not exist.
+(404 page screenshot to be added here)
