@@ -79,3 +79,20 @@ The sections and windows are detailed below;
 
 A 404 page was created to ensure that a user can easily navigate back to the Beat Maker site if they encounter a page which does not exist.
 (404 page screenshot to be added here)
+
+### Languages
+
+- HTML
+- CSS
+- Javascript
+
+### Frameworks, Libraries & Tools
+
+- [Am I Responsive](http://ami.responsivedesign.is/), used to create a devices mock-up image. 
+- [Balsamiq](https://balsamiq.com/), used to create wireframes.
+- [Favicon.io](https://favicon.io), used to create the site favicon.
+- [Font Awesome](https://fontawesome.com/), used for all site icons.
+- [Git](https://git-scm.com/), used for version control within VSCode to push the code to GitHub.
+- [GitHub](https://github.com/), used to store project code.
+- [Google Fonts](https://fonts.google.com/), used to acquire the site's fonts.
+- [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/), used to test the site's code, performance, accessibilty and responsiveness. 
