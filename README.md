@@ -122,3 +122,13 @@ The website consists of six sections with thirteen features.
 - The second tab (Presets/Share), shows the presets and share window.
 - The third tab (Information), shows the information window.
 - When a tab is clicked, the other tab's background colours change to a darker colour. This is to show that the tab's window is not active. Only in-active tabs will change the window, clicking an active tab has no effect.
+
+### Sequencer
+- Situated below the Tab Navigation section.
+- Contains six drum tracks
+- Each of the six tracks consists of a Drum Pad, Mute button, Clear button and a 16 Step Sequencer.
+- The Drum pad plays an audio sample of the track's sound when clicked. The pad's colour changes temporarily when clicked to give visual feedback to the user, informing them that the button was clicked.
+- The Mute button will mute the track and stop the track's audio from playing during playback. The button's colour changes to visually inform the user that the mute button is active.
+- The clear button toggles off any active steps in the track's step sequencer. The button's colour changes temporarily to privide visual feedback to the user that the change has occured.
+- The 16 Step Sequencers consists of 16 buttons. When a button is clicked the colour changes to provide visual feedback that the step is active. During playback, when the playback position reaches the step's position, if the step is active the track's sound will trigger.
+- Each track's step has a different colour. This is to clearly show the different tracks and also to provide variety to the visuals.
