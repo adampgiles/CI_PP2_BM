@@ -161,3 +161,7 @@ The website consists of six sections with thirteen features.
 - The Quick Guide sub-section consists of a heading, sub-headings, text boxes and images.
 - There are two images (Media control, and Track Section), each with text boxes above with arrows directed towards sections of the image. The text boxes contain information on the sections function.
 - The Credits/Copyright sub-section consists of a heading and information on credits, and a copyright notice.
+
+### 404 Page
+- Page is display when a user encounter a page that does not exist (HTTP 404 response code).
+- User provided with a link to return to the main site
