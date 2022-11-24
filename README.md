@@ -113,3 +113,12 @@ The website consists of six sections with thirteen features.
 - The playback button can be clicked to Play or Stop the loop playback.
 - The Tempo control consists of a number input and refresh button. The number input changes the tempo value, which is in beats per minute. The tempo can then be updated by clicking the refresh button. The tempo value is limited between 60 and 200. A tootip shows this range when entering a value and when clicking refresh, the tooltip shows that the tempo has been updated.
 - The Kit selection area consists of a dropdown with 4 options. These 4 options change the drum sounds on each of the drum sequencer tracks. Selecting an option immediately updates the sounds.
+
+### Tab Navigation
+- Situated below the Media Control.
+- Contains three tabs for each of the three windows.
+- When clicked the tabs change the window.
+- The first tab (Sequencer), shows the sequencer window.
+- The second tab (Presets/Share), shows the presets and share window.
+- The third tab (Information), shows the information window.
+- When a tab is clicked, the other tab's background colours change to a darker colour. This is to show that the tab's window is not active. Only in-active tabs will change the window, clicking an active tab has no effect.
