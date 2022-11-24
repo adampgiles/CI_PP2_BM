@@ -124,7 +124,7 @@ The website consists of six sections with thirteen features.
 - When a tab is clicked, the other tab's background colours change to a darker colour. This is to show that the tab's window is not active. Only in-active tabs will change the window, clicking an active tab has no effect.
 
 ### Sequencer
-- Situated below the Tab Navigation section.
+- Situated below the Tab Navigation section, connected to the first tab.
 - Contains six drum tracks
 - Each of the six tracks consists of a Drum Pad, Mute button, Clear button and a 16 Step Sequencer.
 - The Drum pad plays an audio sample of the track's sound when clicked. The pad's colour changes temporarily when clicked to give visual feedback to the user, informing them that the button was clicked.
@@ -132,3 +132,32 @@ The website consists of six sections with thirteen features.
 - The clear button toggles off any active steps in the track's step sequencer. The button's colour changes temporarily to privide visual feedback to the user that the change has occured.
 - The 16 Step Sequencers consists of 16 buttons. When a button is clicked the colour changes to provide visual feedback that the step is active. During playback, when the playback position reaches the step's position, if the step is active the track's sound will trigger.
 - Each track's step has a different colour. This is to clearly show the different tracks and also to provide variety to the visuals.
+
+### Preset/Share Section
+- Situated below the Tab Navigation section, connected to the second tab.
+- Contains three sub-sections; Preset Loops, Sharing Loops and Submit for Review.
+- The Preset Loops sub-section consists of a Heading, paragraph with short instructions, a dropdown and a refresh button. The dropdown contains a list of Premade Loops, the user can select a loop then click the refresh button to load the loop into the Sequencer. The window will then automatically change to the sequencer window, populate the sequencer and the media control. This change provides visual feedback to the user that the change has occured.
+- The Sharing Loops sub-sections consists of a Heading, paragraph with instructions, a text input-box, a button to Export Loop and a button to Import Loop. When clicking the Export Loop button, the text input-box is populated with a Loop Data text string which has been compliled using Javascript. The user can then copy this text and share it with other users. The other users can then paste the Loop Data in the text input-box on thier session of the site and click the Import Button. The Loop Data will then be decompiled and loaded to the sequencer. Both buttons when clicked, temporarily chance colour to visually notify the user that it has been clicked.
+- The Submit for Review sub-section consists of a Heading and a button. The button when clicked, opens up a Submission Window. This window is detailed further in the section below.
+
+### Submission Window
+- This window displays after clicking the "Submit Loop for Review" button on the Preset/Share window.
+- Consists of a close button, a section containing a Heading and paragraph with instructions, and a section containing a form with a button, and an alert text box.
+- The close button when clicked hides the sumbission window.
+- The form consists of three text input fields and a button. The text inputs are for; Name, Email Address, and Your Loop Title. The button when clicked will submit the form.
+- The form contains validation and will not submit if any of the fields are empty, and if the email address is not a valid email. The alert textbox will show below the button after clicking.
+- The button can display four different messages;
+1."Please enter details in all three text boxes"
+2."Please enter a valid Email Address"
+3."Please wait, sending details..."
+4."Loop Data successfully sent for review!"
+- Messages 1 and 2 display when trying to submit invalid inputs. Messages 3 and 4 display when submitting valid inputs.
+- When submitting the form also submits the exported Loop Data.
+- All form data is submitted through EmailJS and an email is sent to the site owner. This is detailed further in a section below.
+
+### Information Window
+- Situated below the Tab Navigation section, connected to the third tab.
+- Contains two sub-sections; Quick Guide, and Credits/Copyright Notice.
+- The Quick Guide sub-section consists of a heading, sub-headings, text boxes and images.
+- There are two images (Media control, and Track Section), each with text boxes above with arrows directed towards sections of the image. The text boxes contain information on the sections function.
+- The Credits/Copyright sub-section consists of a heading and information on credits, and a copyright notice.
