@@ -63,21 +63,27 @@ The website structure consists of a main page and 404 page. The main page has a 
 The sections and windows are detailed below;
 
 - The Media Control contains a "Play/Stop" button, Tempo number input and Kit Selection dropdown.
+
 (Media Control screenshot here)
 
 - The first window contains the Track section. This section contains six tracks. Each track consists of a Drum Pad, mute button, clear button and a 16 step drum sequencer.
+
 (Track Section screenshot to be added here)
 
 - The second window contains the Presets and Share section. This section contains Preset selection instructions and a dropdown, Export and Import instruction, text input box and Export and Import buttons. When viewing this window a section shows below. This section contains text and a button inviting the user to submit thier loop to be added to the presets. Clicking the button opens the Submission Window.
+
 (Preset/Share Section screenshot to be added here)
 
 - The Submission Window contains a form with instructions. The form has text inputs for "Name", "Email Address" and "Loop Title", and a button to submit the form. There is also a text alert box below the button, which displays a message after clicking the button. This message changes based on the validity of the input and the current stage during loop submission. The form uses EmailJS, which is detailed further in a section below.
+
 (Submission Window screenshot to be added here)
 
 - The third window contains the Information section. This section contains a Quick Guide, Credits and a copyright notice. The Quick Guide gives the user an overview of the drum sequencer features.
+
 (Information Section screenshot to be added here)
 
 A 404 page was created to ensure that a user can easily navigate back to the Beat Maker site if they encounter a page which does not exist.
+
 (404 page screenshot to be added here)
 
 ### Languages
@@ -96,3 +102,14 @@ A 404 page was created to ensure that a user can easily navigate back to the Bea
 - [GitHub](https://github.com/), used to store project code.
 - [Google Fonts](https://fonts.google.com/), used to acquire the site's fonts.
 - [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/), used to test the site's code, performance, accessibilty and responsiveness. 
+
+## Features
+
+The website consists of six sections with thirteen features.
+
+### Media Controls
+- Situated in a persistant position at the top of the page.
+- Contains the playback button, tempo control and kit selection.
+- The playback button can be clicked to Play or Stop the loop playback.
+- The Tempo control consists of a number input and refresh button. The number input changes the tempo value, which is in beats per minute. The tempo can then be updated by clicking the refresh button. The tempo value is limited between 60 and 200. A tootip shows this range when entering a value and when clicking refresh, the tooltip shows that the tempo has been updated.
+- The Kit selection area consists of a dropdown with 4 options. These 4 options change the drum sounds on each of the drum sequencer tracks. Selecting an option immediately updates the sounds.
