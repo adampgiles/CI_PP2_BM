@@ -378,6 +378,8 @@ function ExportLoop(){
   shareTextbox.value = exportString;
 }
 
+export {ExportLoop};
+
 // Loop Import
 function ImportLoop(){
   let loopString = shareTextbox.value;
