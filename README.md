@@ -187,3 +187,22 @@ W3C Jigsaw CSS Validation Service was utilised to validate the website's CSS. Wh
 <img src="docs/validation/website_css_validation.JPG">
 <img src="docs/validation/website_css_warning_validation.JPG">
 </details>
+
+### JS Validation
+
+JSHint was utilised to validate the website's JS. The three scripts received the following results;
+
+- drums.js received 4 warnings is relation to "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics." The code is functioning correctly, so I have chosen not to make any changes to the 4 sections referenced. There 1 one undefined variable referenced "AudioContext", but this is used for the Web Audio API.
+<details><summary>drums.js</summary>
+<img src="docs/validation/drums_js_validation.JPG">
+</details>
+
+- navigation.js received 0 warnings.
+<details><summary>navigation.js</summary>
+<img src="docs/validation/navigation_js_validation.JPG">
+</details>
+
+- form.js received 0 warnings. One undefined variable was referenced (emailjs), this is used for EmailJS. One unused variable was referenced (SendLoop), this loop is not called in the script but is called via an onclick event in index.html.
+<details><summary>forms.js</summary>
+<img src="docs/validation/form_js_validation.JPG">
+</details>
