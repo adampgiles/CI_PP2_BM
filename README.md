@@ -164,4 +164,17 @@ The website consists of six sections with thirteen features.
 
 ### 404 Page
 - Page is display when a user encounter a page that does not exist (HTTP 404 response code).
-- User provided with a link to return to the main site
+- User provided with a link to return to the main site.
+
+## Validation
+
+### HTML Validation
+
+W3C Markup Validation Service was utilised to validate the HTML of the website. Both the main page and 404 page pass with no errors or no warnings to show.
+<details><summary>Main Page</summary>
+<img src="docs/validation/index_html_validation.JPG">
+</details>
+
+<details><summary>404 Page</summary>
+<img src="docs/validation/404_html_validation.JPG">
+</details>
