@@ -178,3 +178,12 @@ W3C Markup Validation Service was utilised to validate the HTML of the website. 
 <details><summary>404 Page</summary>
 <img src="docs/validation/404_html_validation.JPG">
 </details>
+
+### CSS Validation
+
+W3C Jigsaw CSS Validation Service was utilised to validate the website's CSS. When validating the website, 0 errors are found and 38 warnings. All 38 warnings are for "Due to their dynamic nature, CSS variables are currently not statically checked".
+
+<details><summary>Website</summary>
+<img src="docs/validation/website_css_validation.JPG">
+<img src="docs/validation/website_css_warning_validation.JPG">
+</details>
