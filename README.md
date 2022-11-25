@@ -207,7 +207,15 @@ JSHint was utilised to validate the website's JS. The three scripts received the
 <img src="docs/validation/form_js_validation.JPG">
 </details>
 
+## Testing
 
+### Accessibility
+
+WAVE WebAIM web accessibility evaluation tool was utilised to ensure the website met accessibility standards, passed with 0 errors.
+
+<details><summary>Accessibility Test Result</summary>
+<img src="docs/validation/accessibility_validation.JPG">
+</details>
 
 ## Deployment
 
