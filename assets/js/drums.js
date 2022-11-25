@@ -50,7 +50,7 @@ inputTempoRefresh.addEventListener("click", function(){
   tempoUpdated.style.display = "block";
   setTimeout(function () {
     tempoUpdated.style.display = "none";
-  }, 500)
+  }, 500);
 });
 // Update Tempo on "enter" key press if editing tempo value
 tempoInput.addEventListener("keyup", (event) => {
@@ -60,7 +60,7 @@ tempoInput.addEventListener("keyup", (event) => {
   tempoUpdated.style.display = "block";
   setTimeout(function () {
     tempoUpdated.style.display = "none";
-  }, 500)
+  }, 500);
   }
 });
 
@@ -78,9 +78,9 @@ function UpdateTempo(){
   
   // Update Tempo - (Process: Stop loop, update beatsPerMinute, resume loop)
   if(isPlaying){
-    clearInterval(stepInterval);
+    clearInterval(setInterval);
     beatsPerMinute = (60 / tempoInput.value) * 250;
-    PlayLoop()    
+    PlayLoop();
   }
   else{
     beatsPerMinute = (60 / tempoInput.value) * 250;
@@ -113,7 +113,7 @@ function UpdateKit(){
     currentKit = kitFour;
   }   
 
-  for(i = 0; i < currentKit.length; i++){
+  for(let i = 0; i < currentKit.length; i++){
     LoadSounds(i);
   }
 
@@ -124,12 +124,12 @@ function UpdateKit(){
 // Drum Pads
 let drumPad = document.getElementsByClassName("drum-pad");
 // Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
-for(i = 0; i < drumPad.length; i++){
+for(let i = 0; i < drumPad.length; i++){
   let soundNumber = i;  
   LoadSounds(soundNumber);
 }
 // Play the sounds using Web Audio Api
-for(i = 0; i < drumPad.length; i++){
+for(let i = 0; i < drumPad.length; i++){
   let number = i;
   drumPad[number].addEventListener("click", function(){
     PlayOneShot(number);
@@ -138,7 +138,7 @@ for(i = 0; i < drumPad.length; i++){
 }
 // Clear Icons
 let iconClear = document.getElementsByClassName("clear");
-for(i = 0; i < iconClear.length; i++){
+for(let i = 0; i < iconClear.length; i++){
   let number = i;
   iconClear[number].addEventListener("click", function(){
     ClearTrackSteps(number);
@@ -148,7 +148,7 @@ for(i = 0; i < iconClear.length; i++){
 // Mute Icons
 let iconMute = document.getElementsByClassName("mute");
 let mutedTracks = [0, 0, 0, 0, 0, 0];
-for(i = 0; i < iconMute.length; i++){
+for(let i = 0; i < iconMute.length; i++){
   let number = i;
   iconMute[number].addEventListener("click", function(){
     ToggleTrackMute(number, this.style);
@@ -167,7 +167,7 @@ function ToggleTrackMute(trackNumber, element){
 }
 
 function ClearTrackSteps(trackNumber){
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[trackNumber][i] = 0;
   }
   UpdateStepDisplay();
@@ -191,9 +191,9 @@ const steps = [
   document.getElementById("step-container-six").children
 ];
 
-for(i = 0; i < steps.length; i++){
+for(let i = 0; i < steps.length; i++){
   let num = i;    
-  for(j = 0; j < steps[num].length; j++){
+  for(let j = 0; j < steps[num].length; j++){
     let number = j;      
     steps[num][number].addEventListener("click", function(){
       if(trackStepValues[num][number] == 0){
@@ -229,10 +229,10 @@ function LoadSounds(soundNumber){
 
 // Play Loop
 function PlayLoop(){
-  stepInterval = setInterval(function(){
+  setInterval(function(){
     if(isPlaying == true){          
       // Check if Step is enable for each track, trigger sound if enabled
-      for(i = 0; i < trackStepValues.length; i++){
+      for(let i = 0; i < trackStepValues.length; i++){
         if(trackStepValues[i][stepPosition] == 1){
           PlayStep(i);
         }
@@ -241,7 +241,7 @@ function PlayLoop(){
 
       // Increment stepPosition and reset if reaches 16
       stepPosition++;
-      if(stepPosition > 15){
+      if(stepPosition == fullBarCount){
         stepPosition = 0;
       }            
     }
@@ -263,7 +263,7 @@ function PlayStep(number){
   }
 }
 function StopLoop(){
-  clearInterval(stepInterval);
+  clearInterval(setInterval);
   stepPosition = 0;
 }
 
@@ -274,7 +274,7 @@ function ToggleStepBorder(trackNumber){
   let currentStep = stepPosition;
   setTimeout(function(){
       steps[trackNumber][currentStep].style.borderColor = "var(--stepDefaultBorder)";
-  }, beatsPerMinute)     
+  }, beatsPerMinute);     
 }
 
 //Preset Loops
@@ -346,27 +346,27 @@ inputImport.addEventListener('click',function(){
 function ExportLoop(){  
   //Convert each track's step values to a 16 digit string
   let track1Steps = "";
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     track1Steps += trackStepValues[0][i];
   }
   let track2Steps = "";
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     track2Steps += trackStepValues[1][i];
   }
   let track3Steps = "";
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     track3Steps += trackStepValues[2][i];
   }
   let track4Steps = "";
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     track4Steps += trackStepValues[3][i];
   }
   let track5Steps = "";
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     track5Steps += trackStepValues[4][i];
   }
   let track6Steps = "";
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     track6Steps += trackStepValues[5][i];
   }
 
@@ -412,36 +412,39 @@ function ImportLoop(){
   UpdateKit();
 
   //Set Track One Step Values
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[0][i] = track1String.charAt(i);
   }
   //Set Track Two Step Values
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[1][i] = track2String.charAt(i);
   }
   //Set Track Three Step Values
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[2][i] = track3String.charAt(i);
   }
   //Set Track Four Step Values
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[3][i] = track4String.charAt(i);
   }
   //Set Track Five Step Values
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[4][i] = track5String.charAt(i);
   }
   //Set Track Six Step Values
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     trackStepValues[5][i] = track6String.charAt(i);
   }
 
   UpdateStepDisplay();
 }
 
+// import ShowDrumWindow() function from navigation script in readiness for UpdateStepDisplay()'s use of the function
+import {ShowDrumWindow} from './navigation.js';
+
 function UpdateStepDisplay(){
   //Update Track One
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     let num = i;
     if(trackStepValues[0][num] == 1){
       steps[0][num].style.backgroundColor = "var(--clear)";
@@ -451,7 +454,7 @@ function UpdateStepDisplay(){
     }
   }
   //Update Track Two
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     let num = i;
     if(trackStepValues[1][num] == 1){
       steps[1][num].style.backgroundColor = "var(--clear)";
@@ -461,7 +464,7 @@ function UpdateStepDisplay(){
     }
   }
   //Update Track Three
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     let num = i;
     if(trackStepValues[2][num] == 1){
       steps[2][num].style.backgroundColor = "var(--clear)";
@@ -471,7 +474,7 @@ function UpdateStepDisplay(){
     }
   }
   //Update Track Four
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     let num = i;
     if(trackStepValues[3][num] == 1){
       steps[3][num].style.backgroundColor = "var(--clear)";
@@ -481,7 +484,7 @@ function UpdateStepDisplay(){
     }
   }
   //Update Track Five
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     let num = i;
     if(trackStepValues[4][num] == 1){
       steps[4][num].style.backgroundColor = "var(--clear)";
@@ -491,7 +494,7 @@ function UpdateStepDisplay(){
     }
   }
   //Update Track Six
-  for(i = 0; i < 16; i++){
+  for(let i = 0; i < fullBarCount; i++){
     let num = i;
     if(trackStepValues[5][num] == 1){
       steps[5][num].style.backgroundColor = "var(--clear)";

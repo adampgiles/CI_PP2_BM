@@ -26,6 +26,7 @@ function ShowDrumWindow(){
   inputShareTab.style.backgroundColor = "var(--tabInactive)";
   inputInfoTab.style.backgroundColor = "var(--tabInactive)";
 }
+export {ShowDrumWindow};
 
 inputShareTab.addEventListener("click", ShowShareWindow);
 function ShowShareWindow(){
