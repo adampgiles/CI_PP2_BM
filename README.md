@@ -62,29 +62,36 @@ The website structure consists of a main page and 404 page. The main page has a 
 
 The sections and windows are detailed below;
 
+<details><summary>Media Control</summary>
+<img src="docs/features/feature_media_control.JPG">
+</details>
 - The Media Control contains a "Play/Stop" button, Tempo number input and Kit Selection dropdown.
 
-(Media Control screenshot here)
+<details><summary>Sequencer</summary>
+<img src="docs/features/feature_sequencer.JPG">
+</details>
+- The first window contains the Sequencer. This section contains six tracks. Each track consists of a Drum Pad, mute button, clear button and a 16 step drum sequencer.
 
-- The first window contains the Track section. This section contains six tracks. Each track consists of a Drum Pad, mute button, clear button and a 16 step drum sequencer.
-
-(Track Section screenshot to be added here)
-
+<details><summary>Preset/Share Window</summary>
+<img src="docs/features/feature_preset_share.JPG">
+</details>
 - The second window contains the Presets and Share section. This section contains Preset selection instructions and a dropdown, Export and Import instruction, text input box and Export and Import buttons. When viewing this window a section shows below. This section contains text and a button inviting the user to submit thier loop to be added to the presets. Clicking the button opens the Submission Window.
 
-(Preset/Share Section screenshot to be added here)
-
+<details><summary>Submission Window</summary>
+<img src="docs/features/feature_submission_window.JPG">
+</details>
 - The Submission Window contains a form with instructions. The form has text inputs for "Name", "Email Address" and "Loop Title", and a button to submit the form. There is also a text alert box below the button, which displays a message after clicking the button. This message changes based on the validity of the input and the current stage during loop submission. The form uses EmailJS, which is detailed further in a section below.
 
-(Submission Window screenshot to be added here)
-
+<details><summary>Information Window</summary>
+<img src="docs/features/feature_information_window.JPG">
+</details>
 - The third window contains the Information section. This section contains a Quick Guide, Credits and a copyright notice. The Quick Guide gives the user an overview of the drum sequencer features.
 
-(Information Section screenshot to be added here)
-
+<details><summary>404 Page</summary>
+<img src="docs/features/feature_404_page.JPG">
+</details>
 A 404 page was created to ensure that a user can easily navigate back to the Beat Maker site if they encounter a page which does not exist.
 
-(404 page screenshot to be added here)
 
 ### Languages
 
