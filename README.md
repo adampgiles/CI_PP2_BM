@@ -249,6 +249,19 @@ The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
 
+
+## Bugs
+
+| Bug                                                                          | Fix                                                                                                                                      |
+| -----------------------------------------------------------------------------| -----------------------------------------------------------------------------------------------------------------------------------------|
+| Preset 5 not importing to sequencer.                                         | Option value corrected on index.html.                                                                                                    |
+| Any key input was toggling loop playback.                                    | Space bar event listener corrected to "===" (3 equals).                                                                                  |
+| Non-whole numbers could be entered in BPM input.                             | Set number to round to nearest whole number on refresh.                                                                                  |
+| Tempo tooltip not hiding if input clicked but not changed.                   | Changed eventlistener to blur.                                                                                                           |
+| Submission form was submitting blank data through emailjs.                   | Removed ".value" when setting parameter values.                                                                                          |
+| EmailJS sending empty loopData.                                              | Assigned to ID value.                                                                                                                    |
+| Submission-input-block not showing.                                          | Added missing div closing tag to information-window.                                                                                     |
+
 ## Deployment
 
 ### GitHub Pages
