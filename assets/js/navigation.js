@@ -1,22 +1,22 @@
 // Tab variables
-drumWindow = document.getElementById("drum-window");
-shareWindow = document.getElementById("share-window");
-infoWindow = document.getElementById("info-window");
-submissionInputBlock = document.getElementById("submission-input-block");
-submissionWindow = document.getElementById("submission-window");
+const drumWindow = document.getElementById("drum-window");
+const shareWindow = document.getElementById("share-window");
+const infoWindow = document.getElementById("info-window");
+const submissionInputBlock = document.getElementById("submission-input-block");
+const submissionWindow = document.getElementById("submission-window");
 
-inputDrumTab = document.getElementById("drum-tab");
-inputShareTab = document.getElementById("share-tab");
-inputInfoTab = document.getElementById("info-tab");
-inputSubmissionOpen = document.getElementById("input-submission-open");
-inputSubmissionClose = document.getElementById("input-submission-close");
+const inputDrumTab = document.getElementById("drum-tab");
+const inputShareTab = document.getElementById("share-tab");
+const inputInfoTab = document.getElementById("info-tab");
+const inputSubmissionOpen = document.getElementById("input-submission-open");
+const inputSubmissionClose = document.getElementById("input-submission-close");
 
 inputDrumTab.addEventListener("click", ShowDrumWindow);
 function ShowDrumWindow(){
   drumWindow.style.display = "flex";
   shareWindow.style.display = "none";
   infoWindow.style.display = "none";
-  submissionInputBlock.style.display = "none"
+  submissionInputBlock.style.display = "none";
 
   inputDrumTab.style.zIndex = "2";
   inputShareTab.style.zIndex = "0";
@@ -33,7 +33,7 @@ function ShowShareWindow(){
   drumWindow.style.display = "none";
   shareWindow.style.display = "flex";
   infoWindow.style.display = "none";
-  submissionInputBlock.style.display = "flex"
+  submissionInputBlock.style.display = "flex";
 
   inputDrumTab.style.zIndex = "0";
   inputShareTab.style.zIndex = "2";
@@ -49,7 +49,7 @@ function ShowInfoWindow(){
   drumWindow.style.display = "none";
   shareWindow.style.display = "none";
   infoWindow.style.display = "flex";
-  submissionInputBlock.style.display = "none"
+  submissionInputBlock.style.display = "none";
   
   inputDrumTab.style.zIndex = "0";
   inputShareTab.style.zIndex = "0";
@@ -64,9 +64,9 @@ inputSubmissionOpen.addEventListener("click", ShowSubmissionWindow);
 inputSubmissionClose.addEventListener("click", HideSubmissionWindow);
 function ShowSubmissionWindow(){
   submissionWindow.style.display = "flex";
-  submissionInputBlock.style.display = "none"
+  submissionInputBlock.style.display = "none";
 }
 function HideSubmissionWindow(){
   submissionWindow.style.display = "none";
-  submissionInputBlock.style.display = "flex"
+  submissionInputBlock.style.display = "flex";
 }
