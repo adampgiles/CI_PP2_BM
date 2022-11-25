@@ -1,6 +1,3 @@
-// import ShowDrumWindow() function from navigation script in readiness for UpdateStepDisplay()'s use of the function
-import {ExportLoop} from './drums.js';
-
 // Code used and modified from YouTube tutorial (https://www.youtube.com/watch?v=dgcYOm8n8ME)
 function SendLoop(){
   //Export loop data to ready for submission

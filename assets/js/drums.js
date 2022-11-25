@@ -378,8 +378,6 @@ function ExportLoop(){
   shareTextbox.value = exportString;
 }
 
-export {ExportLoop};
-
 // Loop Import
 function ImportLoop(){
   let loopString = shareTextbox.value;
@@ -440,9 +438,6 @@ function ImportLoop(){
 
   UpdateStepDisplay();
 }
-
-// import ShowDrumWindow() function from navigation script in readiness for UpdateStepDisplay()'s use of the function
-import {ShowDrumWindow} from './navigation.js';
 
 function UpdateStepDisplay(){
   //Update Track One
