@@ -206,3 +206,42 @@ JSHint was utilised to validate the website's JS. The three scripts received the
 <details><summary>forms.js</summary>
 <img src="docs/validation/form_js_validation.JPG">
 </details>
+
+
+
+## Deployment
+
+### GitHub Pages
+The website was deployed using GitHub Pages by following these steps:
+1. Navigate to the Settings tab in the GitHub repository.
+2. Select Pages on the left hand side menu. 
+3. For source; select Branch: main.
+4. After saving, GitHub will refresh and the website will publish from the GitHub repository.
+5. A link to the published website will show: "Your site is published at "https://adampgiles.github.io/CI_PP2_BM/"
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner.
+
+### Making a Local Clone
+1. Navigate to the GitHub repository 
+2. Select the Code button above the files.
+3. Select the "HTTPS" tab on the dropdown window to clone with HTTPS, copy the link.
+4. Open Git Bash.
+5. Change the current working directory to the location where you would like the cloned directory.
+6. Type "git clone " and paste the URL from the clipboard (example: "$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY")
+7. Press Enter to create.
+
+## Credits
+
+### Images/Icons
+- All website Icons taken from [FontAwesome](https://fontawesome.com/).
+
+### Code
+- EmailJS code used and modified from YouTube tutorial [Code with Voran](https://www.youtube.com/watch?v=dgcYOm8n8ME).
+- Email validation regular expression code from [Abstract](https://www.abstractapi.com/guides/email-validation-regex-javascript).
+
+## Acknowledgements
+Thank you to the following individuals for their support during the creation of this website; 
+- Mo Shami, my Mentor, who provided excellent guidance and feedback throughout. 
+- My partner and friends, for supporting with device testing and creating preset loops.
