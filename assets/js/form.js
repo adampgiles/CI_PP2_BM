@@ -16,8 +16,6 @@ function SendLoop(){
   const inputLoopData = document.getElementById("input-share-data");
   const formAlert = document.getElementById("form-alert");
 
-
-
   // Check if input field are EMPTY
   if(inputname.value == "" || inputEmailAddress.value == "" || inputLoopTitle.value == ""){
     formAlert.style.display = "block";
@@ -39,8 +37,8 @@ function SendLoop(){
         loopData: inputLoopData.value
       };
     
-      serviceID = "service_n6ymtsk";
-      templateID = "template_ftm6gxd";    
+      const serviceID = "service_n6ymtsk";
+      const templateID = "template_ftm6gxd";    
       
       emailjs.send(serviceID, templateID, parameters)
       .then(
