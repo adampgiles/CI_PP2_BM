@@ -41,11 +41,11 @@ User stories have been seperated into two groups; Site Users and Site Owner.
 6. I would like to have access to quick guide information to understand how to use the drum sequencer.
 
 #### Site Owner
-1. I would like users to be able to interact with the website to create music loops.
-2. I would like users to receive feedback when interacting with site buttons, by changing the button colour when clicked.
-3. I would like the user to be notified when the tempo of the loop has been updated.
-4. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
-5. I would like the website to have a loop submission form with validation implemented so the form cannot be submitted blank or with invalid values.
+7. I would like users to be able to interact with the website to create music loops.
+8. I would like users to receive feedback when interacting with site buttons, by changing the button colour when clicked.
+9. I would like the user to be notified when the tempo of the loop has been updated.
+10. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
+1. I would like the website to have a loop submission form with validation implemented so the form cannot be submitted blank or with invalid values.
 
 ## Design
 
@@ -255,6 +255,119 @@ The following resolutions were tested using a Windows desktop PC;
 The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
+
+### User Story Testing
+
+1. I would like to create a music loop by interacting with a drum sequencer.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Sequencer and Media Control          | Use the Sequencer and Media Control features to create a loop                            | A music loop can be created                                | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_sequencer.jpg">
+</details>
+
+2. I would like to hear the loop playing while continuing to change the loop.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Sequencer and Playback button        | Use the Sequencer while the playback button is set to PLAY                               | Playback continues while changing the loop                 | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_sequencer_playing.jpg">
+</details>
+
+3. I would like to change the drum sounds to create different genre loops.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Kit Selection                        | Change the Kit using the Kit selection dropdown                                          | Sequencer track sounds change                              | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_kits.jpg">
+</details>
+
+4. I would like to export or import loop data to colaborate with other users.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Export, Import buttons and textbox   | Use the Export and Import buttons to generate Loop Data to share with other users        | Users can Export or Import Loops                           | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_export_import.jpg">
+</details>
+
+5. I would like to submit my loop to the site owner to be added to the loop presets.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Submission Form                      | User completes the submission form to send their loop for review                         | Users can Export or Import Loops                           | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_submission.jpg">
+</details>
+
+6. I would like to have access to quick guide information to understand how to use the drum sequencer.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Quick Guide                          | Navigate to the Information Window to view the Quick Guide                               | User preseted with information on how to use the Sequencer | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_guide.jpg">
+</details>
+
+7. I would like users to be able to interact with the website to create music loops.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | -----------------------------------------------------------| ----------------- |
+| Sequencer and Media Control          | Use the Sequencer and Media Control features to create a loop                            | A music loop can be created                                | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_sequencer.jpg">
+</details>
+
+8. I would like users to receive feedback when interacting with site buttons, by changing the button colour when clicked.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Site Buttons                         | User clicks a button                                                                     | Button colour changes temporarily                          | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_buttons.jpg">
+</details>
+
+9. I would like the user to be notified when the tempo of the loop has been updated.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Tempo tooltip                        | User clicks the Tempo refresh button                                                     | Tooltip shows "Tempo Updated"                              | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_tooltip.jpg">
+</details>
+
+10. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Website Responsiveness               | Access website on different devices                                                      | Website functions correctly on different devices           | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_responsive.jpg">
+</details>
+
+11. I would like the website to have a loop submission form with validation implemented so the form cannot be submitted blank or with invalid values.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Form Validation                      | Invalid or Empty form inputs will not submit and display alert. Only valid data submits  | Website functions correctly on different devices           | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user_story_testing/user_story_validation.jpg">
+</details>
+
 
 
 ## Bugs
