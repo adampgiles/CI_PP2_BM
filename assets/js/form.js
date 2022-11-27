@@ -23,10 +23,10 @@ function SendLoop(){
   // Check if email format is valid (code used and modified from https://www.abstractapi.com/guides/email-validation-regex-javascript)
   if(emailRegex.test(inputEmailAddress.value) == true){     
     // Submit Loop if all inputs are valid
-
       formAlert.style.display = "block";
       formAlert.textContent = "Please wait, sending details...";
         
+      // Set emailJS parameters
       var parameters = {
         name: inputname.value,
         emailAddress: inputEmailAddress.value,
@@ -34,9 +34,11 @@ function SendLoop(){
         loopData: inputLoopData.value
       };
     
+      // Set emailJS account IDs
       const serviceID = "service_n6ymtsk";
       const templateID = "template_ftm6gxd";    
       
+      // Sumbit parameters to emailJS
       emailjs.send(serviceID, templateID, parameters)
       .then(
         res =>{
@@ -58,4 +60,3 @@ function SendLoop(){
       formAlert.textContent = "Please enter a valid Email Address";
     }
 }
-

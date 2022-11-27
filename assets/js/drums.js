@@ -10,6 +10,7 @@ let isPlaying = false;
 let stepPosition = 0;
 let fullBarCount = 16;
 
+// Toggles playback when clicking playback button
 inputPlayback.addEventListener("click", TogglePlayback);
 function TogglePlayback(){
   if(isPlaying){  
@@ -24,21 +25,20 @@ function TogglePlayback(){
     isPlaying = true;
     PlayLoop();
   }
-  console.log("Playing: " + isPlaying); // Test if playback changed
 }
 
-// Tempo variable
+// Tempo variables
 let tempoInput = document.getElementById("input-tempo");
 let tempoTooltip = document.getElementById("tempo-tooltip");
 let tempoUpdated = document.getElementById("tempo-updated");
 let beatsPerMinute = (60 / tempoInput.value) * 250; // Converts tempo to milliseconds
 let inputTempoRefresh = document.getElementById("input-tempo-refresh");
 let tempoMinMax = {"min": 60 , "max": 200}; 
-// Show Tooltip
+// Show Tempo Tooltip
 tempoInput.addEventListener("click", function(){
   tempoTooltip.style.display = "block";  
 });
-// Hide Tooltip
+// Hides Tempo Tooltip
 tempoInput.addEventListener("blur", function(){
   tempoTooltip.style.display = "none";  
 });
@@ -64,7 +64,7 @@ tempoInput.addEventListener("keyup", (event) => {
   }
 });
 
-
+// Function to change the speed of playback
 function UpdateTempo(){
   tempoInput.value = Math.round(tempoInput.value);
 
@@ -85,13 +85,12 @@ function UpdateTempo(){
   else{
     beatsPerMinute = (60 / tempoInput.value) * 250;
   }
-
-  console.log("Current Tempo: " + tempoInput.value); // Test if new value updated  
 }  
 
 // Kit variables
 let kitSelect = document.getElementById("kits");
-let kitOne = ["assets/audio/kit1/kick.wav", "assets/audio/kit1/snare.wav", "assets/audio/kit1/clap.wav", "assets/audio/kit1/hihat.wav", "assets/audio/kit1/shaker.wav", "assets/audio/kit1/cowbell.wav"];
+//Assigning Kit sounds
+let kitOne = ["assets/audio/kit1/kick.wav", "assets/audio/kit1/snare.wav", "assets/audio/kit1/clap.wav", "assets/audio/kit1/hihat.wav", "assets/audio/kit1/shaker.wav", "assets/audio/kit1/cowbell.wav"]; 
 let kitTwo = ["assets/audio/kit2/kick.wav", "assets/audio/kit2/snare.wav", "assets/audio/kit2/clap.wav", "assets/audio/kit2/hihat.wav", "assets/audio/kit2/shaker.wav", "assets/audio/kit2/cowbell.wav"];
 let kitThree = ["assets/audio/kit3/kick.wav", "assets/audio/kit3/snare.wav", "assets/audio/kit3/clap.wav", "assets/audio/kit3/hihat.wav", "assets/audio/kit3/shaker.wav", "assets/audio/kit3/cowbell.wav"];
 let kitFour = ["assets/audio/kit4/kick.wav", "assets/audio/kit4/snare.wav", "assets/audio/kit4/clap.wav", "assets/audio/kit4/hihat.wav", "assets/audio/kit4/shaker.wav", "assets/audio/kit4/cowbell.wav"];
@@ -116,19 +115,19 @@ function UpdateKit(){
   for(let i = 0; i < currentKit.length; i++){
     LoadSounds(i);
   }
-
-  console.log("Current Kit: " + kitSelect.value); // Test if kit updated
 }
 
 // Track Icon Elements
-// Drum Pads
+// Drum Pad variable
 let drumPad = document.getElementsByClassName("drum-pad");
 // Ready the sounds using Web Audio Api (Credit: https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html)
+// Loops through all drum pads and assigns the matching sound
 for(let i = 0; i < drumPad.length; i++){
   let soundNumber = i;  
   LoadSounds(soundNumber);
 }
 // Play the sounds using Web Audio Api
+// Loops through all drum pads and adds ability to click the pad, this click plays the pad's current sound
 for(let i = 0; i < drumPad.length; i++){
   let number = i;
   drumPad[number].addEventListener("click", function(){
@@ -136,8 +135,9 @@ for(let i = 0; i < drumPad.length; i++){
     ClickColourToggle(this.style);
   });
 }
-// Clear Icons
+// Clear Icon variable
 let iconClear = document.getElementsByClassName("clear");
+// Loops through all clear buttons and adds ability to click the button to set all the tracks steps to off
 for(let i = 0; i < iconClear.length; i++){
   let number = i;
   iconClear[number].addEventListener("click", function(){
@@ -147,6 +147,7 @@ for(let i = 0; i < iconClear.length; i++){
 }
 // Mute Icons
 let iconMute = document.getElementsByClassName("mute");
+// Loops through all mute buttons and adds ability to click the button to mute the track's volume
 let mutedTracks = [0, 0, 0, 0, 0, 0];
 for(let i = 0; i < iconMute.length; i++){
   let number = i;
@@ -174,6 +175,7 @@ function ClearTrackSteps(trackNumber){
 }
 
 // Step variables
+// 0 = Sound NOT Triggered, 1 = Sound Triggered
 let trackStepValues = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -182,6 +184,7 @@ let trackStepValues = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
+// Getting all steps to later assign click function to
 const steps = [
   document.getElementById("step-container-one").children, 
   document.getElementById("step-container-two").children,
@@ -191,6 +194,7 @@ const steps = [
   document.getElementById("step-container-six").children
 ];
 
+//Loops through all steps, on each track and assigns click to toggle on/off
 for(let i = 0; i < steps.length; i++){
   let num = i;    
   for(let j = 0; j < steps[num].length; j++){
@@ -215,7 +219,7 @@ window.addEventListener('DOMContentLoaded', function(){
   iconStop.style.display = "none";
 });
 
-// Load sounds to buffers
+// Load sounds to Webaudio API buffers, in readiness to be played
 function LoadSounds(soundNumber){
   const request = new XMLHttpRequest();
   request.open("GET", currentKit[soundNumber]);
@@ -227,7 +231,7 @@ function LoadSounds(soundNumber){
   request.send();
 }
 
-// Play Loop
+// Start loop playback
 function PlayLoop(){
   stepInterval = setInterval(function(){
     if(isPlaying == true){          
@@ -247,6 +251,7 @@ function PlayLoop(){
     }
   }, beatsPerMinute);
 }
+//Plays the audio for the track that is fed into the function
 function PlayOneShot(number){
   const source = audioContext.createBufferSource();
   source.buffer = bufferTracks[number];
@@ -254,6 +259,7 @@ function PlayOneShot(number){
   source.start();
 }
 
+//Plays the audio for the track that is fed into the function
 function PlayStep(number){
   if(mutedTracks[number] == 0){
     const source = audioContext.createBufferSource();
@@ -262,6 +268,7 @@ function PlayStep(number){
     source.start();
   }
 }
+// Stops playback
 function StopLoop(){
   clearInterval(stepInterval);
   stepPosition = 0;
@@ -277,7 +284,7 @@ function ToggleStepBorder(trackNumber){
   }, beatsPerMinute);     
 }
 
-//Preset Loops
+//Preset Loops for importing
 const presetOne = "<t>128<k>kitOne<a>1000100010001000<b>0000100000001000<c>0000000000000000<d>1010101010101010<e>0000000000000000<f>0000000000000000<g>";
 const presetTwo = "<t>110<k>kitTwo<a>1000001000100100<b>0000100000001001<c>0000000000000000<d>1011101010110111<e>0000000000000000<f>0000000000000000<g>";
 const presetThree = "<t>120<k>kitFour<a>1001001000100100<b>0000100000001000<c>0000100000001000<d>1010010101100011<e>0000000000000000<f>0010000000100101<g>";
@@ -293,6 +300,7 @@ let presetSelect = document.getElementById("presets");
 const inputPresetRefresh = document.getElementById("input-preset-refresh");
 inputPresetRefresh.addEventListener('click', LoadPreset);
 
+// Loads preset based on preset dropdown selection
 function LoadPreset(){
   if(presetSelect.value == "presetOne"){
     shareTextbox.value = presetOne;
@@ -372,13 +380,10 @@ function ExportLoop(){
 
   // Create full export string, combining tempo, kit and track step values, with tags between to target when importing
   let exportString = "<t>" + tempoInput.value + "<k>" + kitSelect.value + "<a>" + track1Steps + "<b>" + track2Steps + "<c>" + track3Steps + "<d>" + track4Steps + "<e>"  + track5Steps + "<f>"  + track6Steps + "<g>";
-  // Test if string is produced
-  console.log(exportString);
-
   shareTextbox.value = exportString;
 }
 
-// Loop Import
+// Loop Import. Deconstructs the loop data string by targeting the data between the tags (eg. <t>...<k>)
 function ImportLoop(){
   let loopString = shareTextbox.value;
 
@@ -400,8 +405,6 @@ function ImportLoop(){
   let track4String = loopString.substring(track4StartPoint, track5StartPoint -3);
   let track5String = loopString.substring(track5StartPoint, track6StartPoint -3);
   let track6String = loopString.substring(track6StartPoint, stringEndPoint);
-
-  console.log(tempoString, kitString, track1String, track2String, track3String, track4String, track5String, track6String);
 
   // Import Tempo
   tempoInput.value = tempoString;
@@ -439,6 +442,7 @@ function ImportLoop(){
   UpdateStepDisplay();
 }
 
+// Sets the visual display of the step (on/off)
 function UpdateStepDisplay(){
   //Update Track One
   for(let i = 0; i < fullBarCount; i++){
@@ -513,4 +517,3 @@ function ClickColourToggle(element){
     element.backgroundColor = "var(--buttons)";
   }  
 }
-

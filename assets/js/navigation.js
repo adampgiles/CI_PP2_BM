@@ -11,6 +11,7 @@ const inputInfoTab = document.getElementById("info-tab");
 const inputSubmissionOpen = document.getElementById("input-submission-open");
 const inputSubmissionClose = document.getElementById("input-submission-close");
 
+// Shows Sequencer window when the tab is clicked
 inputDrumTab.addEventListener("click", ShowDrumWindow);
 function ShowDrumWindow(){
   drumWindow.style.display = "flex";
@@ -27,6 +28,7 @@ function ShowDrumWindow(){
   inputInfoTab.style.backgroundColor = "var(--tabInactive)";
 }
 
+// Shows Preset/Share window when the tab is clicked
 inputShareTab.addEventListener("click", ShowShareWindow);
 function ShowShareWindow(){
   drumWindow.style.display = "none";
@@ -43,6 +45,7 @@ function ShowShareWindow(){
   inputInfoTab.style.backgroundColor = "var(--tabInactive)";
 }
 
+// Shows Information window when the tab is clicked
 inputInfoTab.addEventListener("click", ShowInfoWindow);
 function ShowInfoWindow(){
   drumWindow.style.display = "none";
@@ -59,7 +62,9 @@ function ShowInfoWindow(){
   inputInfoTab.style.backgroundColor = "var(--tabActive)";
 }
 
+// Shows Submission window when "Submit loop for Review" button clicked
 inputSubmissionOpen.addEventListener("click", ShowSubmissionWindow);
+// Hides Submission window when "Close" icon clicked
 inputSubmissionClose.addEventListener("click", HideSubmissionWindow);
 function ShowSubmissionWindow(){
   submissionWindow.style.display = "flex";
