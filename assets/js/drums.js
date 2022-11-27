@@ -78,7 +78,7 @@ function UpdateTempo(){
   
   // Update Tempo - (Process: Stop loop, update beatsPerMinute, resume loop)
   if(isPlaying){
-    clearInterval(setInterval);
+    clearInterval(stepInterval);
     beatsPerMinute = (60 / tempoInput.value) * 250;
     PlayLoop();
   }
@@ -229,7 +229,7 @@ function LoadSounds(soundNumber){
 
 // Play Loop
 function PlayLoop(){
-  setInterval(function(){
+  stepInterval = setInterval(function(){
     if(isPlaying == true){          
       // Check if Step is enable for each track, trigger sound if enabled
       for(let i = 0; i < trackStepValues.length; i++){
@@ -263,7 +263,7 @@ function PlayStep(number){
   }
 }
 function StopLoop(){
-  clearInterval(setInterval);
+  clearInterval(stepInterval);
   stepPosition = 0;
 }
 
