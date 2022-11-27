@@ -79,7 +79,11 @@ User stories have been separated into two groups; Site Users and Site Owner.
 ## Design
 
 ### Colour
-The site's colour scheme consists of five key colours; White, black, yellow, teal and light-blue. White is used for buttons and input fields. Black is used for text and icons. Yellow is used for the background and the Quick Guide text-boxes. Light-blue is used for clicked buttons.
+The site's colour scheme consists of five key colours; White, black, yellow, teal and light-blue. White is used for buttons and input fields. Black is used for text and icons. Yellow is used for the background and the Quick Guide text-boxes. Light-blue is used for clicked buttons. Six additional colours are used for each track's steps to differentiate between them, these are; orange, yellow, green blue purple and pink.
+<details><summary>Key Colours</summary>
+<img src="docs/features/colour_scheme.JPG">
+</details>
+
 
 ### Font
 
