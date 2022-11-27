@@ -14,7 +14,7 @@
     - [User Stories](#user-stories)
 - [Design](#design)
     - [Colour](#colour)
-    - [Fonts](#fonts)
+    - [Fonts](#font)
     - [Structure](#structure)
     - [Wireframes](#wireframes)
 - [Technologies Used](#technologies-used)
