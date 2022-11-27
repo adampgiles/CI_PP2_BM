@@ -21,6 +21,7 @@
     - [Languages](#languages)
     - [Frameworks, Libraries & Tools](#frameworks-libraries--tools)
 - [Features](#features)
+    - [Future Features](#future-features)
 - [Validation](#validation)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
@@ -443,6 +444,9 @@ The website was tested on the following browsers:
 | Submission form was submitting blank data through emailjs.                   | Removed ".value" when setting parameter values.                                                                                          |
 | EmailJS sending empty loopData.                                              | Assigned to ID value.                                                                                                                    |
 | Submission-input-block not showing.                                          | Added missing div closing tag to information-window.                                                                                     |
+
+### Known Issue
+I would have liked to have added validation to the Import Loop textbox. Currently the user can type anything into the textbox and click the Import Loop button. Although this does not break any features, I would like to have an error message appear informing the user that the text is not valid Loop Data. I intend to add validation to this using "Regular Expressions", once I improve my knowledge of the topic.
 
 ## Deployment
 
