@@ -207,10 +207,10 @@ The website consists of six sections with thirteen features.
 - After the Submission Form is completed and submitted by the user, the data is collated into a email using an email template on emailJS. This email is then sent the the site owner's email address.
 - Below are screenshots of the template and an example email;
 <details><summary>EmailJS Template</summary>
-<img src="docs/validation/feature_emailjs_template.JPG">
+<img src="docs/features/feature_emailjs_template.JPG">
 </details>
 <details><summary>Example Email</summary>
-<img src="docs/validation/feature_emailjs_example.JPG">
+<img src="docs/features/feature_emailjs_example.JPG">
 </details>
 
 ### Information Window
