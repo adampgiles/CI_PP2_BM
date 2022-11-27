@@ -234,7 +234,7 @@ W3C Jigsaw CSS Validation Service was utilised to validate the website's CSS. Wh
 
 JSHint was utilised to validate the website's JS. The three scripts received the following results;
 
-- drums.js received 4 warnings is relation to "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics." The code is functioning correctly, so I have chosen not to make any changes to the 4 sections referenced. Two undefined variables are referenced; "AudioContext", this is used for the Web Audio API, and "ShowDrumWindow", this is a function in navigation.js which is loaded earlier in index.html.
+- drums.js received 4 warnings is relation to "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics." The code is functioning correctly, so I have chosen not to make any changes to the 4 sections referenced. Three undefined variables are referenced; "AudioContext", this is used for the Web Audio API. "stepInterval", this is assigned to the SetInterval function so the interval can be cleared when the track is stopped or the tempo is updated. "ShowDrumWindow", this is a function in navigation.js which is loaded earlier in index.html.
 <details><summary>drums.js</summary>
 <img src="docs/validation/drums_js_validation.JPG">
 </details>
