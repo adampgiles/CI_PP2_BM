@@ -58,13 +58,13 @@ Users of Beat Maker have the following goals;
 - Individuals interested in sharing musical creations.
 
 ### User Stories
-User stories have been seperated into two groups; Site Users and Site Owner. 
+User stories have been separated into two groups; Site Users and Site Owner. 
 
 #### Site Users
 1. I would like to create a music loop by interacting with a drum sequencer.
 2. I would like to hear the loop playing while continuing to change the loop.
 3. I would like to change the drum sounds to create different genre loops.
-4. I would like to export or import loop data to colaborate with other users.
+4. I would like to export or import loop data to collaborate with other users.
 5. I would like to submit my loop to the site owner to be added to the loop presets.
 6. I would like to have access to quick guide information to understand how to use the drum sequencer.
 
@@ -86,7 +86,7 @@ One font was used on the site; Signika Negative, which is a clear and legible fo
 
 ### Structure
 
-The website structure consists of a main page and 404 page. The main page has a persistent media control section at the top of the page and a section below consisting of three windows. Only one window is visable at a time and can be changed using tabs at the top of this section. 
+The website structure consists of a main page and 404 page. The main page has a persistent media control section at the top of the page and a section below consisting of three windows. Only one window is visible at a time and can be changed using tabs at the top of this section. 
 
 The sections and windows are detailed below;
 
@@ -103,7 +103,7 @@ The sections and windows are detailed below;
 <details><summary>Preset/Share Window</summary>
 <img src="docs/features/feature_preset_share.JPG">
 </details>
-- The second window contains the Presets and Share section. This section contains Preset selection instructions and a dropdown, Export and Import instruction, text input box and Export and Import buttons. When viewing this window a section shows below. This section contains text and a button inviting the user to submit thier loop to be added to the presets. Clicking the button opens the Submission Window.
+- The second window contains the Presets and Share section. This section contains Preset selection instructions and a dropdown, Export and Import instruction, text input box and Export and Import buttons. When viewing this window a section shows below. This section contains text and a button inviting the user to submit their loop to be added to the presets. Clicking the button opens the Submission Window.
 
 <details><summary>Submission Window</summary>
 <img src="docs/features/feature_submission_window.JPG">
@@ -150,10 +150,10 @@ A 404 page was created to ensure that a user can easily navigate back to the Bea
 The website consists of six sections with thirteen features.
 
 ### Media Controls
-- Situated in a persistant position at the top of the page.
+- Situated in a persistent position at the top of the page.
 - Contains the playback button, tempo control and kit selection.
 - The playback button can be clicked to Play or Stop the loop playback.
-- The Tempo control consists of a number input and refresh button. The number input changes the tempo value, which is in beats per minute. The tempo can then be updated by clicking the refresh button. The tempo value is limited between 60 and 200. A tootip shows this range when entering a value and when clicking refresh, the tooltip shows that the tempo has been updated.
+- The Tempo control consists of a number input and refresh button. The number input changes the tempo value, which is in beats per minute. The tempo can then be updated by clicking the refresh button. The tempo value is limited between 60 and 200. A tooltip shows this range when entering a value and when clicking refresh, the tooltip shows that the tempo has been updated.
 - The Kit selection area consists of a dropdown with 4 options. These 4 options change the drum sounds on each of the drum sequencer tracks. Selecting an option immediately updates the sounds.
 - Meets user stories: 1, 2, 3, 7, 8, 9.
 
@@ -172,7 +172,7 @@ The website consists of six sections with thirteen features.
 - Each of the six tracks consists of a Drum Pad, Mute button, Clear button and a 16 Step Sequencer.
 - The Drum pad plays an audio sample of the track's sound when clicked. The pad's colour changes temporarily when clicked to give visual feedback to the user, informing them that the button was clicked.
 - The Mute button will mute the track and stop the track's audio from playing during playback. The button's colour changes to visually inform the user that the mute button is active.
-- The clear button toggles off any active steps in the track's step sequencer. The button's colour changes temporarily to privide visual feedback to the user that the change has occured.
+- The clear button toggles off any active steps in the track's step sequencer. The button's colour changes temporarily to provide visual feedback to the user that the change has occurred.
 - The 16 Step Sequencers consists of 16 buttons. When a button is clicked the colour changes to provide visual feedback that the step is active. During playback, when the playback position reaches the step's position, if the step is active the track's sound will trigger.
 - Each track's step has a different colour. This is to clearly show the different tracks and also to provide variety to the visuals.
 - Meets user stories: 1, 2, 7, 8.
@@ -180,15 +180,15 @@ The website consists of six sections with thirteen features.
 ### Preset/Share Section
 - Situated below the Tab Navigation section, connected to the second tab.
 - Contains three sub-sections; Preset Loops, Sharing Loops and Submit for Review.
-- The Preset Loops sub-section consists of a Heading, paragraph with short instructions, a dropdown and a refresh button. The dropdown contains a list of Premade Loops, the user can select a loop then click the refresh button to load the loop into the Sequencer. The window will then automatically change to the sequencer window, populate the sequencer and the media control. This change provides visual feedback to the user that the change has occured.
-- The Sharing Loops sub-sections consists of a Heading, paragraph with instructions, a text input-box, a button to Export Loop and a button to Import Loop. When clicking the Export Loop button, the text input-box is populated with a Loop Data text string which has been compliled using Javascript. The user can then copy this text and share it with other users. The other users can then paste the Loop Data in the text input-box on thier session of the site and click the Import Button. The Loop Data will then be decompiled and loaded to the sequencer. Both buttons when clicked, temporarily chance colour to visually notify the user that it has been clicked.
+- The Preset Loops sub-section consists of a Heading, paragraph with short instructions, a dropdown and a refresh button. The dropdown contains a list of pre-made Loops, the user can select a loop then click the refresh button to load the loop into the Sequencer. The window will then automatically change to the sequencer window, populate the sequencer and the media control. This change provides visual feedback to the user that the change has occurred.
+- The Sharing Loops sub-sections consists of a Heading, paragraph with instructions, a text input-box, a button to Export Loop and a button to Import Loop. When clicking the Export Loop button, the text input-box is populated with a Loop Data text string which has been compiled using Javascript. The user can then copy this text and share it with other users. The other users can then paste the Loop Data in the text input-box on their session of the site and click the Import Button. The Loop Data will then be decompiled and loaded to the sequencer. Both buttons when clicked, temporarily chance colour to visually notify the user that it has been clicked.
 - The Submit for Review sub-section consists of a Heading and a button. The button when clicked, opens up a Submission Window. This window is detailed further in the section below.
 - Meets user stories: 4, 5.
 
 ### Submission Window
 - This window displays after clicking the "Submit Loop for Review" button on the Preset/Share window.
 - Consists of a close button, a section containing a Heading and paragraph with instructions, and a section containing a form with a button, and an alert text box.
-- The close button when clicked hides the sumbission window.
+- The close button when clicked hides the submission window.
 - The form consists of three text input fields and a button. The text inputs are for; Name, Email Address, and Your Loop Title. The button when clicked will submit the form.
 - The form contains validation and will not submit if any of the fields are empty, and if the email address is not a valid email. The alert textbox will show below the button after clicking.
 - The button can display four different messages;
@@ -328,7 +328,7 @@ The website was tested on the following browsers:
 <img src="docs/user_story_testing/3/user_story_kits.JPG">
 </details>
 
-4. I would like to export or import loop data to colaborate with other users.
+4. I would like to export or import loop data to collaborate with other users.
 
 | **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
 | ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
@@ -359,7 +359,7 @@ The website was tested on the following browsers:
 
 | **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
 | ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
-| Quick Guide                          | Navigate to the Information Window to view the Quick Guide                               | User preseted with information on how to use the Sequencer | Works as expected |
+| Quick Guide                          | Navigate to the Information Window to view the Quick Guide                               | User presented with information on how to use the Sequencer | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/user_story_testing/6/user_story_guide_1.JPG">
@@ -427,7 +427,7 @@ The website was tested on the following browsers:
 | Preset 5 not importing to sequencer.                                         | Option value corrected on index.html.                                                                                                    |
 | Any key input was toggling loop playback.                                    | Space bar event listener corrected to "===" (3 equals).                                                                                  |
 | Non-whole numbers could be entered in BPM input.                             | Set number to round to nearest whole number on refresh.                                                                                  |
-| Tempo tooltip not hiding if input clicked but not changed.                   | Changed eventlistener to blur.                                                                                                           |
+| Tempo tooltip not hiding if input clicked but not changed.                   | Changed eventListener to blur.                                                                                                           |
 | Submission form was submitting blank data through emailjs.                   | Removed ".value" when setting parameter values.                                                                                          |
 | EmailJS sending empty loopData.                                              | Assigned to ID value.                                                                                                                    |
 | Submission-input-block not showing.                                          | Added missing div closing tag to information-window.                                                                                     |
