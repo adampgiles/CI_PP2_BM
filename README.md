@@ -265,7 +265,7 @@ The website was tested on the following browsers:
 | Sequencer and Media Control          | Use the Sequencer and Media Control features to create a loop                            | A music loop can be created                                | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_sequencer.jpg">
+<img src="docs/user_story_testing/1/user_story_sequencer.JPG">
 </details>
 
 2. I would like to hear the loop playing while continuing to change the loop.
@@ -275,7 +275,7 @@ The website was tested on the following browsers:
 | Sequencer and Playback button        | Use the Sequencer while the playback button is set to PLAY                               | Playback continues while changing the loop                 | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_sequencer_playing.jpg">
+<img src="docs/user_story_testing/2/user_story_sequencer_playing.JPG">
 </details>
 
 3. I would like to change the drum sounds to create different genre loops.
@@ -285,7 +285,7 @@ The website was tested on the following browsers:
 | Kit Selection                        | Change the Kit using the Kit selection dropdown                                          | Sequencer track sounds change                              | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_kits.jpg">
+<img src="docs/user_story_testing/3/user_story_kits.JPG">
 </details>
 
 4. I would like to export or import loop data to colaborate with other users.
@@ -295,7 +295,11 @@ The website was tested on the following browsers:
 | Export, Import buttons and textbox   | Use the Export and Import buttons to generate Loop Data to share with other users        | Users can Export or Import Loops                           | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_export_import.jpg">
+<img src="docs/user_story_testing/4/user_story_export_import_1.JPG">
+<img src="docs/user_story_testing/4/user_story_export_1.JPG">
+<img src="docs/user_story_testing/4/user_story_export_2.JPG">
+<img src="docs/user_story_testing/4/user_story_import_1.JPG">
+<img src="docs/user_story_testing/4/user_story_import_2.JPG">
 </details>
 
 5. I would like to submit my loop to the site owner to be added to the loop presets.
@@ -305,7 +309,10 @@ The website was tested on the following browsers:
 | Submission Form                      | User completes the submission form to send their loop for review                         | Users can Export or Import Loops                           | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_submission.jpg">
+<img src="docs/user_story_testing/5/user_story_submission_1.JPG">
+<img src="docs/user_story_testing/5/user_story_submission_2.JPG">
+<img src="docs/user_story_testing/5/user_story_submission_3.JPG">
+<img src="docs/user_story_testing/5/user_story_submission_4.JPG">
 </details>
 
 6. I would like to have access to quick guide information to understand how to use the drum sequencer.
@@ -315,7 +322,8 @@ The website was tested on the following browsers:
 | Quick Guide                          | Navigate to the Information Window to view the Quick Guide                               | User preseted with information on how to use the Sequencer | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_guide.jpg">
+<img src="docs/user_story_testing/6/user_story_guide_1.JPG">
+<img src="docs/user_story_testing/6/user_story_guide_2.JPG">
 </details>
 
 7. I would like users to be able to interact with the website to create music loops.
@@ -325,7 +333,7 @@ The website was tested on the following browsers:
 | Sequencer and Media Control          | Use the Sequencer and Media Control features to create a loop                            | A music loop can be created                                | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_sequencer.jpg">
+<img src="docs/user_story_testing/7/user_story_sequencer.JPG">
 </details>
 
 8. I would like users to receive feedback when interacting with site buttons, by changing the button colour when clicked.
@@ -335,7 +343,8 @@ The website was tested on the following browsers:
 | Site Buttons                         | User clicks a button                                                                     | Button colour changes temporarily                          | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_buttons.jpg">
+<img src="docs/user_story_testing/8/user_story_button_1.JPG">
+<img src="docs/user_story_testing/8/user_story_button_2.JPG">
 </details>
 
 9. I would like the user to be notified when the tempo of the loop has been updated.
@@ -345,7 +354,7 @@ The website was tested on the following browsers:
 | Tempo tooltip                        | User clicks the Tempo refresh button                                                     | Tooltip shows "Tempo Updated"                              | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_tooltip.jpg">
+<img src="docs/user_story_testing/9/user_story_tooltip.JPG">
 </details>
 
 10. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
@@ -355,7 +364,7 @@ The website was tested on the following browsers:
 | Website Responsiveness               | Access website on different devices                                                      | Website functions correctly on different devices           | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_responsive.jpg">
+<img src="docs/user_story_testing/10/user_story_responsive.JPG">
 </details>
 
 11. I would like the website to have a loop submission form with validation implemented so the form cannot be submitted blank or with invalid values.
@@ -365,7 +374,8 @@ The website was tested on the following browsers:
 | Form Validation                      | Invalid or Empty form inputs will not submit and display alert. Only valid data submits  | Website functions correctly on different devices           | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="docs/user_story_testing/user_story_validation.jpg">
+<img src="docs/user_story_testing/11/user_story_form_validation_1.JPG">
+<img src="docs/user_story_testing/11/user_story_form_validation_2.JPG">
 </details>
 
 
