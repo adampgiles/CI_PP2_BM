@@ -149,7 +149,7 @@ A 404 page was created to ensure that a user can easily navigate back to the Bea
 - [GitHub](https://github.com/), used to store project code.
 - [Google Fonts](https://fonts.google.com/), used to acquire the site's fonts.
 - [EmailJS](https://dashboard.emailjs.com) is utilised to supply the site owner with user submitted Loops via email.
-- [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/), used to test the site's code, performance, accessibilty and responsiveness. 
+- [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/), used to test the site's code, performance, accessibility and responsiveness. 
 
 ## Features
 
