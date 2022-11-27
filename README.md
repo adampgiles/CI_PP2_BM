@@ -201,6 +201,17 @@ The website consists of six sections with thirteen features.
 - All form data is submitted through EmailJS and an email is sent to the site owner. This is detailed further in a section below.
 - Meets user stories: 11.
 
+### EmailJS
+- [EmailJS](https://dashboard.emailjs.com) is utilised to supply the site owner with user submitted Loops via email.
+- After the Submission Form is completed and submitted by the user, the data is collated into a email using an email template on emailJS. This email is then sent the the site owner's email address.
+- Below are screenshots of the template and an example email;
+<details><summary>EmailJS Template</summary>
+<img src="docs/validation/feature_emailjs_template.JPG">
+</details>
+<details><summary>Example Email</summary>
+<img src="docs/validation/feature_emailjs_example.JPG">
+</details>
+
 ### Information Window
 - Situated below the Tab Navigation section, connected to the third tab.
 - Contains two sub-sections; Quick Guide, and Credits/Copyright Notice.
