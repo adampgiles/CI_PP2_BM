@@ -1,365 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beat Maker, Drum Sequencer">
-    <meta name="keywords" content="beat maker, drums, step sequencer, music creation, loops, beats">
-    <!-- Custom Stylesheet Link -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Favicon links-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
-    <title>Beat Maker - Drum Sequencer</title>
-</head>
-<body>  
-  <div class="page-container"> 
-    <!-- Control Interface Section -->
-    <div class="control-interface">
-      <!-- Playback block -->
-      <div id="input-playback" class="input-playback">
-        <div id="icon-play" class="play">
-          <i class="fa-solid fa-play"></i>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Beat Maker, Drum Sequencer">
+      <meta name="keywords" content="beat maker, drums, step sequencer, music creation, loops, beats">
+      <!-- Custom Stylesheet Link -->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- Favicon links-->
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io/favicon-16x16.png">
+      <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
+      <title>Beat Maker - Drum Sequencer</title>
+  </head>
+  <body>  
+    <div class="page-container"> 
+      <!-- Control Interface Section -->
+      <div class="control-interface">
+        <!-- Playback block -->
+        <div id="input-playback" class="input-playback">
+          <div id="icon-play" class="play">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div id="icon-stop" class="stop">
+            <i class="fa-solid fa-stop"></i>
+          </div>
         </div>
-        <div id="icon-stop" class="stop">
-          <i class="fa-solid fa-stop"></i>
+        <!-- Tempo block -->
+        <div class="tempo-block">
+          <label for="input-tempo">BPM:</label>
+          <input type="number" name="tempo" id="input-tempo" min="60" max="200" value="120">
+          <div id="input-tempo-refresh" class="tempo-refresh">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>      
+          <div id="tempo-tooltip" class="tempo-tooltip">Enter a value between 60 and 200</div>
+          <div id="tempo-updated" class="tempo-updated">Tempo Updated</div>
         </div>
-      </div>
-      <!-- Tempo block -->
-      <div class="tempo-block">
-        <label for="input-tempo">BPM:</label>
-        <input type="number" name="tempo" id="input-tempo" min="60" max="200" value="120">
-        <div id="input-tempo-refresh" class="tempo-refresh">
-          <i class="fa-solid fa-arrows-rotate"></i>
-        </div>      
-        <div id="tempo-tooltip" class="tempo-tooltip">Enter a value between 60 and 200</div>
-        <div id="tempo-updated" class="tempo-updated">Tempo Updated</div>
-      </div>
-      <!-- Kit block -->
-      <div class="kit-block">
-        <label for="kits">Kits:</label>
-        <select name="kits" id="kits">
-          <option value="kitOne">Kit-1</option>
-          <option value="kitTwo">Kit-2</option>
-          <option value="kitThree">Kit-3</option>
-          <option value="kitFour">Kit-4</option>
-        </select>
-      </div>
-    </div>   
+        <!-- Kit block -->
+        <div class="kit-block">
+          <label for="kits">Kits:</label>
+          <select name="kits" id="kits">
+            <option value="kitOne">Kit-1</option>
+            <option value="kitTwo">Kit-2</option>
+            <option value="kitThree">Kit-3</option>
+            <option value="kitFour">Kit-4</option>
+          </select>
+        </div>
+      </div>   
 
-    <!-- Tab Section -->
-    <div class="tab-section">
-      <div id="drum-tab" class="drum-tab">Sequencer</div>
-      <div id="share-tab" class="share-tab">Presets/Share</div>
-      <div id="info-tab" class="info-tab">Information</div>
-    </div>
-  
-    <!-- Track Interface Section -->
-    <div id="drum-window" class="track-window">
-      <!-- Track 1 Block -->
-      <div id="track-one" class="track track-one">
-        <div id="icon-track-one" class="track-icon">
-          <div class="drum-pad">
-            <i class="fa-solid fa-music"></i>
-          </div>
-          <div class="track-controls">
-            <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
-            <div class="control clear"><i class="fa-solid fa-trash"></i></div>
-          </div>
-        </div>
-        <div id="step-container-one" class="step-container">
-          <div class="step step-0"></div>
-          <div class="step step-1"></div>
-          <div class="step step-2"></div>
-          <div class="step step-3"></div>
-          <div class="step step-4"></div>
-          <div class="step step-5"></div>
-          <div class="step step-6"></div>
-          <div class="step step-7"></div>
-          <div class="step step-8"></div>
-          <div class="step step-9"></div>
-          <div class="step step-10"></div>
-          <div class="step step-11"></div>
-          <div class="step step-12"></div>
-          <div class="step step-13"></div>
-          <div class="step step-14"></div>
-          <div class="step step-15"></div>
-        </div>  
+      <!-- Tab Section -->
+      <div class="tab-section">
+        <div id="drum-tab" class="drum-tab">Sequencer</div>
+        <div id="share-tab" class="share-tab">Presets/Share</div>
+        <div id="info-tab" class="info-tab">Information</div>
       </div>
-      <!-- Track 2 Block -->
-      <div id="track-two" class="track track-two">
-        <div id="icon-track-two" class="track-icon">
-          <div class="drum-pad">
-            <i class="fa-solid fa-music"></i>
-          </div>
-          <div class="track-controls">
-            <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
-            <div class="control clear"><i class="fa-solid fa-trash"></i></div>
-          </div>
-        </div>
-        <div id="step-container-two" class="step-container">
-          <div class="step step-0"></div>
-          <div class="step step-1"></div>
-          <div class="step step-2"></div>
-          <div class="step step-3"></div>
-          <div class="step step-4"></div>
-          <div class="step step-5"></div>
-          <div class="step step-6"></div>
-          <div class="step step-7"></div>
-          <div class="step step-8"></div>
-          <div class="step step-9"></div>
-          <div class="step step-10"></div>
-          <div class="step step-11"></div>
-          <div class="step step-12"></div>
-          <div class="step step-13"></div>
-          <div class="step step-14"></div>
-          <div class="step step-15"></div>
-        </div>  
-      </div>
-      <!-- Track 3 Block -->
-      <div id="track-three" class="track track-three">
-        <div id="icon-track-three" class="track-icon">
-          <div class="drum-pad">
-            <i class="fa-solid fa-music"></i>
-          </div>
-          <div class="track-controls">
-            <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
-            <div class="control clear"><i class="fa-solid fa-trash"></i></div>
-          </div>
-        </div>
-        <div id="step-container-three" class="step-container">
-          <div class="step step-0"></div>
-          <div class="step step-1"></div>
-          <div class="step step-2"></div>
-          <div class="step step-3"></div>
-          <div class="step step-4"></div>
-          <div class="step step-5"></div>
-          <div class="step step-6"></div>
-          <div class="step step-7"></div>
-          <div class="step step-8"></div>
-          <div class="step step-9"></div>
-          <div class="step step-10"></div>
-          <div class="step step-11"></div>
-          <div class="step step-12"></div>
-          <div class="step step-13"></div>
-          <div class="step step-14"></div>
-          <div class="step step-15"></div>
-        </div>  
-      </div>
-      <!-- Track 4 Block -->
-      <div id="track-four" class="track track-four">
-        <div id="icon-track-four" class="track-icon">
-          <div class="drum-pad">
-            <i class="fa-solid fa-music"></i>
-          </div>
-          <div class="track-controls">
-            <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
-            <div class="control clear"><i class="fa-solid fa-trash"></i></div>
-          </div>
-        </div>
-        <div id="step-container-four" class="step-container">
-          <div class="step step-0"></div>
-          <div class="step step-1"></div>
-          <div class="step step-2"></div>
-          <div class="step step-3"></div>
-          <div class="step step-4"></div>
-          <div class="step step-5"></div>
-          <div class="step step-6"></div>
-          <div class="step step-7"></div>
-          <div class="step step-8"></div>
-          <div class="step step-9"></div>
-          <div class="step step-10"></div>
-          <div class="step step-11"></div>
-          <div class="step step-12"></div>
-          <div class="step step-13"></div>
-          <div class="step step-14"></div>
-          <div class="step step-15"></div>
-        </div>  
-      </div>
-      <!-- Track 5 Block -->
-      <div id="track-five" class="track track-five">
-        <div id="icon-track-five" class="track-icon">
-          <div class="drum-pad">
-            <i class="fa-solid fa-music"></i>
-          </div>
-          <div class="track-controls">
-            <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
-            <div class="control clear"><i class="fa-solid fa-trash"></i></div>
-          </div>
-        </div>
-        <div id="step-container-five" class="step-container">
-          <div class="step step-0"></div>
-          <div class="step step-1"></div>
-          <div class="step step-2"></div>
-          <div class="step step-3"></div>
-          <div class="step step-4"></div>
-          <div class="step step-5"></div>
-          <div class="step step-6"></div>
-          <div class="step step-7"></div>
-          <div class="step step-8"></div>
-          <div class="step step-9"></div>
-          <div class="step step-10"></div>
-          <div class="step step-11"></div>
-          <div class="step step-12"></div>
-          <div class="step step-13"></div>
-          <div class="step step-14"></div>
-          <div class="step step-15"></div>
-        </div>  
-      </div>
-      <!-- Track 6 Block -->
-      <div id="track-six" class="track track-six">
-        <div id="icon-track-six" class="track-icon">
-          <div class="drum-pad">
-            <i class="fa-solid fa-music"></i>
-          </div>
-          <div class="track-controls">
-            <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
-            <div class="control clear"><i class="fa-solid fa-trash"></i></div>
-          </div>
-        </div>
-        <div id="step-container-six" class="step-container">
-          <div class="step step-0"></div>
-          <div class="step step-1"></div>
-          <div class="step step-2"></div>
-          <div class="step step-3"></div>
-          <div class="step step-4"></div>
-          <div class="step step-5"></div>
-          <div class="step step-6"></div>
-          <div class="step step-7"></div>
-          <div class="step step-8"></div>
-          <div class="step step-9"></div>
-          <div class="step step-10"></div>
-          <div class="step step-11"></div>
-          <div class="step step-12"></div>
-          <div class="step step-13"></div>
-          <div class="step step-14"></div>
-          <div class="step step-15"></div>
-        </div>  
-      </div>      
-    </div>
-
-    <!-- Share Section -->
-    <div id="share-window" class="share-window"> 
-      <h2>Preset Loops</h2>
-      <p>Choose a pre-made loop below.</p>
-      <div class="preset-block">
-        <label for="presets">Preset:</label>
-        <select name="presets" id="presets">
-          <option value="presetOne">Preset-1</option>
-          <option value="presetTwo">Preset-2</option>
-          <option value="presetThree">Preset-3</option>
-          <option value="presetFour">Preset-4</option>
-          <option value="presetFive">Preset-5</option>
-          <option value="presetSix">Preset-6</option>
-          <option value="presetSeven">Preset-7</option>
-          <option value="presetEight">Preset-8</option>
-          <option value="presetNine">Preset-9</option>
-          <option value="presetTen">Preset-10</option>
-        </select>
-        <div id="input-preset-refresh" class="preset-refresh">
-          <i class="fa-solid fa-arrows-rotate"></i>
-        </div>   
-      </div>    
-      <h2>Sharing Loops</h2>
-        <p> <strong>Exporting</strong> - Create a loop and click Export to generate share-data in the text-box below.<br><strong>Importing</strong> - Paste share-data into the text-box below and click "Import Loop" to load the loop to the sequencer</p>
-        <textarea aria-label="Loop Data Textbox" id="input-share-data"  class="input-share-data" name="loop-data" cols="30" rows="10"></textarea> 
-      <div class="share-input-block">
-        <div id="input-export" class="input-export">Export Loop</div>
-        <div id="input-import" class="input-import">Import Loop</div>        
-      </div>            
-    </div>
     
-    <!-- Information Section -->
-    <div id="info-window" class="info-window"> 
-      <div class="tutorial-block">
-        <h1>Quick Guide</h1>
-        <p>Media Controls</p>
-        <div class="tutorial-media">
-          <div class="media-left">
-            <p>Play/Stop,<br>toggles playback</p>
-            <i class="fa-solid fa-arrow-down"></i>
+      <!-- Track Interface Section -->
+      <div id="drum-window" class="track-window">
+        <!-- Track 1 Block -->
+        <div id="track-one" class="track track-one">
+          <div id="icon-track-one" class="track-icon">
+            <div class="drum-pad">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="track-controls">
+              <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
+              <div class="control clear"><i class="fa-solid fa-trash"></i></div>
+            </div>
           </div>
-          <div class="media-middle">
-            <p>Tempo,<br>changes playback speed<br>(Beats per Minute)</p>
-            <i class="fa-solid fa-arrow-down"></i>
-          </div>
-          <div class="media-right">
-            <p>Kit selection,<br>changes track sounds</p>
-            <i class="fa-solid fa-arrow-down"></i>
-          </div>
+          <div id="step-container-one" class="step-container">
+            <div class="step step-0"></div>
+            <div class="step step-1"></div>
+            <div class="step step-2"></div>
+            <div class="step step-3"></div>
+            <div class="step step-4"></div>
+            <div class="step step-5"></div>
+            <div class="step step-6"></div>
+            <div class="step step-7"></div>
+            <div class="step step-8"></div>
+            <div class="step step-9"></div>
+            <div class="step step-10"></div>
+            <div class="step step-11"></div>
+            <div class="step step-12"></div>
+            <div class="step step-13"></div>
+            <div class="step step-14"></div>
+            <div class="step step-15"></div>
+          </div>  
         </div>
-        <img src="assets/images/media-controls.webp" alt="Image of Beat Maker's media controls">
-        <p>Track Section</p>
-        <div class="tutorial-track">
-          <div class="track-left">
-            <p>Drum Pad, plays a sample of the track sound<br>Mute, mutes the track sound<br>Clear, empties all track steps</p>
-            <i class="fa-solid fa-arrow-down"></i>
+        <!-- Track 2 Block -->
+        <div id="track-two" class="track track-two">
+          <div id="icon-track-two" class="track-icon">
+            <div class="drum-pad">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="track-controls">
+              <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
+              <div class="control clear"><i class="fa-solid fa-trash"></i></div>
+            </div>
           </div>
-          <div class="track-right">
-            <p>Steps, filled steps trigger the track sound when playback reaches the step position</p>
-            <i class="fa-solid fa-arrow-down"></i>
-          </div>    
+          <div id="step-container-two" class="step-container">
+            <div class="step step-0"></div>
+            <div class="step step-1"></div>
+            <div class="step step-2"></div>
+            <div class="step step-3"></div>
+            <div class="step step-4"></div>
+            <div class="step step-5"></div>
+            <div class="step step-6"></div>
+            <div class="step step-7"></div>
+            <div class="step step-8"></div>
+            <div class="step step-9"></div>
+            <div class="step step-10"></div>
+            <div class="step step-11"></div>
+            <div class="step step-12"></div>
+            <div class="step step-13"></div>
+            <div class="step step-14"></div>
+            <div class="step step-15"></div>
+          </div>  
         </div>
-        <img src="assets/images/track-section.webp" alt="Image of Beat Maker's track section">
+        <!-- Track 3 Block -->
+        <div id="track-three" class="track track-three">
+          <div id="icon-track-three" class="track-icon">
+            <div class="drum-pad">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="track-controls">
+              <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
+              <div class="control clear"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+          <div id="step-container-three" class="step-container">
+            <div class="step step-0"></div>
+            <div class="step step-1"></div>
+            <div class="step step-2"></div>
+            <div class="step step-3"></div>
+            <div class="step step-4"></div>
+            <div class="step step-5"></div>
+            <div class="step step-6"></div>
+            <div class="step step-7"></div>
+            <div class="step step-8"></div>
+            <div class="step step-9"></div>
+            <div class="step step-10"></div>
+            <div class="step step-11"></div>
+            <div class="step step-12"></div>
+            <div class="step step-13"></div>
+            <div class="step step-14"></div>
+            <div class="step step-15"></div>
+          </div>  
+        </div>
+        <!-- Track 4 Block -->
+        <div id="track-four" class="track track-four">
+          <div id="icon-track-four" class="track-icon">
+            <div class="drum-pad">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="track-controls">
+              <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
+              <div class="control clear"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+          <div id="step-container-four" class="step-container">
+            <div class="step step-0"></div>
+            <div class="step step-1"></div>
+            <div class="step step-2"></div>
+            <div class="step step-3"></div>
+            <div class="step step-4"></div>
+            <div class="step step-5"></div>
+            <div class="step step-6"></div>
+            <div class="step step-7"></div>
+            <div class="step step-8"></div>
+            <div class="step step-9"></div>
+            <div class="step step-10"></div>
+            <div class="step step-11"></div>
+            <div class="step step-12"></div>
+            <div class="step step-13"></div>
+            <div class="step step-14"></div>
+            <div class="step step-15"></div>
+          </div>  
+        </div>
+        <!-- Track 5 Block -->
+        <div id="track-five" class="track track-five">
+          <div id="icon-track-five" class="track-icon">
+            <div class="drum-pad">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="track-controls">
+              <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
+              <div class="control clear"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+          <div id="step-container-five" class="step-container">
+            <div class="step step-0"></div>
+            <div class="step step-1"></div>
+            <div class="step step-2"></div>
+            <div class="step step-3"></div>
+            <div class="step step-4"></div>
+            <div class="step step-5"></div>
+            <div class="step step-6"></div>
+            <div class="step step-7"></div>
+            <div class="step step-8"></div>
+            <div class="step step-9"></div>
+            <div class="step step-10"></div>
+            <div class="step step-11"></div>
+            <div class="step step-12"></div>
+            <div class="step step-13"></div>
+            <div class="step step-14"></div>
+            <div class="step step-15"></div>
+          </div>  
+        </div>
+        <!-- Track 6 Block -->
+        <div id="track-six" class="track track-six">
+          <div id="icon-track-six" class="track-icon">
+            <div class="drum-pad">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="track-controls">
+              <div class="control mute"><i class="fa-solid fa-volume-xmark"></i></div>
+              <div class="control clear"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+          <div id="step-container-six" class="step-container">
+            <div class="step step-0"></div>
+            <div class="step step-1"></div>
+            <div class="step step-2"></div>
+            <div class="step step-3"></div>
+            <div class="step step-4"></div>
+            <div class="step step-5"></div>
+            <div class="step step-6"></div>
+            <div class="step step-7"></div>
+            <div class="step step-8"></div>
+            <div class="step step-9"></div>
+            <div class="step step-10"></div>
+            <div class="step step-11"></div>
+            <div class="step step-12"></div>
+            <div class="step step-13"></div>
+            <div class="step step-14"></div>
+            <div class="step step-15"></div>
+          </div>  
+        </div>      
       </div>
-      <div class="credits-block">
-        <h1>Credits</h1>
-        <p>Drum samples provided by <a href="https://99sounds.org/drum-samples/" target="_blank">99sounds.org</a>.</p>
-        <p>Copyright <i class="fa-regular fa-copyright"></i> Adam Giles</p>
-      </div>
-    </div>    
 
-    <!-- Submission Section -->      
-    <div id="submission-input-block" class="submission-input-block">
-      <p> <strong>Want your Loop added to the Presets?</strong><br></p>
-      <div id="input-submission-open" class="input-submission-open">Submit Loop for Review</div>
-    </div>   
-    <div id="submission-window" class="submission-window">
-      <div id="input-submission-close" class="input-submission-close">
-        <i class="fa-regular fa-circle-xmark"></i>
+      <!-- Share Section -->
+      <div id="share-window" class="share-window"> 
+        <h2>Preset Loops</h2>
+        <p>Choose a pre-made loop below.</p>
+        <div class="preset-block">
+          <label for="presets">Preset:</label>
+          <select name="presets" id="presets">
+            <option value="presetOne">Preset-1</option>
+            <option value="presetTwo">Preset-2</option>
+            <option value="presetThree">Preset-3</option>
+            <option value="presetFour">Preset-4</option>
+            <option value="presetFive">Preset-5</option>
+            <option value="presetSix">Preset-6</option>
+            <option value="presetSeven">Preset-7</option>
+            <option value="presetEight">Preset-8</option>
+            <option value="presetNine">Preset-9</option>
+            <option value="presetTen">Preset-10</option>
+          </select>
+          <div id="input-preset-refresh" class="preset-refresh">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>   
+        </div>    
+        <h2>Sharing Loops</h2>
+          <p> <strong>Exporting</strong> - Create a loop and click Export to generate share-data in the text-box below.<br><strong>Importing</strong> - Paste share-data into the text-box below and click "Import Loop" to load the loop to the sequencer</p>
+          <textarea aria-label="Loop Data Textbox" id="input-share-data"  class="input-share-data" name="loop-data" cols="30" rows="10"></textarea> 
+        <div class="share-input-block">
+          <div id="input-export" class="input-export">Export Loop</div>
+          <div id="input-import" class="input-import">Import Loop</div>        
+        </div>            
       </div>
-      <div class="submission-form">      
-        <div class="submission-info">
-          <h2>Want your Loop added to the Presets?<br>Fill out the form below...</h2>
-          <p>If we like what we hear...<br> Your Loop will be added to the Presets!</p>
-        </div>  
-        <div>
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required><br>
+      
+      <!-- Information Section -->
+      <div id="info-window" class="info-window"> 
+        <div class="tutorial-block">
+          <h1>Quick Guide</h1>
+          <p>Media Controls</p>
+          <div class="tutorial-media">
+            <div class="media-left">
+              <p>Play/Stop,<br>toggles playback</p>
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="media-middle">
+              <p>Tempo,<br>changes playback speed<br>(Beats per Minute)</p>
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="media-right">
+              <p>Kit selection,<br>changes track sounds</p>
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+          </div>
+          <img src="assets/images/media-controls.webp" alt="Image of Beat Maker's media controls">
+          <p>Track Section</p>
+          <div class="tutorial-track">
+            <div class="track-left">
+              <p>Drum Pad, plays a sample of the track sound<br>Mute, mutes the track sound<br>Clear, empties all track steps</p>
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="track-right">
+              <p>Steps, filled steps trigger the track sound when playback reaches the step position</p>
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>    
+          </div>
+          <img src="assets/images/track-section.webp" alt="Image of Beat Maker's track section">
         </div>
-        <div>
-          <label for="email-address">Email Address</label><br>
-          <input type="email" id="email-address" name="email-address" required><br>
+        <div class="credits-block">
+          <h1>Credits</h1>
+          <p>Drum samples provided by <a href="https://99sounds.org/drum-samples/" target="_blank">99sounds.org</a>.</p>
+          <p>Copyright <i class="fa-regular fa-copyright"></i> Adam Giles</p>
         </div>
-        <div>
-          <label for="loop-title">Your Loop Title</label><br>
-          <input type="text" id="loop-title" name="loop-title" required><br>
-        </div>
-        <div>
-          <button class="input-submit" onclick="SendLoop()">Send Loop</button>
-        </div>        
-        <div id="form-alert" class="form-alert"></div>
-      </div>
-    </div> 
+      </div>    
 
-    <!-- Font Awesome Link --> 
-    <script src="https://kit.fontawesome.com/d642f04513.js" crossorigin="anonymous"></script>
-    <!-- Tab Navigation Script Link -->
-    <script src="assets/js/navigation.js" defer></script> 
-    <!-- Drum Sequencer Script Link -->
-    <script src="assets/js/drums.js" defer></script>    
-    <!-- EmailJS Script Link --> 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-    (function(){
-      emailjs.init("QE8Dp1wYPRMCL2P0G");
-      })();
-    </script>
-    <!-- Form Script Link -->
-    <script src="assets/js/form.js" defer></script> 
-  </div>
-</body>
+      <!-- Submission Section -->      
+      <div id="submission-input-block" class="submission-input-block">
+        <p> <strong>Want your Loop added to the Presets?</strong><br></p>
+        <div id="input-submission-open" class="input-submission-open">Submit Loop for Review</div>
+      </div>   
+      <div id="submission-window" class="submission-window">
+        <div id="input-submission-close" class="input-submission-close">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+        <div class="submission-form">      
+          <div class="submission-info">
+            <h2>Want your Loop added to the Presets?<br>Fill out the form below...</h2>
+            <p>If we like what we hear...<br> Your Loop will be added to the Presets!</p>
+          </div>  
+          <div>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br>
+          </div>
+          <div>
+            <label for="email-address">Email Address</label><br>
+            <input type="email" id="email-address" name="email-address" required><br>
+          </div>
+          <div>
+            <label for="loop-title">Your Loop Title</label><br>
+            <input type="text" id="loop-title" name="loop-title" required><br>
+          </div>
+          <div>
+            <button class="input-submit" onclick="SendLoop()">Send Loop</button>
+          </div>        
+          <div id="form-alert" class="form-alert"></div>
+        </div>
+      </div> 
+
+      <!-- Font Awesome Link --> 
+      <script src="https://kit.fontawesome.com/d642f04513.js" crossorigin="anonymous"></script>
+      <!-- Tab Navigation Script Link -->
+      <script src="assets/js/navigation.js" defer></script> 
+      <!-- Drum Sequencer Script Link -->
+      <script src="assets/js/drums.js" defer></script>    
+      <!-- EmailJS Script Link --> 
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+      (function(){
+        emailjs.init("QE8Dp1wYPRMCL2P0G");
+        })();
+      </script>
+      <!-- Form Script Link -->
+      <script src="assets/js/form.js" defer></script> 
+    </div>
+  </body>
 </html>
