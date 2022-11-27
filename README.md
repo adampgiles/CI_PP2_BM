@@ -1,5 +1,7 @@
 # Beat Maker - Drum Sequencer
 
+<img src="docs/user_story_testing/10/user_story_responsive.JPG">
+
 **Developer: Adam Giles**
 
 [Live website](https://adampgiles.github.io/CI_PP2_BM/)
@@ -117,6 +119,12 @@ The sections and windows are detailed below;
 <img src="docs/features/feature_404_page.JPG">
 </details>
 A 404 page was created to ensure that a user can easily navigate back to the Beat Maker site if they encounter a page which does not exist.
+
+### Wireframes
+
+<details><summary>Wireframes</summary>
+<img src="docs/wireframes/wireframes.png">
+</details>
 
 ## Technologies Used
 
