@@ -7,6 +7,32 @@
 ## Table of Content
 
 - [Project Goals](#project-goals)
+- [User Experience](#user-experience)
+    - [Target Audience](#target-audience)
+    - [User Stories](#user-stories)
+- [Design](#design)
+    - [Colour](#colour)
+    - [Fonts](#fonts)
+    - [Structure](#structure)
+    - [Wireframes](#wireframes)
+- [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks, Libraries & Tools](#frameworks-libraries--tools)
+- [Features](#features)
+- [Validation](#validation)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [JS Validation](#js-validation)
+- [Testing](#testing)
+    - [Accessibility](#accessibility)
+    - [Performance](#performance)
+    - [Device Testing](#device-testing)
+    - [Browser Compatibility](#browser-compatibility)
+    - [User Story Testing](#user-story-testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
 ## Project Goals
 Beat Maker is an interactive online drum sequencer. Featuring 6 tracks, 4 kits, 10 preset loops, adjustable tempo and import/export features to share your creations.
@@ -92,6 +118,7 @@ The sections and windows are detailed below;
 </details>
 A 404 page was created to ensure that a user can easily navigate back to the Beat Maker site if they encounter a page which does not exist.
 
+## Technologies Used
 
 ### Languages
 

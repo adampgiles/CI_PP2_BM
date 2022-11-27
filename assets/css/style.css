@@ -570,7 +570,7 @@ body{
   border: 2px solid var(--borders);
   border-radius: 5px;
   text-align: center;
-  padding: 2.5px;
+  padding: 0px;
 }
 .submission-form{
   width: 100%;
@@ -581,7 +581,7 @@ body{
   height: 20px;
   background-color: var(--buttons);
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 5x;
 }
 .input-submission-close svg{
   width: 100%;
