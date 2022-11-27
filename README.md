@@ -73,7 +73,7 @@ User stories have been seperated into two groups; Site Users and Site Owner.
 8. I would like users to receive feedback when interacting with site buttons, by changing the button colour when clicked.
 9. I would like the user to be notified when the tempo of the loop has been updated.
 10. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
-1. I would like the website to have a loop submission form with validation implemented so the form cannot be submitted blank or with invalid values.
+11. I would like the website to have a loop submission form with validation implemented so the form cannot be submitted blank or with invalid values.
 
 ## Design
 
@@ -155,6 +155,7 @@ The website consists of six sections with thirteen features.
 - The playback button can be clicked to Play or Stop the loop playback.
 - The Tempo control consists of a number input and refresh button. The number input changes the tempo value, which is in beats per minute. The tempo can then be updated by clicking the refresh button. The tempo value is limited between 60 and 200. A tootip shows this range when entering a value and when clicking refresh, the tooltip shows that the tempo has been updated.
 - The Kit selection area consists of a dropdown with 4 options. These 4 options change the drum sounds on each of the drum sequencer tracks. Selecting an option immediately updates the sounds.
+- Meets user stories: 1, 2, 3, 7, 8, 9.
 
 ### Tab Navigation
 - Situated below the Media Control.
@@ -174,6 +175,7 @@ The website consists of six sections with thirteen features.
 - The clear button toggles off any active steps in the track's step sequencer. The button's colour changes temporarily to privide visual feedback to the user that the change has occured.
 - The 16 Step Sequencers consists of 16 buttons. When a button is clicked the colour changes to provide visual feedback that the step is active. During playback, when the playback position reaches the step's position, if the step is active the track's sound will trigger.
 - Each track's step has a different colour. This is to clearly show the different tracks and also to provide variety to the visuals.
+- Meets user stories: 1, 2, 7, 8.
 
 ### Preset/Share Section
 - Situated below the Tab Navigation section, connected to the second tab.
@@ -181,6 +183,7 @@ The website consists of six sections with thirteen features.
 - The Preset Loops sub-section consists of a Heading, paragraph with short instructions, a dropdown and a refresh button. The dropdown contains a list of Premade Loops, the user can select a loop then click the refresh button to load the loop into the Sequencer. The window will then automatically change to the sequencer window, populate the sequencer and the media control. This change provides visual feedback to the user that the change has occured.
 - The Sharing Loops sub-sections consists of a Heading, paragraph with instructions, a text input-box, a button to Export Loop and a button to Import Loop. When clicking the Export Loop button, the text input-box is populated with a Loop Data text string which has been compliled using Javascript. The user can then copy this text and share it with other users. The other users can then paste the Loop Data in the text input-box on thier session of the site and click the Import Button. The Loop Data will then be decompiled and loaded to the sequencer. Both buttons when clicked, temporarily chance colour to visually notify the user that it has been clicked.
 - The Submit for Review sub-section consists of a Heading and a button. The button when clicked, opens up a Submission Window. This window is detailed further in the section below.
+- Meets user stories: 4, 5.
 
 ### Submission Window
 - This window displays after clicking the "Submit Loop for Review" button on the Preset/Share window.
@@ -196,6 +199,7 @@ The website consists of six sections with thirteen features.
 - Messages 1 and 2 display when trying to submit invalid inputs. Messages 3 and 4 display when submitting valid inputs.
 - When submitting the form also submits the exported Loop Data.
 - All form data is submitted through EmailJS and an email is sent to the site owner. This is detailed further in a section below.
+- Meets user stories: 11.
 
 ### Information Window
 - Situated below the Tab Navigation section, connected to the third tab.
@@ -203,6 +207,7 @@ The website consists of six sections with thirteen features.
 - The Quick Guide sub-section consists of a heading, sub-headings, text boxes and images.
 - There are two images (Media control, and Track Section), each with text boxes above with arrows directed towards sections of the image. The text boxes contain information on the sections function.
 - The Credits/Copyright sub-section consists of a heading and information on credits, and a copyright notice.
+- Meets user stories: 6.
 
 ### 404 Page
 - Page is display when a user encounter a page that does not exist (HTTP 404 response code).
